@@ -27,7 +27,12 @@ class:
 title: What the students see
 build_lists: false
 
-- Mathematics Fundamentals [Moodle area](http://moodle.mmu.ac.uk/course/view.php?id=34993)
+- As always, start with a [Moodle area](http://moodle.mmu.ac.uk/course/view.php?id=34993)
+- Link from there to a Google+ page
+- Chronological list of lectures as Hangout recordings with ancillary info posted in comments below
+    - dropbox links to scanned visualizer pages
+    - weblinks to online code snippets
+    - ...
 
 
 ---
