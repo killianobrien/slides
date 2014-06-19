@@ -1,0 +1,234 @@
+<!--
+slidedeck: A modification of the Google IO 2012 HTML5 slide template
+URL: https://github.com/rmcgibbo/slidedeck
+
+Based on https://github.com/francescolaffi/elastic-google-io-slides, and
+ultimately:
+
+Google IO 2012 HTML5 Slide Template
+Authors: Eric Bidelman <ebidel@gmail.com>
+         Luke Mahe <lukem@google.com>
+URL: https://code.google.com/p/io-2012-slides
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Lecture capture with Google Hangouts</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+  <!--This one seems to work all the time, but really small on ipad-->
+  <!--<meta name="viewport" content="initial-scale=0.4">-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+   <link rel="shortcut icon" href=" http://www2.mmu.ac.uk/media/mmuacuk/style-assets/images/favicon.ico"/> 
+  <link rel="stylesheet" media="all" href="theme/css/default.css">
+  <link rel="stylesheet" media="all" href="theme/css/custom.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css">
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+  <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+
+  <!-- MathJax support  -->
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    showProcessingMessages: false,
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+  </script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</head>
+
+<body style="opacity: 0">
+  
+<slides class="layout-widescreen">
+<!-- logoslide piece 
+ <slide class="logoslide nobackground">
+    <article class="flexbox vcenter">
+      <span><img src="figures/logo_black.png"></span>
+    </article>
+  </slide> -->
+
+<slide class="title-slide segue nobackground">
+  <aside class="gdbar"><img src="figures/me.jpg"></aside>
+  <hgroup class="auto-fadein">
+
+    <h1> Lecture capture with Google Hangouts</h1>
+    <h2> and how I learned to love the sound of my own voice</h2>
+    <p> Killian O'Brien<br/> Mathematics<br/> tinyurl.com/kob-24-06-14</p>
+  </hgroup>
+</slide>
+
+
+<slide class="nobackground" >
+  
+    <hgroup>
+      <h2>Example recording</h2>
+      <h3>Talking through some notes</h3>
+    </hgroup>
+    <article ><iframe height=450px src="http://www.youtube.com/embed/qvdYGdOL52A" frameborder="0" allowfullscreen></iframe></article>
+ 
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>Example recording</h2>
+      <h3>Writing some code</h3>
+    </hgroup>
+    <article ><iframe height=450px src="http://www.youtube.com/embed/ewQK_S30KVY" frameborder="0" allowfullscreen></iframe></article>
+ 
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>What the students see</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><ul>
+<li>Mathematics Fundamentals <a href="http://moodle.mmu.ac.uk/course/view.php?id=34993"> Moodle area</a>.</li>
+</ul></article>
+ 
+</slide>
+
+<slide class="img-top-center" >
+  
+    <hgroup>
+      <h2>Minutes watched</h2>
+      <h3>6G4Z3001 Mathematics Fundamentals, Level 4, ~110 students</h3>
+    </hgroup>
+    <article ><p><img src=figures/maths_fundamentals_minutes_watched.PNG></p>
+<p>2048 minutes (UK 1558, USA 274)</p>
+<footer class="source"> data source: youtube analytics </footer></article>
+ 
+</slide>
+
+<slide class="img-top-center" >
+  
+    <hgroup>
+      <h2>Minutes watched</h2>
+      <h3>6G5Z3001 Mathematical Methods, Level 5, ~100 students</h3>
+    </hgroup>
+    <article ><p><img src=figures/analytical_methods_minutes_watched.PNG></p>
+<p>991 minutes (UK 602, USA 133)</p>
+<footer class="source"> data source: youtube analytics </footer></article>
+ 
+</slide>
+
+<slide class="img-top-center" >
+  
+    <hgroup>
+      <h2>Minutes watched</h2>
+      <h3>6G5Z3006 Number Theory & Cryptography, Level 5, ~40 students</h3>
+    </hgroup>
+    <article ><p><img src=figures/maths_fundamentals_minutes_watched.PNG></p>
+<p>2957 minutes (UK 678, IRL 609, USA 738)</p>
+<footer class="source"> data source: youtube analytics </footer></article>
+ 
+</slide>
+
+<slide class="fill nobackground" >
+  
+    <hgroup>
+      <h2></h2>
+      <h3></h3>
+    </hgroup>
+    <article ><p><img src=figures/happy_students.jpg /></p>
+<aside class="gdbar"><h1>Student feedback</h1></aside>
+
+<footer class="source"> image source: stolen from the internet </footer></article>
+ 
+</slide>
+
+<slide class="fill nobackground" >
+  
+    <hgroup>
+      <h2></h2>
+      <h3></h3>
+    </hgroup>
+    <article ><p><img style="vertical-align: middle" src=figures/monty_mob.jpg /></p>
+<aside class="gdbar"><h1>Student feedback</h1></aside>
+
+<footer class="source"> image source: stolen from the internet </footer></article>
+ 
+</slide>
+
+<slide class="segue dark nobackground" >
+  
+  <aside class="gdbar"><img src="figures/me.jpg"></aside>
+    <hgroup class="auto-fadein">
+      <h2>Segue slide</h2>
+      <h3>I can haz subtitlz?</h3>
+    </hgroup>
+  
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>Maybe some code?</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><p>press 'h' to highlight an important section (that is highlighted
+with &lt;b&gt;...&lt;/b&gt; tags)</p>
+<pre class="prettyprint" data-lang="javascript">
+function isSmall() {
+  return window.matchMedia("(min-device-width: ???)").matches;
+}
+
+<b>function hasTouch() {
+  return Modernizr.touch;
+}</b>
+
+function detectFormFactor() {
+  var device = DESKTOP;
+  if (hasTouch()) {
+    device = isSmall() ? PHONE : TABLET;
+  }
+  return device;
+}
+</pre></article>
+ 
+</slide>
+
+
+<slide class="thank-you-slide segue nobackground">
+  <aside class="gdbar right"><img src="figures/me.jpg"></aside>
+  <article class="flexbox vleft auto-fadein">
+    <h2> Thanks everyone!</h2>
+    <p> And especially these people: Jon S., Colin, Nick, Peter, Darren</p>
+  </article>
+  <p data-config-contact class="auto-fadein"> <span>email</span> <a href="mailto:k.m.obrien@mmu.ac.uk">k.m.obrien@mmu.ac.uk</a><br/> <span>twitter</span> <a href="https://twitter.com/killianobrien">@killianobrien</a></p>
+  </p>
+</slide>
+
+<slide class="backdrop"></slide>
+
+</slides>
+
+<script>
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-XXXXXXXX-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+<!--[if IE]>
+  <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+  <script>CFInstall.check({mode: 'overlay'});</script>
+<![endif]-->
+</body>
+</html>
