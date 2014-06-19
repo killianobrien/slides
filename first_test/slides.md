@@ -27,7 +27,7 @@ class:
 title: What the students see
 build_lists: false
 
-- Mathematics Fundamentals <a href="http://moodle.mmu.ac.uk/course/view.php?id=34993"> Moodle area</a>.
+- Mathematics Fundamentals [Moodle area](http://moodle.mmu.ac.uk/course/view.php?id=34993)
 
 
 ---
