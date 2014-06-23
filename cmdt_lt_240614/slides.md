@@ -42,7 +42,7 @@ title: What are Google Hangouts?
 Google help guides on 
 
 - [Google+](https://support.google.com/plus/?hl=en-GB#topic=3049731)
-- [Google+ pages](https://support.google.com/plus/?hl=en-GB#topic=3049731
+- [Google+ pages](https://support.google.com/plus/?hl=en-GB#topic=3049731)
 - [Google Hangout on Air](https://support.google.com/plus/answer/2553119?hl=en-GB)
 
 
