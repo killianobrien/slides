@@ -1,8 +1,9 @@
 % title: Lecture capture with Google Hangouts
 % subtitle: and how I learned to love the sound of my own voice
+% author: tinyurl.com/kob240614
+% author:   
 % author: Killian O'Brien
 % author: Mathematics
-% author: tinyurl.com/kob240614
 % thankyou: Thanks everyone!
 % thankyou_details: And especially these people: Jon S., Colin, Nick, Peter, Darren
 % contact: <span>email</span> <a href="mailto:k.m.obrien@mmu.ac.uk">k.m.obrien@mmu.ac.uk</a>
