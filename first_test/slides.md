@@ -21,7 +21,7 @@ title: Example recording
 subtitle: Writing some code
 class:
 
-<iframe height=450px src="http://www.youtube.com/embed/ewQK_S30KVY#t=33m50s" frameborder="0" allowfullscreen></iframe>
+<iframe height=450px src="http://www.youtube.com/embed/ewQK_S30KVY#t=2030" frameborder="0" allowfullscreen></iframe>
 
 ---
 title: What the students see
