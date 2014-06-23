@@ -27,13 +27,30 @@ class:
 title: What the students see
 build_lists: false
 
-- As always, start with a [Moodle area](http://moodle.mmu.ac.uk/course/view.php?id=34993)
+- Got to a [Moodle area](http://moodle.mmu.ac.uk/course/view.php?id=34993)
 - Link from there to a Google+ page
-- Chronological list of lectures as Hangout recordings with ancillary info posted in comments below
+- On the G+ page there is a chronological list of the lectures as Hangout recordings with extra info posted in comments below
     - dropbox links to scanned visualizer pages
     - weblinks to online code snippets
     - ...
 
+---
+title: What are Google Hangouts?
+
+- Hangouts (Google) $\approx$ Skype (Microsoft)
+
+Google help guides on 
+- [Google+](https://support.google.com/plus/?hl=en-GB#topic=3049731)
+- [Google+ pages](https://support.google.com/plus/?hl=en-GB#topic=3049731
+- [Google Hangout on Air](https://support.google.com/plus/answer/2553119?hl=en-GB)
+
+
+---
+title: The lecturer
+build_lists: true
+
+- Enter the lecture room
+- other steps *emphasize no encoding steps and robustness of recording*
 
 ---
 title: Minutes watched
