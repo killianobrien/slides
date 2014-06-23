@@ -116,10 +116,9 @@ class: img-top-center
 title: Student feedback
 class:
 
-<img height=200 style="vertical-align: middle;" src=figures/happy_students.jpg /> 
+<div><img height=200 style="vertical-align: middle;" src=figures/happy_students.jpg /> 
 OR
-<img height=200 style="vertical-align: middle;" src=figures/monty_mob.jpg /> ?
-
+<img height=200 style="vertical-align: middle;" src=figures/monty_mob.jpg /> ?</div>
 
 - Plenty of positive comments from students during the course and in ISS
 - Some quibbles about:
