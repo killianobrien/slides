@@ -1275,6 +1275,10 @@ article.smaller q:before, article.smaller q:after {
   line-height: 1.3;
 }
 
+.thank-you-slide a{
+  color: white;
+}
+
 /* line 886, ../scss/default.scss */
 aside.gdbar {
   height: 97px;

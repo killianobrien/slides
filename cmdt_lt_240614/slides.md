@@ -5,7 +5,8 @@
 % author: Killian O'Brien
 % author: Mathematics
 % thankyou: Thanks everyone!
-% thankyou_details: And especially these people: Jon S., Colin, Nick, Peter, Darren
+% thankyou_details: Fellow experimenter: Jon Shiach <a href=https://plus.google.com/114923882877273491383/posts>(Computing Maths)</a>
+% thankyou_details: Helpful conversations with: Colin McA-G, Jon S, Nick W, Peter McK, Darren D, ...
 % contact: <span>email</span> <a href="mailto:k.m.obrien@mmu.ac.uk">k.m.obrien@mmu.ac.uk</a>
 % contact: <span>twitter</span> <a href="https://twitter.com/killianobrien">@killianobrien</a>
 % favicon: http://www2.mmu.ac.uk/media/mmuacuk/style-assets/images/favicon.ico
@@ -56,21 +57,21 @@ See the Google help guides on
 ---
 title: What the lecturer does
 class: smaller
-build_lists: false
+build_lists: true
 
-Before term
+**Before term**
 
 - Set up G+ page and YouTube channel for unit
 - Put links to these in Moodle area
 
-My typical lecture
+**My typical lecture**
 
 - Log in to PC and open needed tabs in browser and/or other applications
 - Initiate the Hangout on Air
 - Do the lecture
 - Log off PC
 
-After lecture
+**After lecture**
 
 - Stop by an MFP (multifunctional printer) and scan any handwritten visualizer pages
 - Save pdf from email to Dropbox
