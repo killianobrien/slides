@@ -14,7 +14,7 @@ title: Example recording
 subtitle: Talking through some notes
 class: nobackground
 
-<iframe height=450px src="http://www.youtube.com/embed/qvdYGdOL52A" frameborder="0" allowfullscreen></iframe>
+<iframe height=450px src="http://www.youtube.com/embed/qvdYGdOL52A#t=41m20s" frameborder="0" allowfullscreen></iframe>
 
 ---
 title: Example recording
