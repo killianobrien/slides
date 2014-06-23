@@ -1,6 +1,6 @@
 % title: Lecture capture with Google Hangouts
 % subtitle: and how I learned to love the sound of my own voice
-% author: tinyurl.com/kob240614
+% author: these slides $\rightarrow$ tinyurl.com/kob240614
 % author:   
 % author: Killian O'Brien
 % author: Mathematics
