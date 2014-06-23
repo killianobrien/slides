@@ -1,3 +1,10 @@
+slide.smaller {
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0;
+}
+
+
 slide.img-top-center img {
     max-width: 100%;
     max-height: 100%;

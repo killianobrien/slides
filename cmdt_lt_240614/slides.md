@@ -1,6 +1,6 @@
 % title: Lecture capture with Google Hangouts
 % subtitle: and how I learned to love the sound of my own voice
-% author: these slides $\rightarrow$ tinyurl.com/kob240614
+% author: these slides at tinyurl.com/kob240614
 % author:   
 % author: Killian O'Brien
 % author: Mathematics
@@ -13,7 +13,7 @@
 ---
 title: Example recording
 subtitle: Talking through some notes
-class: nobackground
+class:
 
 <iframe height=450px src="http://www.youtube.com/embed/qvdYGdOL52A#t=40m0s" frameborder="0" allowfullscreen></iframe>
 
@@ -28,38 +28,53 @@ class:
 title: What the students see
 build_lists: false
 
-- Got to a [Moodle area](http://moodle.mmu.ac.uk/course/view.php?id=34993)
-- Link from there to a Google+ page
+- Go to a [Moodle area](http://moodle.mmu.ac.uk/course/view.php?id=34993)
+- Link from there to a [Google+ page](https://plus.google.com/116980035472158807129/posts) 
 - On the G+ page there is a chronological list of the lectures as Hangout recordings with extra info posted in comments below
     - dropbox links to scanned visualizer pages
     - weblinks to online code snippets
-    - ...
+    - links to any other resources ...  
 
 ---
 title: What are Google Hangouts?
-class: small
 
-- Hangouts (Google) $\approx$ Skype (Microsoft)
-- [Hangouts on Air](https://plus.google.com/hangouts/onair) <img width=500 align="right" src=figures/me_hangout.png>
+- Google+ $\approx$ Facebook
+- Hangouts (Google) $\approx$ Skype (Microsoft) <img width=400 align="right" src=figures/me_hangout.png>
+- [Hangouts on Air](https://plus.google.com/hangouts/onair) 
     - broadcast
     - recorded to youtube channel of G+ page
     - can 'share screen' instead of webcam
-
-
-
-Google help guides on 
+    - can have up to 10 live participants for meetings, seminars etc
+    
+See the Google help guides on 
 
 - [Google+](https://support.google.com/plus/?hl=en-GB#topic=3049731)
 - [Google+ pages](https://support.google.com/plus/answer/1710600?hl=en-GB)
-- [Google Hangout on Air](https://support.google.com/plus/answer/2553119?hl=en-GB)
+- [Google Hangouts on Air](https://support.google.com/plus/answer/2553119?hl=en-GB)
 
 
 ---
-title: The lecturer
-build_lists: true
+title: What the lecturer does
+class: smaller
+build_lists: false
 
-- Enter the lecture room
-- other steps *emphasize no encoding steps and robustness of recording*
+Before term
+
+- Set up G+ page and YouTube channel for unit
+- Put links to these in Moodle area
+
+My typical lecture
+
+- Log in to PC and open needed tabs in browser and/or other applications
+- Initiate the Hangout on Air
+- Do the lecture
+- Log off PC
+
+After lecture
+
+- Stop by an MFP (multifunctional printer) and scan any handwritten visualizer pages
+- Save pdf from email to Dropbox
+- Paste Dropbox share link to comments section on G+ page
 
 ---
 title: Minutes watched
