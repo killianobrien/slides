@@ -40,6 +40,10 @@ title: What are Google Hangouts?
 
 - Hangouts (Google) $\approx$ Skype (Microsoft)
 
+<img width=320 src=http://www.omnibeat.com/wp-content/uploads/2012/05/Google-Hangouts.jpg>
+<img width=320 src=http://i1.ytimg.com/vi/w27khkoW9f8/0.jpg>
+<img width=320 src=figures/me_hangout.png>
+
 Google help guides on 
 
 - [Google+](https://support.google.com/plus/?hl=en-GB#topic=3049731)
