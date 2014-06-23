@@ -38,8 +38,8 @@ build_lists: false
 ---
 title: What are Google Hangouts?
 
-- Google+ $\approx$ Facebook
-- Hangouts (Google) $\approx$ Skype (Microsoft) <img width=400 align="right" src=figures/me_hangout.png>
+- Google+ &#x2248; Facebook
+- Hangouts (Google) &#x2248; Skype (Microsoft) <img width=400 align="right" src=figures/me_hangout.png>
 - [Hangouts on Air](https://plus.google.com/hangouts/onair) 
     - broadcast
     - recorded to youtube channel of G+ page
