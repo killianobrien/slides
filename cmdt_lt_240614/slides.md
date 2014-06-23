@@ -37,12 +37,15 @@ build_lists: false
 
 ---
 title: What are Google Hangouts?
+class: small
 
 - Hangouts (Google) $\approx$ Skype (Microsoft)
+- [Hangouts on Air](https://plus.google.com/hangouts/onair) <img width=500 align="right" src=figures/me_hangout.png>
+    - broadcast
+    - recorded to youtube channel of G+ page
+    - can 'share screen' instead of webcam
 
-<img width=320 src=http://www.omnibeat.com/wp-content/uploads/2012/05/Google-Hangouts.jpg>
-<img width=320 src=http://i1.ytimg.com/vi/w27khkoW9f8/0.jpg>
-<img width=320 src=figures/me_hangout.png>
+
 
 Google help guides on 
 
