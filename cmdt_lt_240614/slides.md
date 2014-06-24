@@ -36,6 +36,12 @@ build_lists: false
     - weblinks to online code snippets
     - links to any other resources ...  
 
+Links to the G+ pages for my lectures:
+    
+- [Mathematics Fundamentals](https://plus.google.com/116980035472158807129/posts), Level 4
+- [Analyticall Methods](https://plus.google.com/108585842013332383095/posts), Level 5
+- [Number Theory](https://plus.google.com/102535114978958959263/posts), Level 5
+    
 ---
 title: What are Google Hangouts?
 class: smaller
