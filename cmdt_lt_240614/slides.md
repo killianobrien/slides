@@ -38,6 +38,7 @@ build_lists: false
 
 ---
 title: What are Google Hangouts?
+class: smaller
 
 - Google+ &#x2248; Facebook
 - Hangouts (Google) &#x2248; Skype (Microsoft) <img width=400 align="right" src=figures/me_hangout.png>
@@ -114,7 +115,7 @@ class: img-top-center
 
 ---
 title: Student feedback
-class:
+class: smaller
 
 <img height=200 style="vertical-align: middle;" src=figures/happy_students.jpg /> 
 OR
@@ -133,7 +134,7 @@ title: Reflections
 class: smaller
 build_lists: true
 
-<img width=400 align="right" src=http://2.bp.blogspot.com/_Nuta_CQvImI/TA2NNS9tjtI/AAAAAAAAB5M/CCfv28odS6s/s1600/The-Thinker-by-Auguste-Rodin.jpg>
+<img width=350 align="right" src=http://2.bp.blogspot.com/_Nuta_CQvImI/TA2NNS9tjtI/AAAAAAAAB5M/CCfv28odS6s/s1600/The-Thinker-by-Auguste-Rodin.jpg>
 
 - Requires minimal extra effort, so why not? Students like them.
 - Occasionally useful to myself for self-evaluation. 
