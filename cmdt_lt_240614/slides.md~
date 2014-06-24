@@ -3,7 +3,7 @@
 % author: slides at tinyurl.com/kob240614
 % author:   
 % author: Killian O'Brien
-% author: Mathematics
+% author: SCMDT, Division of Mathematics and Computation
 % thankyou: Go raibh míle maith agaibh
 % thankyou_details: Fellow experimenter: Jon Shiach <a href=https://plus.google.com/114923882877273491383/posts>(Computing Maths)</a>
 % thankyou_details: Helpful conversations with: Colin McA-G, Jon S, Nick W, Peter McK, Darren D, ...
@@ -16,14 +16,14 @@ title: Example recording
 subtitle: Talking through some notes
 class:
 
-<iframe height=450px src="http://www.youtube.com/embed/qvdYGdOL52A#t=40m0s" frameborder="0" allowfullscreen></iframe>
+<iframe height=450px  frameborder="0" allowfullscreen src="http://www.youtube.com/embed/qvdYGdOL52A?start=2595"></iframe>
 
 ---
 title: Example recording
 subtitle: Writing some code
 class:
 
-<iframe height=450px src="http://www.youtube.com/embed/ewQK_S30KVY#t=33m30s" frameborder="0" allowfullscreen></iframe>
+<iframe height=450px frameborder="0" allowfullscreen src="https://www.youtube.com/embed/ewQK_S30KVY?start=2010" ></iframe>
 
 ---
 title: What the students see
@@ -145,7 +145,7 @@ build_lists: true
 ### What do you think?
 
 - any questions
-- your own reflections
+- your own reflections and experience
 - technical points
 
 

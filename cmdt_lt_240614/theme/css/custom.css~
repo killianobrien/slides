@@ -1,3 +1,7 @@
+slide img{
+  margin: 10px;
+}
+
 .thank-you-slide a{
   color: white;
 }
@@ -12,7 +16,7 @@ article h3 {
 
 slide.smaller {
   font-size: 20px;
-  line-height: 24px;
+  line-height: 22px;
   letter-spacing: 0;
 }
 
