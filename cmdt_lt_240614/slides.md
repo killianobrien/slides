@@ -122,32 +122,32 @@ OR
 
 
 - Plenty of positive comments from students during the course and in ISS
+	- very appreciative of this extra revision/catch-up resource
 - Some quibbles about:
 	- no visualiser video
 	- missing recordings / very occasional gremlins
 
 I did emphasize experimental / proof of concept nature of the enterprise to guard against such comments
 ---
-title: Maybe some code?
+title: Reflections
+class: smaller
+build_lists: true
 
-press 'h' to highlight an important section (that is highlighted
-with &lt;b&gt;...&lt;/b&gt; tags)
+<img width=400 align="right" src=http://2.bp.blogspot.com/_Nuta_CQvImI/TA2NNS9tjtI/AAAAAAAAB5M/CCfv28odS6s/s1600/The-Thinker-by-Auguste-Rodin.jpg>
 
-<pre class="prettyprint" data-lang="javascript">
-function isSmall() {
-  return window.matchMedia("(min-device-width: ???)").matches;
-}
+- Requires minimal extra effort, so why not? Students like them.
+- Occasionally useful to myself for self-evaluation. 
+- Maybe a negative affect on attendance?
+	- put this down to student mis-use?
+- A distraction from better things?
+	- watching videos is a poor substitute for reading and doing mathematics, i.e. directly engaging the mind with these abstract concepts.
 
-<b>function hasTouch() {
-  return Modernizr.touch;
-}</b>
+### What do you think?
 
-function detectFormFactor() {
-  var device = DESKTOP;
-  if (hasTouch()) {
-    device = isSmall() ? PHONE : TABLET;
-  }
-  return device;
-}
-</pre>
+- any questions
+- your own reflections and experience
+- technical points
+
+
+
 
