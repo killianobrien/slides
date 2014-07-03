@@ -126,7 +126,7 @@ Let $\gamma_n$ denote the area of the shaded areas, then
 
 $h_n = \frac{w}{2} \left ( \int_1^n \, \frac{1}{x} \, dx + \gamma_n \right ).$
 
-Now $\lim_{n \to \infty} \gamma_n = \gamma \approx 0.6$, The Euler-Mascheroni constant. So for large $n$, a very good approximation is 
+Now $\lim_{n \to \infty} \gamma_n = \gamma \approx 0.6$, the Euler-Mascheroni constant. So for large $n$, a very good approximation is 
 
 $$ h_n \approx \frac{w}{2} \left ( \int_1^n \, \frac{1}{x} \, dx + 0.6 \right ) 
 = \frac{w}{2} \left ( \log(n) + 0.6 \right ) .$$
