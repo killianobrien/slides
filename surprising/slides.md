@@ -67,7 +67,6 @@ The overhang for a stack of $n$ blocks is the centre of gravity of the upper $n-
 
 $h_n = h_{n-1} + \dfrac{1}{n-1} \dfrac{w}{2}.$
 
-*That last sentence might take a while to parse, and convince yourself of, but do persevere!*
 ---
 title: Analyzing this solution
 subtitle: Developing the sequence $h_1, h_2, h_3, \dots$
