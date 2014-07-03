@@ -308,7 +308,7 @@ slides > slide.dark {
 /* line 169, ../scss/default.scss */
 slides > slide:not(.nobackground):before {
   font-size: 12pt;
-  content: "Killian O'Brien, slides at tinyurl.com/...";
+  content: "Killian O'Brien, slides at tinyurl.com/surprising0714";
   position: absolute;
   bottom: 20px;
   left: 60px;

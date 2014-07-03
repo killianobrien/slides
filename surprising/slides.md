@@ -1,6 +1,6 @@
-% title: Surpring our intuitions
+% title: Surprising our intuitions
 % subtitle: unexpected mathematical facts from stacking blocks and three-dimensional rotations
-% author: slides at tinyurl.com/...
+% author: slides at tinyurl.com/surprising0714
 % author:   
 % author: Killian O'Brien
 % author: School of Computing, Mathematics & Digital Technology
