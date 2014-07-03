@@ -55,14 +55,19 @@ Using previous principles we get that $h_n$ is also the centre of gravity of the
 ---
 title: Analyzing this solution
 subtitle: A recurrence relation for $h_n$
-class: 
+class: smaller
 
 <img align=right height=300px src="figures/stack.png">
 
-$h_1 = 0$
+A stack consisting of a single block has no overhang, so
 
-$h_n = h_{n-1} + \dfrac{1}{n-1} \dfrac{w}{2}$
+$h_1 = 0.$
 
+The overhang for a stack of $n$ blocks is the centre of gravity of the upper $n-1$ blocks which itself is the centre of gravity of the upper $n-2$ blocks plus the weighted contribution of the $(n-1)^{th}$ block, so
+
+$h_n = h_{n-1} + \dfrac{1}{n-1} \dfrac{w}{2}.$
+
+*That last sentence might take a while to parse, and convince yourself of, but do perservere!*
 ---
 title: Analyzing this solution
 subtitle: Developing the sequence $h_1, h_2, h_3, \dots$
