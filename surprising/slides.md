@@ -157,8 +157,15 @@ That is **quite** tall. In fact, $4.6 \times 10^{32}$ metres is approximately 52
 <div style="font-size: 20px;">Hubble ultra deep field image, June 2014, NASA, ESA, Teplitz et al.,  <a href="http://hubblesite.org/newscenter/archive/releases/2014/27/">Hubblesite.org</a></div>
 
 ---
-title: Simulate a stack
+title: Simulate a stack and read more
 
 <a href="http://sagecell.sagemath.org/?z=eJxtUrGO2zAM3Q34HwhkOKfxXeMAXQpo7ZgfCDrINu2oYcRAonF2v7605OAy1IMhkXyP71HcgVwRhsl34thDS9zdqrle9tDj4DxGsBCwE-tHQhiDfVxdF4HbPxqETydXaFmE70A4CHQcPAawkmg75tA7b0VpEmlZ7NZERKDE3eI4Oj9mnh3YgIDzg6xCOCyKv9_RSywLFfOi7WdZgH4BZQoeHkzLyP7UV5eLZn_XcJkPzcvhcPw4pct21PPgiMwvSxFrFeS6m6qJpqm1JXEwby1N-KZyN8H_88hDygg_srKymM2xLJb1t8Kcd-Isub-Y6qLY7paNpom7EOUJTDnz5S8TnLWaSGeUAH66t7lrqovK_8VbFmfTHJ9yXYSBAxCrNNv3MdXhLME-scKvrjYnG9MK9St70DfH6lSfD81z4rOZ348fP75VzffKvzf7fQ4vZtHwKV-ymWz3AK-m1uyqUPfKEi01xCt_ptYB40SybkLGbXumk9GKKsVqO2M0w_pkSvUPar7dpA==&lang=sage"><img height = 450px align=right src="figures/sage_stack.png"/></a>
 
 Here's a stack of 50 blocks. Click on the image to see (and experiment with) the generating code, thanks to <a href="http://www.sagemath.org/">Sage</a>, a free open-source mathematics software system.
+
+Read more
+
+- <a href="http://www.math.umt.edu/tmme/vol3no1/TMMEv3n1a4.pdf">*Building Blocks Problem Related to Harmonic Series*</a> by Yutaka Nishiyama published in Montana Mathematics Enthusiast. This contains detailed explanations of many of the ideas in this talk.
+
+- <a href= http://arxiv.org/abs/0710.2357>*Overhang*</a> by Mike Paterson & Uri Zwick published in the American Mathematical Monthly.
+This article briefly deals with the simple stack before discussing several complex counter-balancing block stacking strategies. There are many references to related articles in the bibliography.
