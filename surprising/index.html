@@ -1,0 +1,284 @@
+<!--
+slidedeck: A modification of the Google IO 2012 HTML5 slide template
+URL: https://github.com/rmcgibbo/slidedeck
+
+Based on https://github.com/francescolaffi/elastic-google-io-slides, and
+ultimately:
+
+Google IO 2012 HTML5 Slide Template
+Authors: Eric Bidelman <ebidel@gmail.com>
+         Luke Mahe <lukem@google.com>
+URL: https://code.google.com/p/io-2012-slides
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Surpring our intuitions</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
+  <meta name="viewport" content="initial-scale=1.0">
+  <!--This one seems to work all the time, but really small on ipad-->
+  <!--<meta name="viewport" content="initial-scale=0.4">-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+   <link rel="shortcut icon" href=" http://www2.mmu.ac.uk/media/mmuacuk/style-assets/images/favicon.ico"/> 
+  <link rel="stylesheet" media="all" href="theme/css/default.css">
+  <link rel="stylesheet" media="all" href="theme/css/custom.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css">
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+  <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+
+  <!-- MathJax support  -->
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    showProcessingMessages: false,
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+  </script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+
+<body style="opacity: 0">
+  
+<slides class="layout-widescreen">
+<!-- logoslide piece 
+ <slide class="logoslide nobackground">
+    <article class="flexbox vcenter">
+      <span><img src="figures/logo_black.png"></span>
+    </article>
+  </slide> -->
+
+<slide class="title-slide segue nobackground">
+  <aside class="gdbar"><img src="figures/me.jpg"></aside>
+  <hgroup class="auto-fadein">
+
+    <h1> Surpring our intuitions</h1>
+    <h2> unexpected mathematical facts from stacking blocks and three-dimensional rotations</h2>
+    <p> slides at tinyurl.com/...<br/>   <br/> Killian O'Brien<br/> School of Computing, Mathematics & Digital Technology<br/> Manchester Metropolitan University</p>
+  </hgroup>
+</slide>
+
+
+<slide class="segue dark nobackground" >
+  
+  <aside class="gdbar"><img src="figures/me.jpg"></aside>
+    <hgroup class="auto-fadein">
+      <h2>The challenge</h2>
+      <h3>Make a tower of blocks with a large overhang</h3>
+    </hgroup>
+  
+</slide>
+
+<slide class="fill nobackground" >
+  
+    <hgroup>
+      <h2></h2>
+      <h3></h3>
+    </hgroup>
+    <article ><p><img src="http://s0.geograph.org.uk/geophotos/02/95/38/2953864_ba0b9eeb.jpg"></p>
+<footer class="source"> source: <a href="http://www.geograph.org.uk/photo/2953864">Anthony Parkes</a></article>
+ 
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>An optimal solution for simple stacking</h2>
+      <h3>but not optimal in general</h3>
+    </hgroup>
+    <article ><p>A couple of basic principles</p>
+<ul class="build">
+<li>A body balances on a flat surface if its centre of gravity lies over its footprint</li>
+<li>The location of the centre of gravity of a stack of blocks can be determined by averaging over the locations of the centres of gravity of the individual blocks</li>
+</ul>
+<p>Iterate the following construction</p>
+<ul class="build">
+<li>Build the stack by adding extra blocks to the bottom of the stack</li>
+<li>When adding a block position its edge directly under the centre of gravity of the existing stack in order to maximize the overhang</li>
+</ul></article>
+ 
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>Analyzing this solution</h2>
+      <h3>Defining $h_n$</h3>
+    </hgroup>
+    <article ><p><img align=right height=300px src="figures/stack.png"></p>
+<p>Let <mathjax>$h_n$</mathjax> denote the overhang of this optimal simple stack of <mathjax>$n$</mathjax> blocks, each of width <mathjax>$w$</mathjax>.</p>
+<p>Using previous principles we get that <mathjax>$h_n$</mathjax> is also the centre of gravity of the upper <mathjax>$n-1$</mathjax> blocks.</p></article>
+ 
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>Analyzing this solution</h2>
+      <h3>A recurrence relation for $h_n$</h3>
+    </hgroup>
+    <article ><p><img align=right height=300px src="figures/stack.png"></p>
+<p><mathjax>$h_1 = 0$</mathjax></p>
+<p><mathjax>$h_n = h_{n-1} + \dfrac{1}{n-1} \dfrac{w}{2}$</mathjax></p></article>
+ 
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>Analyzing this solution</h2>
+      <h3>Developing the sequence $h_1, h_2, h_3, \dots$</h3>
+    </hgroup>
+    <article ><p><mathjax>$$\begin{align*}
+h_1 &amp; = 0 , \\
+h_2 &amp;= \frac{w}{2}, \\
+h_3 &amp;= \frac{w}{2} + \frac{1}{2} \frac{w}{2} = \frac{w}{2} \left ( 1 + \frac{1}{2} \right ) , \\
+h_4 &amp;= \frac{w}{2} \left ( 1 + \frac{1}{2} \right ) + \frac{1}{3} \frac{w}{2} = \frac{w}{2} \left ( 1 + \frac{1}{2} + \frac{1}{3} \right ) \\
+&amp;\vdots \\
+h_n &amp;= \frac{w}{2} \left (  1 + \frac{1}{2} + \frac{1}{3} + \dots + \frac{1}{n-1} \right )
+\end{align*}$$</mathjax></p></article>
+ 
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>Analyzing this solution</h2>
+      <h3>Overhang $h_n$ is governed by the harmonic series</h3>
+    </hgroup>
+    <article ><p><mathjax>$h_n = \frac{w}{2} \left (  1 + \frac{1}{2} + \frac{1}{3} + \dots + \frac{1}{n-1} \right )$</mathjax> and the harmonic series <mathjax>$1 + \frac{1}{2} + \frac{1}{3} + \dots + \frac{1}{n-1}$</mathjax> increases without any upper bound.</p>
+<p><mathjax>$$\begin{align}
+&amp; 1 + \frac{1}{2} + \left ( \frac{1}{3} + \frac{1}{4} \right ) + \left ( \frac{1}{5} + \dots + \frac{1}{8}
+\right )  + \left ( \frac{1}{9} + \dots + \frac{1}{16} \right ) + \dots \\
+\gt &amp; 1 + \frac{1}{2} + \frac{2}{4} + \frac{4}{8} +  \frac{8}{16} + \dots  \\
+= &amp; 1 + \frac{1}{2} + \frac{1}{2} + \frac{1}{2} + \frac{1}{2} + \dots
+\end{align}$$</mathjax></p>
+<p>Conclusion: Given enough blocks one can achieve any overhang whatsoever!</p></article>
+ 
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>Evaluating $h_n$</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><p><img height=300px align=right src="figures/integralunfilled.png" ></p>
+<p>We can view the harmonic series as the sum of the areas of a sequence of rectangles. The sum of these areas is approximated by the integral of the function <mathjax>$\frac{1}{x}$</mathjax>. </p>
+<p><mathjax>$h_n = \frac{w}{2} \left (  1 + \frac{1}{2} + \frac{1}{3} + \dots + \frac{1}{n-1} \right )$</mathjax></p>
+<p><mathjax>$h_n \approx \frac{w}{2} \int_1^{n} \, \frac{1}{x} \, dx $</mathjax></p></article>
+ 
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>Evaluating $h_n$</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><p><img height=300px align=right src="figures/integralfilled.png" ></p>
+<p><mathjax>$h_n \approx \frac{w}{2} \int_1^{n} \, \frac{1}{x} \, dx $</mathjax></p>
+<p>Let <mathjax>$\gamma_n$</mathjax> denote the area of the shaded areas, then </p>
+<p><mathjax>$h_n = \frac{w}{2} \left ( \int_1^n \, \frac{1}{x} \, dx + \gamma_n \right ) .$</mathjax></p></article>
+ 
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>Evaluating $h_n$</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><p><img height=300px align=right src="figures/integralfilledslid.png" ></p>
+<p><mathjax>$h_n \approx \frac{w}{2} \int_1^{n} \, \frac{1}{x} \, dx $</mathjax></p>
+<p>Let <mathjax>$\gamma_n$</mathjax> denote the area of the shaded areas, then </p>
+<p><mathjax>$h_n = \frac{w}{2} \left ( \int_1^n \, \frac{1}{x} \, dx + \gamma_n \right ).$</mathjax></p>
+<p>Now <mathjax>$\lim_{n \to \infty} \gamma_n = \gamma \approx 0.6$</mathjax>, The Euler-Mascheroni constant. So for large <mathjax>$n$</mathjax>, a very good approximation is </p>
+<p><mathjax>$$ h_n \approx \frac{w}{2} \left ( \int_1^n \, \frac{1}{x} \, dx + 0.6 \right ) 
+= \frac{w}{2} \left ( \log(n) + 0.6 \right ) .$$</mathjax></p></article>
+ 
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>An actual stack of Jenga blocks with 3m overhang</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><p><mathjax>$$h_n \approx \frac{w}{2} \Big ( \log(n)+ 0.6 \Big )$$</mathjax></p>
+<p><strong>How tall is a simple optimal stack with a <mathjax>$3$</mathjax> metre overhang?</strong></p>
+<p>The Jenga block is <mathjax>$7.5$</mathjax>cm wide and <mathjax>$1.5$</mathjax>cm tall.
+<mathjax>$$3 = \frac{0.075}{2} \Big ( \log(n) + 0.6 \Big )$$</mathjax>
+Solve this to find number, <mathjax>$n$</mathjax>, of blocks required.
+<mathjax>$$\begin{align*}
+n &amp;= e^{\left ( \frac{3}{0.0375} - 0.6 \right )} \\
+&amp;\approx 3.0 \times 10^{34}, \text{ a LOT of bricks}
+\end{align*}$$</mathjax>
+Such a stack would be <mathjax>$3.0 \times 10^{34} \times 0.015 \approx 4.6 \times 10^{32}$</mathjax> metres tall.</p></article>
+ 
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>An actual stack of Jenga blocks with 3m overhang</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><p><img align=right src='http://imgsrc.hubblesite.org/hu/db/images/hs-2014-27-a-web.jpg' alt='Hubble Ultra Deep Field 2014' /></p>
+<p>That is <strong>quite</strong> tall. In fact, <mathjax>$4.6 \times 10^{32}$</mathjax> metres is approximately 520 000 times the diameter of the observable universe.</p>
+<div style="font-size: 20px;">Hubble ultra deep field image, June 2014, NASA, ESA, Teplitz et al.,  <a href="http://hubblesite.org/newscenter/archive/releases/2014/27/">Hubblesite.org</a></div></article>
+ 
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>Simulate a stack</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><p><a href="http://sagecell.sagemath.org/?z=eJxtUrGO2zAM3Q34HwhkOKfxXeMAXQpo7ZgfCDrINu2oYcRAonF2v7605OAy1IMhkXyP71HcgVwRhsl34thDS9zdqrle9tDj4DxGsBCwE-tHQhiDfVxdF4HbPxqETydXaFmE70A4CHQcPAawkmg75tA7b0VpEmlZ7NZERKDE3eI4Oj9mnh3YgIDzg6xCOCyKv9_RSywLFfOi7WdZgH4BZQoeHkzLyP7UV5eLZn_XcJkPzcvhcPw4pct21PPgiMwvSxFrFeS6m6qJpqm1JXEwby1N-KZyN8H_88hDygg_srKymM2xLJb1t8Kcd-Isub-Y6qLY7paNpom7EOUJTDnz5S8TnLWaSGeUAH66t7lrqovK_8VbFmfTHJ9yXYSBAxCrNNv3MdXhLME-scKvrjYnG9MK9St70DfH6lSfD81z4rOZ348fP75VzffKvzf7fQ4vZtHwKV-ymWz3AK-m1uyqUPfKEi01xCt_ptYB40SybkLGbXumk9GKKsVqO2M0w_pkSvUPar7dpA==&lang=sage"><img height = 450px align=right src="figures/sage_stack.png"/></a></p>
+<p>Here's a stack of 50 blocks. Click on the image to see (and experiment with) the generating code, thanks to <a href="http://www.sagemath.org/">Sage</a>, a free open-source mathematics software system.</p></article>
+ 
+</slide>
+
+
+<slide class="thank-you-slide segue nobackground">
+  <aside class="gdbar right"><img src="figures/me.jpg"></aside>
+  <article class="flexbox vleft auto-fadein">
+    <h2> Go raibh míle maith agaibh</h2>
+    <p></p>
+  </article>
+  <p data-config-contact class="auto-fadein"> <span>email</span> <a href="mailto:k.m.obrien@mmu.ac.uk">k.m.obrien@mmu.ac.uk</a><br/> <span>twitter</span> <a href="https://twitter.com/killianobrien">@killianobrien</a></p>
+  </p>
+</slide>
+
+<slide class="backdrop"></slide>
+
+</slides>
+
+<script>
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-XXXXXXXX-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+
+<!--[if IE]>
+  <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+  <script>CFInstall.check({mode: 'overlay'});</script>
+<![endif]-->
+</body>
+</html>
