@@ -54,7 +54,7 @@ class:
 
 Let $h_n$ denote the overhang of this optimal simple stack of $n$ blocks, each of width $w$.
 
-Using previous principles we get that $h_n$ is also the centre of gravity of the upper $n-1$ blocks.
+Using previous principles we get that $h_n$ is also the (horizontal position of the) centre of gravity of the upper $n-1$ blocks.
 
 
 ---
