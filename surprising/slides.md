@@ -198,10 +198,13 @@ The dancer repeatedly rotates the cups, but without dislocating her shoulders.
 
 
 ---
-title:
-class: fill 
+title: A topological xenoscope
+subtitle: (my invented name)
 
-<img style="max-height: 100%; max-width: 100%" src="figures/top_xeno_title.png")>
+<img align=right height=300px src="figures/top_xeno.jpg">
+
+This is a device that allows one to perceive a different three-dimensional topology (shape of space) than what we normally think of as our own. 
+
 
 ---
 title: 
