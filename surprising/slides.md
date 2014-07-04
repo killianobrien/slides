@@ -173,3 +173,53 @@ Read more
 
 - <a href= http://arxiv.org/abs/0710.2357>*Overhang*</a> by Mike Paterson & Uri Zwick published in the American Mathematical Monthly.
 This article briefly deals with the simple stack before discussing several complex counter-balancing block stacking strategies. There are many references to related articles in the bibliography.
+
+---
+title:
+class: fill 
+
+<img style="max-height: 100%; max-width: 100%" src="figures/top_xeno_title.png")>
+
+---
+title: 
+class: fill 
+
+<img style="max-height: 100%; max-width: 100%" src="figures/spiders.png")>
+
+---
+title: 
+class: fill 
+
+<img style="max-height: 100%; max-width: 100%" src="figures/spiders_loops.png")>
+
+---
+title:
+class: fill 
+
+<img style="max-height: 100%; max-width: 100%" src="figures/fund_group.png")>
+
+---
+title: 
+class: fill 
+
+<img  style="max-height: 100%; max-width: 100%" src="figures/so3.png")>
+
+---
+title: 
+class: fill 
+
+<img  style="max-height: 100%; max-width: 100%" src="figures/so3_space.png")>
+
+---
+title:
+class: fill 
+
+<img style="max-height: 100%; max-width: 100%"  src="figures/summary.png")>
+
+---
+title: 
+class: fill 
+
+<img  style="max-height: 100%; max-width: 100%" src="figures/so3_fund_group.png")>
+
+
