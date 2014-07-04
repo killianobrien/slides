@@ -11,12 +11,6 @@
 % contact: <span>twitter</span> <a href="https://twitter.com/killianobrien">@killianobrien</a>
 % favicon: http://www2.mmu.ac.uk/media/mmuacuk/style-assets/images/favicon.ico
 
-
----
-title: The challenge
-subtitle: Make a tower of blocks with a large overhang
-class: segue dark nobackground
-
 ---
 title: 
 class: fill nobackground
@@ -24,6 +18,17 @@ class: fill nobackground
 <img src="http://s0.geograph.org.uk/geophotos/02/95/38/2953864_ba0b9eeb.jpg">
 
 <footer class="source"> source: <a href="http://www.geograph.org.uk/photo/2953864">Anthony Parkes</a>
+
+---
+title: The challenge
+subtitle: Make a tower of blocks with a large overhang
+class: segue dark nobackground
+
+---
+title: Does this look odd?
+class: fill nobackground
+
+<img src="figures/my_stack.jpg">
 
 ---
 title: An optimal solution for simple stacking
