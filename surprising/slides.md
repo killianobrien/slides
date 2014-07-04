@@ -175,6 +175,24 @@ Read more
 This article briefly deals with the simple stack before discussing several complex counter-balancing block stacking strategies. There are many references to related articles in the bibliography.
 
 ---
+title: Rotations in three dimensions
+subtitle: Not too hard to understand ...
+
+<iframe height=450px frameborder="0" allowfullscreen src="https://www.youtube.com/embed/ERFV4W8Lt-M" ></iframe>
+
+---
+title: Rotations in three dimensions
+subtitle: ... but what about this?
+
+The dancer repeatedly rotates the cups, but without dislocating her shoulders.
+
+<iframe align=right height=400px width=auto frameborder="0" allowfullscreen src="https://www.youtube.com/embed/CYBqIRM8GiY?start=68" ></iframe>
+
+
+
+
+
+---
 title:
 class: fill 
 
