@@ -1,0 +1,119 @@
+slide img{
+  margin: 10px;
+  border-radius: 10px;  
+}
+
+.thank-you-slide a{
+  color: white;
+}
+
+article h3 {
+  font-size: 100%;
+  letter-spacing: -1px;
+  line-height: 2;
+  font-weight: inherit;
+  color: #0da861;
+}
+
+slide.smaller {
+  font-size: 20px;
+  line-height: 22px;
+  letter-spacing: 0;
+}
+
+
+slide.img-top-center img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+slide .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+em, i  {
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold;
+}
+
+slides footer.source {
+ font-size: 16pt
+ position: absolute;
+    position: absolute;
+    bottom: 40px;
+    left: 20px;
+/*    background: url(../../images/google_developers_icon_128.png) no-repeat 0 50%;*/
+    -webkit-background-size: 30px 30px;
+    -moz-background-size: 30px 30px;
+    -o-background-size: 30px 30px;
+    background-size: 30px 30px;
+    padding: 5px 5px 5px 5px;
+    height: 30px;
+    line-height: 1.9;
+}
+
+pre b {
+    font-weight: normal;
+}
+
+slide.fill img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  min-width: 100%;
+  min-height: 100%;
+
+  z-index: -1;
+}
+
+slide.fill h2{
+  color: white;
+  background-color: rgba(100, 100, 100, .5);
+}
+
+aside.gdbar h1{
+  margin: 8px 15px;
+}
+
+slide.fill footer.source{
+    color: white;
+    background-color: rgba(100, 100, 100, .5);
+}
+
+slide iframe{
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+slide.title-slide{
+  background: #4387fd !important;
+  color: white !important;
+}
+
+slide.title-slide hgroup h1{
+  color: white;
+}
+
+slide.title-slide hgroup h2{
+  color: white;
+}
+
+slide.title-slide hgroup p{
+  color: white;
+}
+
+.title-slide aside.gdbar, .thank-you-slide aside.gdbar{
+  background: white;
+}
+
