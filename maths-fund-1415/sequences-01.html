@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Killian O'Brien" />
+  <title>6G4Z3001_1415 \\ Mathematics Fundamentals</title>
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+    href="http://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" />
+  <script src="https://d3eoax9i5htok0.cloudfront.net/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+  <script src="https://sagecell.sagemath.org/static/jquery.min.js"></script>
+      <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+      <script>$(function () {
+      // Make the div with id 'mycell' a Sage cell
+      sagecell.makeSagecell({inputLocation:  '#mycell',
+                             template:       sagecell.templates.minimal,
+                             evalButtonText: 'Activate'});
+      // Make *any* div with class 'compute' a Sage cell
+      sagecell.makeSagecell({inputLocation: 'div.compute',
+                             evalButtonText: 'Evaluate'});
+      });
+      </script>
+  	<link rel="stylesheet" type="text/css" href="https://sagecell.sagemath.org/static/sagecell_embed.css">
+  <script src="http://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js.gz"
+    charset="utf-8" type="text/javascript"></script>
+</head>
+<body>
+<div class="slide titlepage">
+  <h1 class="title">6G4Z3001_1415 \\ Mathematics Fundamentals</h1>
+  <p class="author">
+Killian O'Brien
+  </p>
+  <p class="date">Oct 2014</p>
+</div>
+<div class="section titleslide slide level1" id="introduction"><h1 id="introduction">Introduction</h1></div><div class="section slide level2" id="a-quick-trip-through-the-unit">
+<h1 id="a-quick-trip-through-the-unit">A quick trip through the unit</h1>
+<p>See the unit's Moodle area for info on:</p>
+<ul>
+<li>Syllabus</li>
+<li>Teaching team &amp; pattern</li>
+<li>Assessment</li>
+<li>Resources</li>
+</ul>
+</div>
+<div class="section titleslide slide level1" id="some-motivation"><h1 id="some-motivation">Some motivation</h1></div><div class="section slide level2" id="motivation-convergence-and-divergence-in-applied-mathematics">
+<h1 id="motivation-convergence-and-divergence-in-applied-mathematics">Motivation \\ Convergence and divergence in applied mathematics</h1>
+<ul>
+<li><strong>Convergence</strong> is the concept of an (infinite) process getting closer and closer to some limiting state.</li>
+<li><strong>Divergence</strong> is where the process does not converge.</li>
+</ul>
+<p>This is important to understand as it is fundamental to much of applied mathematics, e.g.</p>
+<ul>
+<li>Mathematical models of the real world are almost always only approximations and so only offer approximations to the truth.</li>
+<li>This is ok as long as we can in principle make the approximations as good as we want, i.e. make them <em>converge</em> to the actual truth.</li>
+</ul>
+<div class="figure">
+<img src="http://nas-sites.org/climatemodeling/common/images/image_page_3_2_resolution.png" alt="Fig. Increasing resolutions of the IPCC reports" /><p class="caption">Fig. Increasing resolutions of the IPCC reports</p>
+</div>
+<p>Figure taken from <em><a href="http://www.nap.edu/catalog.php?record_id=13430">A National Strategy for Advancing Climate Modeling</a></em> by US National Academy of Sciences</p>
+<p>In addition ...</p>
+<ul>
+<li>The mathematical problems set up on these already approximate models are almost always impossible to solve <em>exactly</em> ...</li>
+<li>... and we can only find approximate solutions to them (so called <em>numerical</em> solutions).</li>
+<li>This is ok as long as we can in principle make the approximations as good as we want, i.e. make them <em>converge</em> to the actual solution.</li>
+<li>For time based models, such as weather/climate, these approximations get poorer and poorer as we look into the future, i.e. they <em>diverge</em> from the actual solution.</li>
+</ul>
+</div><div class="section slide level2" id="motivation-convergence-and-divergence-in-pure-mathematics">
+<h1 id="motivation-convergence-and-divergence-in-pure-mathematics">Motivation \\ Convergence and divergence in pure mathematics</h1>
+<ul>
+<li>The integers \(\mathbb{Z}\) and rationals \(\mathbb{Q}\) can be rigorously described without too much trouble, \[ \mathbb{Z} = \left \{ \dots, -3, -2, -1, 0 , 1, 2, 3, \dots \right \} \textit{ positive and negative whole numbers},\] \[ \mathbb{Q} = \left \{ \, \frac{n}{m} \, : \, n,m \in \mathbb{Z}, m \neq 0 \right \} \textit{ ratios of integers} .\]</li>
+</ul>
+<p>(<em>See Saeed's Set Theory lectures for explanation of this \(\{ \quad \}\)notation.</em>)</p>
+<ul>
+<li><p>Non-rational numbers (so called <em>irrationals</em>) are harder to describe rigorously and precisely, e.g. \[\sqrt{2} , \, \pi , \, e \]</p></li>
+<li><p>One way to do so is to describe them as the limits of infinite sequences or infinite sums of rational numbers, e.g. \[ \frac{\pi}{4} = \sum_{n=1}^\infty \frac{(-1)^{n+1}}{2n-1} = 1 - \frac{1}{3} + \frac{1}{5} - \frac{1}{7} + \dots \] Many such interesting summation formulas exist for \(\pi\).</p></li>
+<li><p>Infinite sequences and sums of mathematical objects and their convergence / divergence properties are a fundamental part of calculus and analysis: the study of the number line (2-d plane, 3-d space, ...) and functions defined on them.</p></li>
+</ul>
+</div><div class="section slide level2" id="motivation-convergence-and-divergence-in-pure-applied-mathematics">
+<h1 id="motivation-convergence-and-divergence-in-pure-applied-mathematics">Motivation \\ Convergence and divergence in pure &amp; applied mathematics</h1>
+<ul>
+<li>So there is lots of convergence &amp; divergence going on</li>
+<li>This needs to be studied and understood</li>
+<li>We will study sequences and series and their convergence/divergence.</li>
+</ul>
+</div><div class="section slide level2" id="sequences-definitions-and-notation">
+<h1 id="sequences-definitions-and-notation">Sequences \\ Definitions and notation</h1>
+<p><strong>Definition</strong> (1.1) A <em>sequence</em> is a list of elements (usually numbers) indexed by the positive integers. We usually use a single letter, with subscript, to denote the elements of a sequence, as in \[x_1 , x_2 , x_3 , x_4, \dots .\] We can represent the sequence \(x_1 , x_2 , x_3 , x_4, \dots\) using the compact notation \(\left \{ x_n \right \}_{n=1}^\infty\) or just simply \(\left \{ x_n \right \}\) if the \(n\) indexing is understood.</p>
+<p><strong>Example</strong> (1.1)</p>
+<ul>
+<li><p>The sequence of positive integers $1,2,3, $, or \(\left \{ z_m \right \}\), where the rule is \[z_m = m . \]</p></li>
+<li><p>The Fibonacci sequence: \(1, 1, 2, 3, 5, 8, 13, ...\) or \(\left \{f_n \right \}\) , where the rule is \[f_1 = 1, f_2 = 1 \text{ and } f_m = f_{m-1}+f_{m-2} \text{ for all } m \geq 2, \] i.e. each element is the sum of the previous two elements. This type of rule for a sequence, where each term is defined using the values of some previous terms, is called a <strong>recurrence relation</strong>.</p></li>
+<li><p>The sequence of odd positive integers: $1, 3, 5, 7, ... $or \(\left \{a_n\right \}\), where \[a_n = 2n-1.\]</p></li>
+<li><p>The sequence of prime numbers: $2, 3, 5, 7, 11, 13, ... $ or \(\left \{ p_m \right \}\) , where \[p_m = ???.\]</p></li>
+</ul>
+</div><div class="section slide level2" id="sequences-arithmetic-and-geometric-sequences">
+<h1 id="sequences-arithmetic-and-geometric-sequences">Sequences \\ Arithmetic and geometric sequences</h1>
+<p><strong>Definition</strong> (1.2) An <em>arithmetic sequence</em> has a common difference between successive elements and a <em>geometric sequence</em> has a common ratio of successive elements. So we can write an arithmetic sequence as \[a, a + d , a + 2d , a + 3d ,\dots \] or \(\left \{ a_n\right \}\) , where \(a_n = a + (n - 1)d\) . Here \(a\) is the initial element and \(d\) is the common difference. A geometric sequence can be written as \[a, ar , ar^2 , ar^3 ,\dots \] or \(\left \{ a_n \right \}\) , where \(a_n = ar^{n-1}\). Here \(a\) is the initial element and \(r\) is the common ratio.</p>
+<p><strong>Examples</strong> (1.2 through 1.5)</p>
+<ul>
+<li><p>The sequences of positive integers and odd positive integers above are actually arithmetic sequences. The sequence of positive integers can be written as \(\left \{ a_n \right \}\) , where \[a_n = n = 1 + (n - 1),\] so 1 is the initial element and 1 is the common difference. The sequence of odd positive integers can be written as \(\left \{ a_n \right \}\) , where \[a_n = 1 + (n - 1)2 ,\] so 1 is the initial element and 2 is the common difference.</p></li>
+<li><p>The sequence, \[ 1, \frac{1}{2}, \frac{1}{4} , \frac{1}{8}, \dots \] of powers of \(\frac{1}{2}\), is geometric as it has the form \(\left \{a_n \right \}\) , where \[a_n = \left ( \frac{1}{2} \right )^{n-1},\] so 1 is the initial element and 2 the common ratio.</p></li>
+<li><p>Compound interest awarded on investments or charged on debts provide examples of geometric sequences. Suppose a bank offers an annual compound interest rate of \(r \%\) on an initial deposit of \(P\) units. Then the value of the deposit after \(n\) years is given by \[v_n = P \left ( 1 + \frac{r}{100} \right )^n .\]</p></li>
+<li><p>The sequence \(\left \{ x_n \right \}\), where \[x_n = \frac{1}{n^2} ,\] is neither arithmetic nor geometric, as it is not possible to express it in the required form.</p></li>
+</ul>
+</div><div class="section slide level2" id="sequences-monotonic-sequences-increasing-or-decreasing-behaviour">
+<h1 id="sequences-monotonic-sequences-increasing-or-decreasing-behaviour">Sequences \\ Monotonic sequences: increasing or decreasing behaviour</h1>
+<p><strong>Definition</strong> (1.3) A sequence \(\left \{ x_n \right \}\) is <em>increasing</em> if its elements satisfy \[ x_1 \leq x_2 \leq x_3 \leq \dots \] and <em>decreasing</em> if they satisfy \[ x_1 \geq x_2 \geq x_3 \geq \dots  .\] If the inequalities are all strict then the sequence can be called <em>strictly increasing</em> or <em>strictly decreasing</em> as appropriate.</p>
+<h3 id="proving-monotonicity-i.e.-increasing-or-decreasing-behaviour">Proving monotonicity, i.e. increasing or decreasing behaviour</h3>
+<p>Two approaches ...</p>
+<ul>
+<li><p>Examine the difference between consecutive terms, i.e. \(a_{n+1} - a_n\) and then try to establish one of the inequalities \[ a_{n+1} - a_n \geq 0 \quad \text{ or } \quad a_{n+1} - a_n \leq 0 .\]</p></li>
+<li><p>Examine the quotient of consecutive terms, \[ \frac{a_{n+1}}{a_n} ,\] and try to establish one of the inequalties \[ \frac{a_{n+1}}{a_n} \geq 1 \quad \text{ or } \quad \frac{a_{n+1}}{a_n} \leq 1 .\]</p></li>
+<li><p>Strict inequalities here will establish the strict version of increasing / decreasing as appropriate.</p></li>
+</ul>
+<p><strong>Example</strong> (1.6) Investigate the sequence \(\{ a_n \}\) defined by \[ a_n = \frac{5^n}{n!},\] and describe its increasing / decreasing behaviour.</p>
+<p><em>NB: \(n!\) is the factorial of \(n\), defined by,</em> \[n! = n \times (n-1) \times (n-2) \times  \dots \times 3 \times 2 \times 1 .\]</p>
+<p>Ivestigate by computing some values...</p>
+<div class="compute"><script type="text/x-sage">
+list_plot([(5^n)/factorial(n) for n in range(5)])
+</script></div>
+
+<p>and then <strong>prove</strong> it.</p>
+<p>The above computation is performed by a <a href="http://www.sagemath.org">Sage</a> cell. In Matlab, use the <code>plot</code> command.</p>
+<!--- 
+ <div class="compute"><script type="text/x-sage"><div class="compute"><script type="text/x-sage">
+@interact
+def tline(ep=slider(0.0001,4,0.1,0)):
+          p=plot(sin(x), (x, 0, 2*pi));
+          a=pi/2;
+          u=a+ep;
+          slope=(sin(u)-sin(a))/(u-a);
+          q=plot(slope*(x-pi/2)+sin(pi/2), (x,0,2*pi), color='red');
+          (p+q).show();
+</script></div> </script></div> 
+
+
+
+ --->
+</div>
+</body>
+</html>
