@@ -155,6 +155,23 @@ and then **prove** it.
 
 The above computation is performed by a [Sage](http://www.sagemath.org) cell. In Matlab, use the `plot` command.
 
+# Sequences \\\\ Examples
+
+## Sequences \\\\ Examples \\\\ Increasing / decreasing
+
+Try the difference or ratio method (or both) on the following sequences to determine their increasing/decreasing nature
+
+* $\left \{ s_n \right \}$ where $s_n = \frac{3n}{4n+1},$
+* $\left \{ f_n \right \}$ where $f_n = \frac{n^2}{2^n},$
+* $\left \{ y_n \right \}$ where $y_n = \frac{1}{\sqrt{n^2+1} - n}.$
+
+Confirm this behaviour and investigate their convergence using the Sage cell ...
+
+<div class="compute"><script type="text/x-sage">
+list_plot([(5^n)/factorial(n) for n in range(5)])
+</script></div>
+
+
  <!--- 
  <div class="compute"><script type="text/x-sage"><div class="compute"><script type="text/x-sage">
 @interact
