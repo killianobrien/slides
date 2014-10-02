@@ -137,7 +137,6 @@ show(g(n).subs(sol[0]))
 
 ### Next week's tutorial on number theory
 
-* First few problems in Exercises 1.1
 * Prepare the induction problems in Exercises 1.2
 
 ### Further work
