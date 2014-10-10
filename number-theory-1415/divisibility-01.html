@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Killian O'Brien" />
+  <title>6G5Z3006_1415 \\ Number Theory &amp; Cryptography</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+    href="http://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" />
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+   href="mycss.css" />
+  <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+  <script src="https://sagecell.sagemath.org/static/jquery.min.js"></script>
+      <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+      <script>$(function () {
+      // Make the div with id 'mycell' a Sage cell
+      sagecell.makeSagecell({inputLocation:  '#mycell',
+                             template:       sagecell.templates.minimal,
+                             evalButtonText: 'Activate'});
+      // Make *any* div with class 'compute' a Sage cell
+      sagecell.makeSagecell({inputLocation: 'div.compute',
+                             evalButtonText: 'Evaluate'});
+      });
+      </script>
+  	<link rel="stylesheet" type="text/css" href="https://sagecell.sagemath.org/static/sagecell_embed.css">
+  <script src="http://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js"
+    charset="utf-8" type="text/javascript"></script>
+</head>
+<body>
+<div class="slide titlepage">
+  <h1 class="title">6G5Z3006_1415 \\ Number Theory &amp; Cryptography</h1>
+  <p class="author">
+Killian O'Brien
+  </p>
+  <p class="date">October 2014</p>
+</div>
+<div id="ntc-integer-divisibility-ch.-2" class="titleslide slide section level1"><h1>NT&amp;C \\ Integer divisibility (Ch. 2)</h1></div><div id="ntc-divisibility-sec.-2.1" class="slide section level2">
+<h1>NT&amp;C \\ Divisibility (sec. 2.1)</h1>
+<p>In this chapter we introduce the divisibility relation of the integers. It accords exactly with our primary-school notions of one number <em>evenly dividing</em> another.</p>
+<h3 id="definition-2.1-divisibility">Definition 2.1 (Divisibility)</h3>
+<p>Let <span class="math">\(a,b \in \mathbb{Z}\)</span>. We say that <span class="math">\(b\)</span> <em>divides</em> <span class="math">\(a\)</span> if and only if there exists an integer <span class="math">\(c \in \mathbb{Z}\)</span> such that <span class="math">\[ a = bc .\]</span> If this is so then <span class="math">\(b\)</span> and <span class="math">\(c\)</span> can be referred to as <em>factors</em> or <em>divisors</em> of <span class="math">\(a\)</span>, and <span class="math">\(a\)</span> can be referred to as a (integer) multiple of <span class="math">\(b\)</span> and <span class="math">\(c\)</span>.</p>
+<h3 id="notation">Notation</h3>
+<p>We write <span class="math">\(b | a\)</span> to denote that <span class="math">\(b\)</span> divides <span class="math">\(a\)</span> and <span class="math">\(b \! \! \not | a\)</span> to denote that it does not.</p>
+<h3 id="example-2.1">Example 2.1</h3>
+<p>The integers <span class="math">\(1\)</span>, <span class="math">\(3\)</span>, <span class="math">\(5\)</span> and <span class="math">\(15\)</span> all divide <span class="math">\(15\)</span>, whereas <span class="math">\(10\)</span> is not divisible by <span class="math">\(3\)</span>.</p>
+</div><div id="ntc-divisibility-sec.-2.1-1" class="slide section level2">
+<h1>NT&amp;C \\ Divisibility (sec. 2.1)</h1>
+<h3 id="theorem-2.1-properties-of-divisibility">Theorem 2.1 (Properties of divisibility)</h3>
+<p>The divisibility relation enjoys the following properties:</p>
+<ol style="list-style-type: decimal">
+<li><p>(<em>Reflexivity</em>) For all <span class="math">\(a \in \mathbb{Z}\)</span>, <span class="math">\(a | a\)</span>.</p></li>
+<li><p>(<em>Transitivity</em>) For all <span class="math">\(a,b,c \in \mathbb{Z}\)</span>, if <span class="math">\(a|b\)</span> and <span class="math">\(b|c\)</span> then <span class="math">\(a | c \)</span>.</p></li>
+<li><p>(<em>Divisibility of linear combinations</em>) For all <span class="math">\(a,b,c \in \mathbb{Z}\)</span>, if <span class="math">\(a | b\)</span> and <span class="math">\(a | c\)</span> then for all <span class="math">\(n,m \in \mathbb{Z}\)</span>, <span class="math">\(a | \left ( n b + m c \right )\)</span>.</p></li>
+<li><p>(<em><span class="math">\(1\)</span> divides everything</em>) For all <span class="math">\(a \in \mathbb{Z}\)</span>, <span class="math">\(1|a\)</span>.</p></li>
+<li><p>(<em>everything divides <span class="math">\(0\)</span></em>) For all <span class="math">\(a \in \mathbb{Z}\)</span>, <span class="math">\(a | 0\)</span>.</p></li>
+<li><p>(<em><span class="math">\(0\)</span> divides only itself</em>) For all <span class="math">\(a \in \mathbb{Z}\)</span>, if <span class="math">\(0 | a\)</span> then <span class="math">\(a=0\)</span>.</p></li>
+<li><p>For all <span class="math">\(a,b,c \in \mathbb{Z}\)</span>, if <span class="math">\(c \neq 0\)</span> then <span class="math">\(a | b\)</span> if and only if <span class="math">\(ac | bc\)</span>.</p></li>
+</ol>
+<ul>
+<li>We will prove all of these.</li>
+<li>Note that an integer <span class="math">\(z\)</span> has exactly the same divisors as its negative <span class="math">\(-z\)</span>. In order to avoid duplication we normally confine our attention to the divisibility properties of the positive integers.</li>
+</ul>
+</div><div id="ntc-primes-sec.-2.2" class="slide section level2">
+<h1>NT&amp;C \\ Primes (sec. 2.2)</h1>
+<h3 id="definition-2.2-prime-composite">Definition 2.2 (Prime, Composite)</h3>
+<p>An integer <span class="math">\(p &gt; 1\)</span> is <em>prime</em> if it has no positive divisors other than itself and 1. An integer <span class="math">\(n &gt; 1\)</span> which is not prime is called <em>composite</em>.</p>
+<p>The list of prime numbers begins <span class="math">\[
+2, \, 3, \, 5 , \, 7 , \, 11 , \, 13 , \, 17, \, 19, \, 23, \dots 
+\]</span></p>
+<div class="compute">
+<script type="text/x-sage">
+P=primes(1,100)
+show(P)
+</script>
+</div>
+<p>Also look at relevant Matlab commands</p>
+<pre><code>factor(n)
+primes(n)
+isprime(n)</code></pre>
+<p>We shall prove he following theorem later in the course.</p>
+<h3 id="theorem-fundamental-theorem-of-arithmetic">Theorem (Fundamental Theorem of Arithmetic)</h3>
+<p>Every positive integer <span class="math">\(n\)</span> factors into a product of primes <span class="math">\[
+n = p_1^{\alpha_1} p_2^{\alpha_2} \dots p_r^{\alpha_r}, \quad \text{$p_i$ prime, $\alpha_i \in \mathbb{Z}^+$}
+\]</span> and this factorisation is unique up to the order in which the primes are written down.</p>
+<p>Most people's intuition about the integers agrees with this result and the existence of such prime factorisations can be proved now and follows by recursively applying the definition of prime/composite to <span class="math">\(n\)</span> and using the transitivity of divisibility. But the proof of the uniqueness of these factorisations requires some more theory to be developed.</p>
+</div><div id="ntc-common-divisors-sec.-2.3" class="slide section level2">
+<h1>NT&amp;C \\ Common divisors (sec. 2.3)</h1>
+<p>Relationships between the divisibility of different integers is investigated using the concept of common divisors.</p>
+<h3 id="definition-2.3-common-divisor">Definition 2.3 (Common divisor)</h3>
+<p>Let <span class="math">\(a,b \in \mathbb{Z}\)</span>. An integer <span class="math">\(c\)</span> is a <em>common divisor</em> of <span class="math">\(a\)</span> and <span class="math">\(b\)</span> if and only if <span class="math">\(c\)</span> divides <span class="math">\(a\)</span> and <span class="math">\(c\)</span> divides <span class="math">\(b\)</span>.</p>
+<h3 id="definition-2.4-greatest-common-divisor">Definition 2.4 (Greatest common divisor)</h3>
+<p>By the well-orderedness of <span class="math">\(\mathbb{Z}\)</span> there exists a <em>greatest common divisor</em> of <span class="math">\(a\)</span> and <span class="math">\(b\)</span>. This is denoted <span class="math">\(\text{gcd}(a,b)\)</span>. Note that some authors use a minimalist notation of <span class="math">\((a,b)\)</span> to denote the greatest common divisor.</p>
+<h3 id="definition-2.5-coprime">Definition 2.5 (Coprime)</h3>
+<p>A pair of integers <span class="math">\(a,b \in \mathbb{Z}\)</span> are <em>coprime</em> (or <em>relatively prime</em>) if and only if <span class="math">\(\gcd(a,b)=1\)</span>.</p>
+<p>Note that as long as <span class="math">\(a,b\)</span> are not both zero then <span class="math">\(\gcd(a,b)\)</span> exists. This follows since all common divisors of <span class="math">\(a\)</span> and <span class="math">\(b\)</span> are bounded above by <span class="math">\(\max(|a|,|b|)\)</span> in this case, and so a greatest one exists by the well-orderedness of <span class="math">\(\mathbb{Z}\)</span></p>
+<p>In the next section we will see the Euclidean Algorithm which calculates the gcd of a pair of integers. It consists of repeatedly applying the process of <em>integer division with remainder</em>. Again, while we give a very rigorous treatment of this process here, the concept should be very familiar to you from your schoolwork with numbers.</p>
+</div><div id="ntc-common-divisors-sec.-2.3-1" class="slide section level2">
+<h1>NT&amp;C \\ Common divisors (sec. 2.3)</h1>
+<h3 id="theorem-2.2-integer-division-with-remainder">Theorem 2.2 (Integer division with remainder)</h3>
+<p>Let <span class="math">\(a,b \in \mathbb{Z}\)</span>, <span class="math">\(b \neq 0\)</span>. There exists a unique pair <span class="math">\(q,r \in \mathbb{Z}\)</span> such that <span class="math">\[
+a = qb + r , \quad \quad 0 \leq r &lt; |b|.
+\]</span></p>
+<p><em>Proof.</em> See notes. Notice that it uses axiom 11 of the integers, in the form 11 b. the well ordered property.</p>
+<p>We finish with a characterisation of the gcd of two integers <span class="math">\(a\)</span> and <span class="math">\(b\)</span> in terms of linear combinations of <span class="math">\(a\)</span> and <span class="math">\(b\)</span>.</p>
+<h3 id="theorem-2.3-characterisation-of-greatest-common-divisor">Theorem 2.3 (Characterisation of greatest common divisor)</h3>
+<p>Suppose that <span class="math">\(a,b \in \mathbb{Z}\)</span> are not both zero and that <span class="math">\(d=\gcd(a,b)\)</span>. Then there exists <span class="math">\(n,m \in \mathbb{Z}\)</span> such that <span class="math">\[
+d = ma + nb,
+\]</span> and moreover any common divisor of <span class="math">\(a\)</span> and <span class="math">\(b\)</span> divides <span class="math">\(d\)</span>.</p>
+<p><em>Proof</em>. Let <span class="math">\(S\)</span> be the set of all positive linear combinations of <span class="math">\(a\)</span> and <span class="math">\(b\)</span>, i.e. <span class="math">\[
+S = \left \{ \alpha a + \beta b \, : \, \alpha, \beta \in \mathbb{Z} ,
+ \, \alpha a + \beta b &gt; 0 \right \}.
+\]</span> By the well-ordered axiom <span class="math">\(S\)</span> has a least element <span class="math">\(d\)</span>, which we can write as <span class="math">\[
+0 &lt; d = ma + nb ,
+\]</span> for some pair of integers <span class="math">\(m,n\)</span>. We claim that <span class="math">\(d\)</span> is a common divisor of <span class="math">\(a\)</span> and <span class="math">\(b\)</span>.</p>
+<p>Suppose that <span class="math">\(d\)</span> did not divide <span class="math">\(a\)</span>. Then by the integer division theorem we could write <span class="math">\[\begin{align}
+&amp;a = qd + r, \quad 0 &lt; r &lt; d, \\
+\Rightarrow &amp; r = a - qd , \\
+&amp; = a - q(ma +nb), \text{ (from above)} \\
+&amp;= (1-qm)a -qn b .
+\end{align}
+\]</span> So we see that <span class="math">\(r\)</span> would be a linear combination of <span class="math">\(a\)</span> and <span class="math">\(b\)</span>, i.e. <span class="math">\(r \in S\)</span>. But then this would contradict the fact that <span class="math">\(d\)</span> is the least element of <span class="math">\(S\)</span>, since we have <span class="math">\(r&lt;d\)</span> above. So we conclude that <span class="math">\(d\)</span> does indeed divide <span class="math">\(a\)</span>. An argument along similar lines will show that <span class="math">\(d\)</span> also divides <span class="math">\(b\)</span>. So we can conclude that <span class="math">\(d\)</span> is a common divisor of <span class="math">\(a\)</span> and <span class="math">\(b\)</span>.</p>
+<p>Next we see that if <span class="math">\(e\)</span> is any other common divisor of <span class="math">\(a\)</span> and <span class="math">\(b\)</span> then <span class="math">\(e| d\)</span> by property 3 of theorem 2.1. Hence <span class="math">\(d\)</span> is the greatest common divisor and all other common divisors divide <span class="math">\(d\)</span>. <span class="math">\(\Box\)</span></p>
+</div><div id="ntc-activities" class="slide section level2">
+<h1>NT&amp;C \\ Activities</h1>
+<ul>
+<li>Study the detail of these sections in Number Theory notes.
+<ul>
+<li>In particular, appreciate the role played by the well ordered axiom in the proofs of theorems about integer division with remainder and the characterisation of the gcd in terms of minimal linear combination.</li>
+</ul></li>
+<li>Begin work on the problems in Exercises 1.1 (we will consider some of these next week and in the tutorials in 2 weeks time)</li>
+</ul>
+<!--- 
+ <div class="compute"><script type="text/x-sage"><div class="compute"><script type="text/x-sage">
+@interact
+def tline(ep=slider(0.0001,4,0.1,0)):
+          p=plot(sin(x), (x, 0, 2*pi));
+          a=pi/2;
+          u=a+ep;
+          slope=(sin(u)-sin(a))/(u-a);
+          q=plot(slope*(x-pi/2)+sin(pi/2), (x,0,2*pi), color='red');
+          (p+q).show();
+</script></div> </script></div> 
+
+
+
+
+[`cloud.sagemath.com`](https://cloud.sagemath.com).
+ --->
+
+
+</div>
+</body>
+</html>
