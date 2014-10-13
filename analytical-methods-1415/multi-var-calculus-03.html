@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Killian O'Brien" />
+  <title>6G5Z3001_1415\\ Mathematical Methods</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+    href="http://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" />
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+   href="mycss.css" />
+  <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+  <script src="https://sagecell.sagemath.org/static/jquery.min.js"></script>
+      <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+      <script>$(function () {
+      // Make the div with id 'mycell' a Sage cell
+      sagecell.makeSagecell({inputLocation:  '#mycell',
+                             template:       sagecell.templates.minimal,
+                             evalButtonText: 'Activate'});
+      // Make *any* div with class 'compute' a Sage cell
+      sagecell.makeSagecell({inputLocation: 'div.compute',
+                             evalButtonText: 'Evaluate'});
+      });
+      </script>
+  	<link rel="stylesheet" type="text/css" href="https://sagecell.sagemath.org/static/sagecell_embed.css">
+  <script src="http://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js"
+    charset="utf-8" type="text/javascript"></script>
+</head>
+<body>
+<div class="slide titlepage">
+  <h1 class="title">6G5Z3001_1415\\ Mathematical Methods</h1>
+  <p class="author">
+Killian O'Brien
+  </p>
+  <p class="date">Oct 2014</p>
+</div>
+<div class="slide section level2">
+
+<p><span class="math">\(\newcommand{\pderiv}[2]{\frac{\partial #1}{\partial #2}} \newcommand{\ppderiv}[2]{\frac{\partial^2 #1}{\partial #2}}\)</span></p>
+</div>
+<div id="multi-variable-calculus" class="titleslide slide section level1"><h1>Multi-variable calculus</h1></div><div id="multi-variable-calculus-total-differentials-small-increments-formula-sec.-1.7" class="slide section level2">
+<h1>Multi-variable calculus \\ Total differentials &amp; small increments formula (sec. 1.7)</h1>
+<p>Now we consider the effect on a function <span class="math">\(f\)</span> of changing all its arguments simultaneously. We consider the two-variable case which has a straightforward generalization to functions of more than two variables.</p>
+<h3 id="definition-1.3-total-differential">Definition 1.3 (Total differential)</h3>
+<p>Let <span class="math">\(f\)</span> be a function of the two independent variables <span class="math">\(x\)</span> and <span class="math">\(y\)</span>. Let <span class="math">\(\Delta f\)</span> be the change in <span class="math">\(f\)</span> brought about by the changes, <span class="math">\(\Delta x\)</span> and <span class="math">\(\Delta y\)</span>, in <span class="math">\(x\)</span> and <span class="math">\(y\)</span>, i.e. <span class="math">\[
+\Delta f = f(x + \Delta x, y + \Delta y) - f(x,y) .
+\]</span> Suppose that there exist functions <span class="math">\(A\)</span> and <span class="math">\(B\)</span> of <span class="math">\(x\)</span> and <span class="math">\(y\)</span> such that <span class="math">\[
+\Delta f = A(x,y) \Delta x + B(x,y) \Delta y + \lambda \Delta x + \mu \Delta y,
+\]</span> such that <span class="math">\(\lambda, \mu \to 0\)</span> as <span class="math">\(\Delta x , \Delta y \to 0\)</span>. Then we say that <span class="math">\(f\)</span> has a <em>total differential</em> <span class="math">\(df\)</span> and we write <span class="math">\[
+df = A(x,y)\, dx + B(x,y) \, dy. 
+\]</span></p>
+<h3 id="example-1.6">Example 1.6</h3>
+<p>Consider the function <span class="math">\(f\)</span> defined by <span class="math">\[
+f(x,y) = x^2 + xy.
+\]</span> Show that this has a total differential.</p>
+</div><div id="multi-variable-calculus-total-differentials-small-increments-formula-sec.-1.7-1" class="slide section level2">
+<h1>Multi-variable calculus \\ Total differentials &amp; small increments formula (sec. 1.7)</h1>
+<h3 id="theorem-1.2-total-differentials">Theorem 1.2 (Total differentials)</h3>
+<p>If the partial derivatives <span class="math">\(\frac{\partial f}{\partial x}\)</span> and <span class="math">\(\frac{\partial f}{\partial y}\)</span> exist and are continuous then <span class="math">\[
+\Delta f = \frac{\partial f}{\partial x} \, \Delta x +\frac{\partial f}{\partial y} \, \Delta y + \lambda ( \Delta x + \Delta y ),
+\]</span> where <span class="math">\(\lambda \to 0\)</span> as <span class="math">\(\Delta x , \Delta y \to 0\)</span>, i.e. the function <span class="math">\(f\)</span> has a total differential and <span class="math">\[
+d f = \frac{\partial f}{\partial x} \, d x +\frac{\partial f}{\partial y} \, dy.
+\]</span></p>
+<div class="figure">
+<img src="tot-diff.png" alt="Fig. Changes on the surface z=f(x,y)" /><p class="caption">Fig. Changes on the surface <span class="math">\(z=f(x,y)\)</span></p>
+</div>
+<p><em>Proof.</em> From the diagram we express <span class="math">\(\Delta f\)</span> as follows, <span class="math">\[
+\begin{align}
+\Delta f 
+&amp;= f(x + \Delta x, y+ \Delta y) - f(x,y),\\
+&amp;= CF - AB,\\
+&amp;= DF, \\
+&amp;= GH + EF.
+\end{align}
+\]</span></p>
+<p>Now as <span class="math">\(\Delta x\)</span> becomes small and approaches 0, the curve <span class="math">\(BH\)</span>, which lies on the surface, is approximately a straight line. And so <span class="math">\[
+\begin{align}
+GH &amp;\approx BG \tan (\angle GBH ) ,\\
+&amp;= \Delta x \, \tan (\angle GBH ),\\
+&amp;\approx \Delta x \, \frac{\partial f}{\partial x}.
+\end{align}
+\]</span></p>
+<p>In the same way, examining the 'triangle' <span class="math">\(EHF\)</span> shows that <span class="math">\[
+EF \approx \Delta y \, \frac{\partial f}{\partial y}.
+\]</span> And so <span class="math">\[
+\Delta f \approx \Delta x \, \frac{\partial f}{\partial x} + \Delta y \, \frac{\partial f}{\partial y},
+\label{E:smallincs}
+\]</span> and as <span class="math">\(\Delta x, \Delta y \to 0\)</span> the error in this approximation tends to 0, therefore <span class="math">\[
+d f = \frac{\partial f}{\partial x} \, d x +\frac{\partial f}{\partial y} \, dy,
+\]</span> as required.</p>
+</div><div id="multi-variable-calculus-total-differentials-small-increments-formula-sec.-1.7-2" class="slide section level2">
+<h1>Multi-variable calculus \\ Total differentials &amp; small increments formula (sec. 1.7)</h1>
+<h3 id="definition-1.4-small-increments-formula">Definition 1.4 (Small increments formula)</h3>
+<p>The equation is called the <em>small increments formula</em> and it shows how the partial derivatives of a function can be used to approximate the change in value of the function brought about by changes in the value of the arguments of the function. In general, for a function <span class="math">\(f\)</span> of <span class="math">\(n\)</span> variables <span class="math">\(x_1, \dots , x_n\)</span> the small increments formula is <span class="math">\[
+\Delta f \approx \sum_{i=1}^n \Delta x_i \, \frac{\partial f}{\partial x_i}.
+\]</span></p>
+<h3 id="examples-1.7-1.8">Examples 1.7 &amp; 1.8</h3>
+<p>Discuss on visualizer.</p>
+</div><div id="multi-variable-calculus-chain-rule-jacobians-sec.-1.8" class="slide section level2">
+<h1>Multi-variable calculus \\ Chain Rule &amp; Jacobians (sec. 1.8)</h1>
+<h3 id="recall-chain-rule-for-functions-of-a-single-variable">Recall chain rule for functions of a single variable</h3>
+<p>Suppose that <span class="math">\(y=f(x)\)</span> and <span class="math">\(x = g(t)\)</span>. Then <span class="math">\[
+\frac{dy}{dt} = \frac{df}{dx} \, \frac{dg}{dt},
+\]</span> or in alternative notation <span class="math">\[
+y&#39;(t) = f&#39;(x(t)) \, g&#39;(t) .
+\]</span> What we seek now is a chain rule functions of more than one variable.</p>
+</div><div id="multi-variable-calculus-chain-rule-jacobians-sec.-1.8-1" class="slide section level2">
+<h1>Multi-variable calculus \\ Chain Rule &amp; Jacobians (sec. 1.8)</h1>
+<p>Again we shall consider the general two-variable situation and then describe the extension to any number of variables. So suppose we have two coordinate systems for <span class="math">\(\mathbb{R}^2\)</span>, <span class="math">\((x,y)\)</span> and <span class="math">\((s,t)\)</span> say, and that these are related by functions <span class="math">\[x = u(s,t) , \quad y=v(s,t).\]</span> Then if we have a function <span class="math">\[ z = f(x,y),\]</span> that defines <span class="math">\(z\)</span> as a function of <span class="math">\(x\)</span> and <span class="math">\(y\)</span>, we can also consider <span class="math">\(z\)</span> as a function of <span class="math">\(s\)</span> and <span class="math">\(t\)</span>, i.e. <span class="math">\[ z = f \big ( u(s,t), v(s,t) \big ). \]</span> The small increments formula applied to <span class="math">\(z=f(x,y)\)</span> gives us <span class="math">\[ 
+\Delta z \approx  \frac{\partial f}{\partial x} \, \Delta x + \frac{\partial f}{\partial y} \, \Delta y ,
+\]</span> and dividing across by <span class="math">\(\Delta s\)</span> gives <span class="math">\[ 
+\frac{\Delta z}{\Delta s} \approx  \frac{\partial f}{\partial x} \, \frac{\Delta x}{\Delta s} + \frac{\partial f}{\partial y} \, \frac{\Delta y}{\Delta s} .
+\]</span> When the limit of this approximation is taken as <span class="math">\(\Delta s \to 0\)</span> it becomes exact and we get <span class="math">\[ 
+\frac{\partial z}{\partial s} =  \frac{\partial f}{\partial x} \, \frac{\partial x}{\partial s} + \frac{\partial f}{\partial y} \, \frac{\partial y}{\partial s} \label{E:chainrule1}. 
+\]</span> A similar treatment of the small increments formula using the change <span class="math">\(\Delta t\)</span> produces <span class="math">\[ 
+\frac{\partial z}{\partial t} =  \frac{\partial f}{\partial x} \, \frac{\partial x}{\partial t} + \frac{\partial f}{\partial y} \, \frac{\partial y}{\partial t} . \label{E:chainrule2} 
+\]</span> These last two equations are together referred to as the <em>chain rule</em> equations. They describe the relationship between the derivatives, <span class="math">\(\frac{\partial z}{\partial s}\)</span>, and <span class="math">\(\frac{\partial z}{\partial t}\)</span>, of <span class="math">\(z\)</span> with respect to the new variables <span class="math">\(s,t,\)</span> with the derivatives with respect to the old variables <span class="math">\(x,y\)</span>.</p>
+<h3 id="definition-1.5-chain-rule-for-two-variable-functions">Definition 1.5 (Chain rule for two-variable functions)</h3>
+<p>If <span class="math">\[ 
+z = f(x,y) = f \big ( u(s,t),v(s,t) \big ),
+\]</span> then <span class="math">\[
+\begin{align}
+\frac{\partial z}{\partial s} &amp;=  \frac{\partial f}{\partial x} \, \frac{\partial x}{\partial s} + \frac{\partial f}{\partial y} \, \frac{\partial y}{\partial s}, \\
+\frac{\partial z}{\partial t} &amp;=  \frac{\partial f}{\partial x} \, \frac{\partial x}{\partial t} + \frac{\partial f}{\partial y} \, \frac{\partial y}{\partial t} . 
+\end{align}
+\]</span></p>
+<p>This has the obvious generalization to the case of <span class="math">\(n\)</span>-variable functions, for any <span class="math">\(n \geq 1\)</span>.</p>
+<h3 id="definition-1.6-chain-rule-for-n-variable-functions">Definition 1.6 (Chain rule for <span class="math">\(n\)</span>-variable functions)</h3>
+<p>If <span class="math">\[ 
+z = f(x_1,x_2, \dots ,x_n), 
+\]</span> and the variables <span class="math">\(x_i\)</span> are in turn related to the new coordinates <span class="math">\(s_1, s_2, \dots ,s_n\)</span> by the functions <span class="math">\[ 
+x_i = u_i(s_1, \dots ,s_n),
+\]</span> then <span class="math">\[
+\begin{align}
+\frac{\partial z}{\partial s_i} = \sum_{j=1}^n \frac{\partial f}{\partial x_j} \, \frac{\partial x_j}{\partial s_i}.
+\end{align}
+\]</span></p>
+<h3 id="example-1.10">Example 1.10</h3>
+<p>Translate the expression <span class="math">\[\mathcal{F} = x \, \pderiv{f}{x} + y \, \pderiv{f}{y} , 
+\]</span> into polar coordinates.</p>
+</div><div id="multi-variable-calculus-chain-rule-jacobians-sec.-1.8-2" class="slide section level2">
+<h1>Multi-variable calculus \\ Chain Rule &amp; Jacobians (sec. 1.8)</h1>
+<h3 id="the-jacobian">The Jacobian</h3>
+<p>The chain rule equations can be expressed very neatly in matrix form, for instance in the two-variable case they become the single matrix equation <span class="math">\[
+\left (
+\begin{array}{cc}
+\pderiv{f}{s} &amp; \pderiv{f}{t}
+\end{array} \right ) 
+= \left (
+\begin{array}{cc}
+\pderiv{f}{x} &amp; \pderiv{f}{y}
+\end{array} \right ) 
+\, \left (
+\begin{array}{cc}
+\pderiv{x}{s} &amp; \pderiv{x}{t} \\
+\pderiv{y}{s} &amp; \pderiv{y}{t}
+\end{array} \right ) ,\]</span> or expressed the other way round as <span class="math">\[
+\left (
+\begin{array}{cc}
+\pderiv{f}{x} &amp; \pderiv{f}{y}
+\end{array} \right ) 
+= \left (\begin{array}{cc}
+\pderiv{f}{s} &amp; \pderiv{f}{t}
+\end{array} \right ) 
+\, \left (
+\begin{array}{cc}
+\pderiv{x}{s} &amp; \pderiv{x}{t} \\
+\pderiv{y}{s} &amp; \pderiv{y}{t}
+\end{array} \right )^{-1}, \]</span> (assuming of course that this inverse matrix exists).</p>
+<p>The <span class="math">\(2 \times 2\)</span> matrix of partial derivatives of the transformation between the coordinate systems <span class="math">\((x,y)\)</span> and <span class="math">\((s,t)\)</span> here is called a Jacobian matrix. Also important is the determinant of this matrix which is called the Jacobian determinant and denoted as <span class="math">\[ 
+\frac{\partial (x,y)}{\partial (s,t)} = \left | \mathcal{J} \right | = \left |
+\begin{array}{cc}
+\pderiv{x}{s} &amp; \pderiv{x}{t} \\
+\pderiv{y}{s} &amp; \pderiv{y}{t}
+\end{array} \right | .
+\]</span> We will make use of the Jacobian determinant later in section  when changing coordinate systems in various integrals. The Jacobian has the natural generalisation to any number of variables, as in the following definition.</p>
+<h3 id="definition-1.7-jacobian-matrix-determinant">Definition 1.7 (Jacobian matrix / determinant)</h3>
+<p>Let <span class="math">\(n \in \mathbb{Z}\)</span>, <span class="math">\(n \geq 1\)</span>. The Jacobian matrix of the transformation from the (old) coordinates <span class="math">\((x_1, \dots x_n)\)</span> for <span class="math">\(\mathbb{R}^n\)</span> to the (new) coordinate system <span class="math">\((u_1 , \dots u_n)\)</span> is the matrix <span class="math">\[ 
+\mathcal{J} = \left ( \pderiv{x_i}{u_j} \right ),
+\]</span> i.e. the entry in the <span class="math">\(i^{th}\)</span> row and <span class="math">\(j^{th}\)</span> column is <span class="math">\(\pderiv{x_i}{u_j}\)</span>.</p>
+<p>The Jacobian determinant refers to the determinant of this matrix. Note that some authors will use the term <em>Jacobian</em> to refer to the determinant while others may use it to refer to the matrix. Care should be taken to take the correct meaning from the context.</p>
+</div><div id="suggested-activities" class="slide section level2">
+<h1>Suggested activities</h1>
+<ul>
+<li>Read the rest of section 1.8 in notes and work on Exercises 1.2 &amp; 1.3</li>
+<li><p>Finish exercises 1.1 if you have not already done so!</p></li>
+<li><em>Schaum's Outlines of Calculus</em> by Ayres &amp; Mendelson: Chapter 49 Total Differential, differentiability, chain rules.
+<ul>
+<li>includes lots of extra practice problems - some with solutions.</li>
+</ul></li>
+</ul>
+<p><!--- 
+ <div class="compute"><script type="text/x-sage"><div class="compute"><script type="text/x-sage">
+@interact
+def tline(ep=slider(0.0001,4,0.1,0)):
+          p=plot(sin(x), (x, 0, 2*pi));
+          a=pi/2;
+          u=a+ep;
+          slope=(sin(u)-sin(a))/(u-a);
+          q=plot(slope*(x-pi/2)+sin(pi/2), (x,0,2*pi), color='red');
+          (p+q).show();
+</script></div> </script></div> 
+
+
+[`cloud.sagemath.com`](https://cloud.sagemath.com).
+ ---></p>
+</div>
+</body>
+</html>
