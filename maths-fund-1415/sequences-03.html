@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Killian O'Brien" />
+  <title>6G4Z3001_1415 \\ Mathematics Fundamentals</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+    href="http://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" />
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+   href="mycss.css" />
+  <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+  <script src="https://sagecell.sagemath.org/static/jquery.min.js"></script>
+      <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+      <script>$(function () {
+      // Make the div with id 'mycell' a Sage cell
+      sagecell.makeSagecell({inputLocation:  '#mycell',
+                             template:       sagecell.templates.minimal,
+                             evalButtonText: 'Activate'});
+      // Make *any* div with class 'compute' a Sage cell
+      sagecell.makeSagecell({inputLocation: 'div.compute',
+                             evalButtonText: 'Evaluate'});
+      });
+      </script>
+  	<link rel="stylesheet" type="text/css" href="https://sagecell.sagemath.org/static/sagecell_embed.css">
+  <script src="http://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js"
+    charset="utf-8" type="text/javascript"></script>
+</head>
+<body>
+<div class="slide titlepage">
+  <h1 class="title">6G4Z3001_1415 \\ Mathematics Fundamentals</h1>
+  <p class="author">
+Killian O'Brien
+  </p>
+  <p class="date">Oct 2014</p>
+</div>
+<div id="sequences-03" class="titleslide slide section level1"><h1>Sequences 03</h1></div><div id="sequences-convergence" class="slide section level2">
+<h1>Sequences \\ Convergence</h1>
+<p>Recall the formal definition we met last time.</p>
+<h3 id="definition-1.6-formal-definition-of-convergence">Definition 1.6 (Formal definition of convergence)</h3>
+<p>The sequence <span class="math">\(\left \{ x_n \right \}\)</span> <em>converges</em> to the <em>limit</em> <span class="math">\(L\)</span> if given any <span class="math">\(\epsilon &gt; 0\)</span> we can find a positive integer <span class="math">\(N_\epsilon\)</span> such that for all <span class="math">\(n \geq N_\epsilon\)</span> the inequality <span class="math">\(\left | x_n - L \right | &lt; \epsilon \)</span> holds.</p>
+<p>This definition is saying that <span class="math">\(\left \{ x_n \right \}\)</span> converges to <span class="math">\(L\)</span> if for all small positive distances <span class="math">\(\epsilon\)</span>, the sequence eventually (for all <span class="math">\(n \geq N_\epsilon\)</span> ) lies within a distance <span class="math">\(\epsilon\)</span> of the limit <span class="math">\(L\)</span>.</p>
+<p>We also consider the <em>negation</em> of the definition, i.e. the definition of non-convergence.</p>
+<h3 id="definition-of-non-convergence">Definition of non-convergence</h3>
+<p>The sequence <span class="math">\(\left \{ x_n \right \}\)</span> <em>does not converge</em> to the <em>limit</em> <span class="math">\(L\)</span> if there exists some <span class="math">\(\epsilon &gt; 0\)</span> such that for every positive integer <span class="math">\(N\)</span> such there is some <span class="math">\(n \geq N\)</span> such that <span class="math">\(\left | x_n - L \right | \geq \epsilon \)</span> holds.</p>
+<p>This definition is saying that that <span class="math">\(\left \{ x_n \right \}\)</span> does not converge to <span class="math">\(L\)</span> if there is some distance <span class="math">\(\epsilon\)</span> such that the sequence will always have terms beyond the distance <span class="math">\(\epsilon\)</span> of <span class="math">\(L\)</span>.</p>
+<p>Evaluate the <a href="http://www.sagemath.org">Sage</a> cell below and use the resulting interact to visualize the way the definition works.</p>
+<div class="compute">
+<script type="text/x-sage">
+html("<h2>Investigating sequence convergence</h2>")
+html("<p>Use the boxes to define the sequence term $a_n$ in terms of the variabe $n$. Provide values for the limit candidate $L$, $\epsilon$ and the minimum and maximum values of $n$ over which to plot the sequence.")
+html("<p>The plot will show a shaded band extending a width of $\epsilon$ either side of $L$. By adjusting $n_{\mathrm{min}}$ and $n_{\mathrm{max}}$ try to see whether or not the sequence eventually lies within distance $\epsilon$ of $L$ according to whether or not $L=\lim a_n$.</p>")
+n=var('n')
+@interact
+def delta_epsilon(an = input_box(label="\(a_n = \)",default=1/n), eps = input_box(label="\( \epsilon =\)",default=1/10), L=input_box(label="\( L = \)",default=0), nm=input_box(label="\( n_{\mathrm{min}} = \)",default=1), nM=input_box(label="\( n_{\mathrm{max}} = \)",default=10)):
+    Limit=an.limit(n=oo)
+
+    html("<p>The limit of " + "$"+ latex(an) +"$" " is $" +latex(Limit) + "$ .</p>")
+    html("<p>You have $L$ set as $"+latex(L) +"$ .</p>")
+    html("<p>The value of $\epsilon$ is set at $"+latex(eps) +"$ .</p>")
+    html("<p>The plot shows terms $a_n$ for $"+latex(nm)+" \leq n \leq "+latex(nM)+"$.</p>")
+
+    p=point((0,L),size=50)
+
+    for i in range(nm,nM+1):
+        p+=point((i,an.subs(n=i)))
+
+    eps_region = polygon([(0,L-eps),(0,L+eps),(nM,L+eps),(nM,L-eps)], rgbcolor=(1,0.6,0.6), alpha=0.5)
+    L_line = line([(0,L),(nM,L)], rgbcolor=(0.5,0.5,0.5),linestyle='--')
+
+    show(p + eps_region + L_line, xmin=nm,xmax=nM, aspect_ratio='automatic')
+</script>
+</div>
+</div><div id="sequences-properties-of-convergence" class="slide section level2">
+<h1>Sequences \\ Properties of convergence</h1>
+<p>We'll go through the proofs of theorems 1.1, 1.2 &amp; 1.4 on the visualizer.</p>
+<h3 id="theorem-1.1-uniqueness-of-limits">Theorem 1.1 (Uniqueness of limits)</h3>
+<p>If a sequence converges then its limit is unique, i.e. if <span class="math">\(x_n \to L\)</span> and <span class="math">\(x_n \to M\)</span> as <span class="math">\(n \to \infty\)</span> then <span class="math">\(L=M\)</span>.</p>
+<h3 id="theorem-1.2">Theorem 1.2</h3>
+<p>Every convergent sequence is bounded.</p>
+<h3 id="theorem-1.3-monotone-convergence-theorem">Theorem 1.3 (Monotone convergence theorem)</h3>
+<p>Every bounded monotonic sequence is convergent.</p>
+<h3 id="theorem-1.4-algebra-of-limits-theorem">Theorem 1.4 (Algebra of limits theorem)</h3>
+<p>Let <span class="math">\(\left \{ a_n \right \}\)</span> and <span class="math">\(\left \{ b_n \right \}\)</span> be two convergent sequences with <span class="math">\[\lim_{n \to \infty} a_n = a \text{ and } \lim_{n \to \infty} b_n = b .\]</span> New sequences can be formed from the elements <span class="math">\(a_n\)</span> and <span class="math">\(b_n\)</span> in many ways. The following new sequences are all convergent and have the expected limits:</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>Linear Combinations:</strong> <span class="math">\[\lim_{n \to \infty} \left (  \alpha a_n + \beta b_n \right )= \alpha a + \beta b,\]</span> where <span class="math">\(\alpha, \beta \in \mathbb{R}\)</span> are any pair of coefficients,</p></li>
+<li><p><strong>Products</strong> <span class="math">\[\lim_{n \to \infty} \left ( a_n b_n \right ) = ab,\]</span></p></li>
+<li><p><strong>Quotients</strong> (assuming that <span class="math">\(b \neq 0\)</span> and for all <span class="math">\(n\)</span>, <span class="math">\(b_n \neq 0\)</span>) <span class="math">\[ \lim_{n \to \infty} \left ( \frac{a_n}{b_n} \right ) = \frac{a}{b}.\]</span></p></li>
+</ol>
+<p><!--- 
+ <div class="compute"><script type="text/x-sage"><div class="compute"><script type="text/x-sage">
+@interact
+def tline(ep=slider(0.0001,4,0.1,0)):
+          p=plot(sin(x), (x, 0, 2*pi));
+          a=pi/2;
+          u=a+ep;
+          slope=(sin(u)-sin(a))/(u-a);
+          q=plot(slope*(x-pi/2)+sin(pi/2), (x,0,2*pi), color='red');
+          (p+q).show();
+</script></div> </script></div> 
+ ---></p>
+</div>
+</body>
+</html>
