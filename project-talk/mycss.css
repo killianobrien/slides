@@ -1,0 +1,13 @@
+/* My CSS for overriding the slidy defaults for MMU lecture slides */
+
+body
+{
+font-family: serif;
+background-color: whitesmoke;
+}
+
+h1
+{
+/* background-color: dimgray !important; */
+color: dodgerblue;
+}
