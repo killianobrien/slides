@@ -1,6 +1,6 @@
-% 6G5Z3006_1314 \\\\ Number Theory & Cryptography
+% 6G5Z3006_1415 \\\\ Number Theory & Cryptography
 % Killian O'Brien
-% October 2013
+% October 2014
 
 # NT&C \\\\ Integer divisibility (Ch. 2)
 

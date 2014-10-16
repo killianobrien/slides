@@ -147,7 +147,7 @@ $\Box$
 
 * Study the detail of these sections in Number Theory notes.
 	* In particular, appreciate the role played by the well ordered axiom in the proofs of theorems about integer division with remainder and the characterisation of the gcd in terms of minimal linear combination.
-* Begin work on the problems in Exercises 1.1 (we will consider some of these next week and in the tutorials in 2 weeks time)
+* Begin work on the problems in Exercises 2.1
 
 
 <!--- 
