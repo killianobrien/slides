@@ -96,7 +96,7 @@ When reading mathematics books and papers be aware the different levels of under
 
 * Recognise the need for drafting & re-drafting & re-drafting ...
 * Don't try and make it perfect first time.
-* From now have a draft Table of Contents and
+* From now, have a draft Table of Contents and
 	* use this to organise your approach,
 	* use this as a menu to pick and choose writing tasks.
 
@@ -167,15 +167,17 @@ A plan which mixes the tasks we've discussed throughout the project period will 
 
 ### The purpose of referencing 
 
-Two of the main reasons are
+Two of the main reasons are:
 
 * To give due credit to other authors for the use of their ideas.
 
 * To allow your reader to investigate your work further by
 	* checking your claimed sources,
 	* finding out more about the ideas you refer to.
+	
+In other disciplines, such as the humanities or the arts, referencing can be very important and deserves a lot of attention. In mathematics and the sciences the is less so, and as long as the above points are covered youshould be fine.
 
-### Referencing systems
+## Referencing systems
 
 There are many systems for referencing in use. They combine brief **citations** within the text which refer to full **bibliographic** information about the sources which appears in a list of references at the end of the text and/or in footnotes at the bottom of pages containing citations. 
 
@@ -183,12 +185,14 @@ There are many systems for referencing in use. They combine brief **citations** 
  	* In widespread use by many books and journals.
 	* But numeric citations convey no information and require interrupting flow of reading if any information about author or age of work is required.
 	* Reference lists not always sorted alphabetically by author surname.
+	* Requires the use of software to implement in order to avoid manually *renumbering everything*.
 
 * *Author Date* reference systems use **citations** consisting of author(s) surname(s) and publication year which refer to full **bibliographic** entries which are listed at the end of the text, sorted alphabetically by the (leading) author's surname.
 	* Requires slightly more effort to implement than numeric systems
 	* But citations now convey relevant information
 	* Reduces need to interrupt flow of reading
 	* Reference lists are always sorted alphabetically
+	* Can be implemented manually if needed.
 
 ## The Harvard Referencing style
 
@@ -205,6 +209,9 @@ There are many systems for referencing in use. They combine brief **citations** 
 * [Endnote](http://libguides.mmu.ac.uk/refguide) -- software for managing citations and reference lists which integrates with Microsoft Word and other software -- link to MMU library help. 
 
 * [LaTeX and BibTeX](http://en.wikibooks.org/wiki/LaTeX/Bibliography_Management) 
+	- LaTeX has a default embedded system for handling referencing using numeric citations.
+	- The LaTeX ``natbib`` package can modify the embedded system to be author-date.
+	- BibTeX is a more sophisticated and flexible approach that builds a database of references.
 
 
 
