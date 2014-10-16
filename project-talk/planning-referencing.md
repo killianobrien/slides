@@ -39,9 +39,9 @@ This is an outline of what we will discuss
 * "Doing the work"
 	* Understanding new mathematics
 	* Solving new problems / carrying out statistical analysis / OR analysis / mathematical modelling ...
-	* Presenting material in different ways
+	* Deciding how to present the materialand presenting it in different ways
 * Writing 
-* Coding
+* Coding: incl. writing, debugging, testing, tidying up for presentation
 * Poster preparation
 * Presentation preparation
 * Constructing physical models
@@ -58,7 +58,7 @@ This is an outline of what we will discuss
 Some suggestions:
 
 * a diary
-* a wall lanner 
+* a wall planner 
 * [Getting Things Done](http://gettingthingsdone.com/)
 * [Gantt charts](http://www.ganttproject.biz/), [Excel template](http://office.microsoft.com/en-gb/templates/results.aspx?qu=gantt&ex=1#ai:TC102887601|)
 * [Trello](https://trello.com/), a card based system
@@ -72,6 +72,7 @@ Some suggestions:
 * ... these notes become your first drafts
 
 When reading mathematics books and papers be aware the different levels of understanding you might be after, i.e.
+
 * complete understanding of all technical details and arguments,
 * simply looking for the broad outline of the topic
 * just looking for nice illustrative examples
