@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Killian O'Brien" />
+  <title>6G5Z3001_1314 \\ Mathematical Methods</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+    href="http://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" />
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+   href="mycss.css" />
+  <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+  <script src="https://sagecell.sagemath.org/static/jquery.min.js"></script>
+      <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+      <script>$(function () {
+      // Make the div with id 'mycell' a Sage cell
+      sagecell.makeSagecell({inputLocation:  '#mycell',
+                             template:       sagecell.templates.minimal,
+                             evalButtonText: 'Activate'});
+      // Make *any* div with class 'compute' a Sage cell
+      sagecell.makeSagecell({inputLocation: 'div.compute',
+                             evalButtonText: 'Evaluate'});
+      });
+      </script>
+  	<link rel="stylesheet" type="text/css" href="https://sagecell.sagemath.org/static/sagecell_embed.css">
+  <script src="http://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js"
+    charset="utf-8" type="text/javascript"></script>
+</head>
+<body>
+<div class="slide titlepage">
+  <h1 class="title">6G5Z3001_1314 \\ Mathematical Methods</h1>
+  <p class="author">
+Killian O'Brien
+  </p>
+  <p class="date">Oct 2014</p>
+</div>
+<div class="slide section level2">
+
+<p><span class="math">\(\newcommand{\pderiv}[2]{\frac{\partial #1}{\partial #2}} \newcommand{\ppderiv}[2]{\frac{\partial^2 #1}{\partial #2}}\)</span></p>
+</div>
+<div id="multi-variable-calculus" class="titleslide slide section level1"><h1>Multi-variable calculus</h1></div><div id="multi-variable-calculus-chain-rule-examples" class="slide section level2">
+<h1>Multi-variable calculus \\ Chain Rule examples</h1>
+<p>Use the chain rule to solve the following problems (taken from Schaum's Calculus Chapt. 49)</p>
+<ol style="list-style-type: decimal">
+<li><p>Consider a function <span class="math">\(f\)</span> defined on points in the plane. Translate the expression <span class="math">\[ \left ( \frac{\partial f}{\partial x} \right )^2 + \left ( \frac{\partial f}{\partial y} \right )^2\]</span> into polar coordinates.</p></li>
+<li><p>Consider a right-circular cone of height 15cm and radius 10cm. Suppose that the height is increasing at a rate of 0.2cm/min and the radius is decreasing at a rate of 0.3cm/min. How fast is the volume of the cone changing at this moment?</p></li>
+<li><p>Consider a cylinder of height 8cm and radius 6cm. Suppose that the height is decreasing at a rate of 0.4cm/min and the radius is increasing at a rate of 0.4cm/min. How fast is the volume of the cone changing at this moment? How about the surface area?</p></li>
+<li><p>Consider a particle moving in the plane whose <span class="math">\(x\)</span> and <span class="math">\(y\)</span> coordinates are given by <span class="math">\[x(t) = 2+3t, \quad y(t)=t^2 + 4 ,\]</span> where <span class="math">\(x\)</span> and <span class="math">\(y\)</span> are measure in centimetres and <span class="math">\(t\)</span> is measured in seconds. At what rate is the distance of the particle from the origin changing at time <span class="math">\(t=1\)</span>.</p></li>
+</ol>
+<div class="compute">
+<script type="text/x-sage">
+
+</script>
+</div>
+<p><!--- 
+ <div class="compute"><script type="text/x-sage"><div class="compute"><script type="text/x-sage">
+@interact
+def tline(ep=slider(0.0001,4,0.1,0)):
+          p=plot(sin(x), (x, 0, 2*pi));
+          a=pi/2;
+          u=a+ep;
+          slope=(sin(u)-sin(a))/(u-a);
+          q=plot(slope*(x-pi/2)+sin(pi/2), (x,0,2*pi), color='red');
+          (p+q).show();
+</script></div> </script></div> 
+
+
+[`cloud.sagemath.com`](https://cloud.sagemath.com).
+ ---></p>
+</div>
+</body>
+</html>

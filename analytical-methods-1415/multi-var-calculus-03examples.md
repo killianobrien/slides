@@ -1,6 +1,6 @@
 % 6G5Z3001_1314 \\\\ Mathematical Methods
 % Killian O'Brien
-% Oct 2013
+% Oct 2014
 $\newcommand{\pderiv}[2]{\frac{\partial #1}{\partial #2}}
 \newcommand{\ppderiv}[2]{\frac{\partial^2 #1}{\partial #2}}$
 
