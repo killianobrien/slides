@@ -1,7 +1,6 @@
-<<<<<<< HEAD
 % 6G4Z3001_1314 \\\\ Mathematics Fundamentals
 % Killian O'Brien
-% Oct 2013
+% Oct 2014
 # Series 01
 
 ## Series \\\\ Introduction
@@ -252,4 +251,4 @@ def tline(ep=slider(0.0001,4,0.1,0)):
           (p+q).show();
 </script></div> </script></div> 
  --->
->>>>>>> 23669de151b4d1315a88584e9daf4fdf32812d9b
+
