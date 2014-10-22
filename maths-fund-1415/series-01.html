@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Killian O'Brien" />
+  <title>6G4Z3001_1314 \\ Mathematics Fundamentals</title>
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+    href="http://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" />
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+   href="mycss.css" />
+  <script src="https://d3eoax9i5htok0.cloudfront.net/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+  <script src="https://sagecell.sagemath.org/static/jquery.min.js"></script>
+      <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+      <script>$(function () {
+      // Make the div with id 'mycell' a Sage cell
+      sagecell.makeSagecell({inputLocation:  '#mycell',
+                             template:       sagecell.templates.minimal,
+                             evalButtonText: 'Activate'});
+      // Make *any* div with class 'compute' a Sage cell
+      sagecell.makeSagecell({inputLocation: 'div.compute',
+                             evalButtonText: 'Evaluate'});
+      });
+      </script>
+  	<link rel="stylesheet" type="text/css" href="https://sagecell.sagemath.org/static/sagecell_embed.css">
+  <script src="http://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js.gz"
+    charset="utf-8" type="text/javascript"></script>
+</head>
+<body>
+<div class="slide titlepage">
+  <h1 class="title">6G4Z3001_1314 \\ Mathematics Fundamentals</h1>
+  <p class="author">
+Killian O'Brien
+  </p>
+  <p class="date">Oct 2013</p>
+</div>
+<div class="section titleslide slide level1" id="series-01"><h1 id="series-01">Series 01</h1></div><div class="section slide level2" id="series-introduction">
+<h1 id="series-introduction">Series \\ Introduction</h1>
+<p>Work through chapter 2 in the notes up to Example 2.3 on the harmonic series.</p>
+</div><div class="section slide level2" id="series-stacking-blocks">
+<h1 id="series-stacking-blocks">Series \\ Stacking blocks</h1>
+<p>Let \(h_n\) denote the overhang of this optimal simple stack of \(n\) blocks, each of width \(w\). The overhang \(h_n\) is measured from the rightmost edge of the top block back to the rightmost edge of the bottom block.</p>
+<div class="figure">
+<img src="stack.png" alt="Fig. An optimal simple stack of blocks" /><p class="caption">Fig. An optimal simple stack of blocks</p>
+</div>
+<p>To create the stack of \(n\) blocks we place the optimal stack of \(n-1\) blocks on top of the bottom block. The best way of doing this is to position the centre of gravity of the stack of \(n-1\) blocks directly over the edge of the bottom block.</p>
+<p>So we see that \[
+\begin{align*}
+h_n &amp;= \text{ overhang obtained from optimal stack of $n$ blocks} \\
+&amp;= \text{ centre of gravity of the upper $n-1$ blocks}
+\end{align*}
+\]</p>
+<p>Using this we can develop a recurrence relation for the value of \(h_n\)</p>
+<p>\[
+\begin{align*}
+h_1 &amp; = 0 , \\
+h_n &amp;= h_{n-1} + \frac{1}{n-1} \frac{w}{2}
+\end{align*}
+\]</p>
+<p>The right hand side of the recurrence relation can be understood as a weighted averaging of the positions of the centres of gravity of the blocks in the stack.</p>
+<p>Applying this recurrence relation to develop the sequence \(\left \{ h_n \right \}\) will show the presence of the harmonic series more clearly.</p>
+<p>\[
+\begin{align*}
+h_1 &amp; = 0 , \\
+h_2 &amp;= \frac{w}{2}, \\
+h_3 &amp;= \frac{w}{2} + \frac{1}{2} \frac{w}{2} = \frac{w}{2} \left ( 1 + \frac{1}{2} \right ) , \\
+h_4 &amp;= \frac{w}{2} \left ( 1 + \frac{1}{2} \right ) + \frac{1}{3} \frac{w}{2} = \frac{w}{2} \left ( 1 + \frac{1}{2} + \frac{1}{3} \right ) \\
+&amp;\vdots \\
+h_n &amp;= \frac{w}{2} \left (  1 + \frac{1}{2} + \frac{1}{3} + \dots + \frac{1}{n-1} \right )
+\end{align*}
+\]</p>
+</div><div class="section slide level2" id="series-stacking-blocks-1">
+<h1 id="series-stacking-blocks-1">Series \\ Stacking blocks</h1>
+<h3 id="obtaining-a-value-for-h_n">Obtaining a value for \(h_n\)</h3>
+<p>\[h_n = \frac{w}{2} \left (  1 + \frac{1}{2} + \frac{1}{3} + \dots + \frac{1}{n-1} \right )\]</p>
+<div class="figure">
+<img src="integralunfilled.png" alt="Fig. An integral approximating the harmonic series" /><p class="caption">Fig. An integral approximating the harmonic series</p>
+</div>
+<p>\[h_n \approx \frac{w}{2} \int_1^n \, \frac{1}{x} \, dx \]</p>
+<div class="figure">
+<img src="integralfilled.png" alt="Fig. An integral approximating the harmonic series" /><p class="caption">Fig. An integral approximating the harmonic series</p>
+</div>
+<p>\[h_n = \frac{w}{2} \left ( \int_1^n \, \frac{1}{x} \, dx + \gamma_n \right ),\] where \[\gamma_n = \text{ area of shaded regions }\]</p>
+<div class="figure">
+<img src="integralfilledslid.png" alt="Fig. An integral approximating the harmonic series" /><p class="caption">Fig. An integral approximating the harmonic series</p>
+</div>
+<p>\[ \lim_{n \to \infty} \gamma_n = \gamma \approx 0.6\]</p>
+<p>\(\gamma\) is the Euler–Mascheroni constant.</p>
+<p>So for large \(n\) a very good approximation is \[
+\begin{align*}
+h_n &amp;\approx \frac{w}{2} \left ( \int_1^n \, \frac{1}{x} \, dx + 0.6 \right ), \\
+&amp;= \frac{w}{2} \Big ( \log(n)+ 0.6 \Big ).
+\end{align*}
+\]</p>
+</div><div class="section slide level2" id="series-stacking-blocks-2">
+<h1 id="series-stacking-blocks-2">Series \\ Stacking blocks</h1>
+<h3 id="an-actual-stack-of-jenga-blocks">An actual stack of Jenga blocks</h3>
+<p>\[h_n \approx \frac{w}{2} \Big ( \log(n)+ 0.6 \Big )\]</p>
+<h4 id="how-tall-is-a-simple-optimal-stack-with-a-3-metre-overhang">How tall is a simple optimal stack with a \(3\) metre overhang?</h4>
+<p>The Jenga block is \(7.5\)cm wide and \(1.5\)cm tall.</p>
+<p>\[3 = \frac{0.075}{2} \Big ( \log(n) + 0.6 \Big )\]</p>
+<p>Solve this to find number, \(n\), of blocks required.</p>
+<p>\[
+\begin{align*}
+n &amp;= e^{\left ( \frac{3}{0.0375} - 0.6 \right )} \\
+&amp;\approx 3.0 \times 10^{34}, \text{ a LOT of bricks}
+\end{align*}
+\]</p>
+<p>Such a stack would be \(3.0 \times 10^{34} \times 0.015 \approx 4.6 \times 10^{32}\) metres tall.</p>
+<h3 id="now-thats-tall">Now that's tall!</h3>
+<p>\(4.6 \times 10^{32}\) metres is approximately \(520 \, 000\) times the diameter of the observable universe.</p>
+<h3 id="further-reading">Further reading</h3>
+<p>Read more about better overhangs that can be achieved with more complicated stacking strategies in the article</p>
+<p><em>Overhang</em>, by Mike Paterson and Uri Zwick, The American Mathematical Monthly , Vol. 116, No. 1 (Jan., 2009), pp. 19-44. Available from <a href="http://www.jstor.org/stable/27642662">JSTOR</a></p>
+<!--- 
+ <div class="compute"><script type="text/x-sage"><div class="compute"><script type="text/x-sage">
+@interact
+def tline(ep=slider(0.0001,4,0.1,0)):
+          p=plot(sin(x), (x, 0, 2*pi));
+          a=pi/2;
+          u=a+ep;
+          slope=(sin(u)-sin(a))/(u-a);
+          q=plot(slope*(x-pi/2)+sin(pi/2), (x,0,2*pi), color='red');
+          (p+q).show();
+</script></div> </script></div> 
+ --->
+</div>
+</body>
+</html>

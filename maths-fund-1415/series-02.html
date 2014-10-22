@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Killian O'Brien" />
+  <title>6G4Z3001_1314 \\ Mathematics Fundamentals</title>
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+    href="http://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" />
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+   href="mycss.css" />
+  <script src="https://d3eoax9i5htok0.cloudfront.net/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+  <script src="https://sagecell.sagemath.org/static/jquery.min.js"></script>
+      <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+      <script>$(function () {
+      // Make the div with id 'mycell' a Sage cell
+      sagecell.makeSagecell({inputLocation:  '#mycell',
+                             template:       sagecell.templates.minimal,
+                             evalButtonText: 'Activate'});
+      // Make *any* div with class 'compute' a Sage cell
+      sagecell.makeSagecell({inputLocation: 'div.compute',
+                             evalButtonText: 'Evaluate'});
+      });
+      </script>
+  	<link rel="stylesheet" type="text/css" href="https://sagecell.sagemath.org/static/sagecell_embed.css">
+  <script src="http://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js.gz"
+    charset="utf-8" type="text/javascript"></script>
+</head>
+<body>
+<div class="slide titlepage">
+  <h1 class="title">6G4Z3001_1314 \\ Mathematics Fundamentals</h1>
+  <p class="author">
+Killian O'Brien
+  </p>
+  <p class="date">Oct 2013</p>
+</div>
+<div class="section titleslide slide level1" id="series-02"><h1 id="series-02">Series 02</h1></div><div class="section slide level2" id="series-convergence">
+<h1 id="series-convergence">Series \\ Convergence</h1>
+<p>Recall from previous lecture ...</p>
+<h3 id="definition-2.3-convergence-for-series">Definition 2.3 (Convergence for series)</h3>
+<p>The series \(\sum_{n=1}^\infty x_n\) <em>converges</em> to the limit (or sum) \(L\) if the sequence of its partial sums, \(\{ S_k \}_{k=1}^\infty\), is a convergent sequence and \[ \lim_{k \to \infty} S_k = L . \] If this is the case then we can simply write \[ \sum_{n=1}^\infty x_n = L .\]</p>
+<p>A series is <em>divergent</em> if the sequence of its partial sums is a divergent sequence.</p>
+<p>Interesting examples were:</p>
+<ul>
+<li><p>The sum of powers of \(\frac{1}{2}\), \[
+\sum_{n=1}^\infty \left ( \frac{1}{2} \right )^n = \frac{1}{2} + \frac{1}{4} + \frac{1}{8} + \frac{1}{16} + \dots ,
+\] which is convergent, with sum 1.</p></li>
+<li><p>The harmonic series \[
+\sum_{n=1}^\infty \frac{1}{n} = 1 + \frac{1}{2} + \frac{1}{3} + \frac{1}{4} + \dots ,
+\] which is divergent, as it increases without upper bound.</p></li>
+</ul>
+<p>We aim now to describe various results that can detect convergence/divergence for certain series.</p>
+</div><div class="section slide level2" id="series-linear-combinations">
+<h1 id="series-linear-combinations">Series \\ Linear combinations</h1>
+<p>Thge following theorem provides a similar result to the linearity case of the algebra of limits theorem for sequences from Chapter 1.</p>
+<h3 id="theorem-2.2-linear-combinations-of-convergent-series">Theorem 2.2 (Linear combinations of convergent series)</h3>
+<p>Suppose that we have two convergent series \(\sum_{m=1}^\infty a_m\) and \(\sum_{m=1}^\infty b_m\) such that \[ \sum_{m=1}^\infty a_m = A , \text{ and } \sum_{m=1}^\infty b_m = B .\] Then for any pair \(\alpha, \beta \in \mathbb{R}\) we have a new series \[ \sum_{m=1}^\infty \left ( \alpha a_m + \beta b_m \right ) ,\] which is convergent and satisfies \[ \sum_{m=1}^\infty \left ( \alpha a_m + \beta b_m \right ) = \alpha A + \beta B.\]</p>
+<p><em>Proof</em>. See visualizer.</p>
+</div><div class="section slide level2" id="series-convergence-tests-sec.-2.3">
+<h1 id="series-convergence-tests-sec.-2.3">Series \\ Convergence tests (sec. 2.3)</h1>
+<h3 id="theorem-2.3-general-term-test">Theorem 2.3 (General term test)</h3>
+<p>If a sequence has a non-zero limit (or no limit at all) then the associated series will diverge.</p>
+<p>Equivalently, by forming the contra-positive we can quote this test as:</p>
+<p>If a series converges then the associated sequence of terms converges to zero.</p>
+<p>Symbolically these two statements are</p>
+<ol style="list-style-type: decimal">
+<li><p>\[\lim_{m \to \infty} a_m  \neq 0 \, \Rightarrow \, \sum_{m=1}^\infty a_m \text{ diverges,}\]</p></li>
+<li><p>\[ \sum_{m=1}^\infty a_m \text{ converges} \, \Rightarrow \, \lim_{m \to \infty} a_m = 0.\]</p></li>
+</ol>
+<p>\(Proof\). See visualizer.</p>
+</div><div class="section slide level2" id="series-convergence-tests-sec.-2.3-1">
+<h1 id="series-convergence-tests-sec.-2.3-1">Series \\ Convergence tests (sec. 2.3)</h1>
+<h3 id="theorem-2.4-geometric-series-test">Theorem 2.4 (Geometric series test)</h3>
+<p>The geometric series \(\sum_{n=1}^\infty a r^{n-1}\) converges trivially if \(a=0\). If \(a \neq 0\) then it converges if and only if \(|r| &lt; 1\), in which case \[ \sum_{n=1}^\infty a r^{n-1} = \frac{a}{1-r} .\]</p>
+<p><em>Proof</em>. See visualizer.</p>
+<p>Use the following <a href="http://www.sagemath.org">Sage</a> cell to experiment with some geometric series.</p>
+<div class="compute"><script type="text/x-sage">
+n=var('n') #defines n to be a symbolic variable
+html('<h2>Geometric Series plotter</h2>')
+html('<p>Enter the parameters $a$ and $r$ for the series $\sum_{n=1}^\infty ar^{n-1}$ and the number $N$ of partial sums to plot.</p>')
+@interact
+def geometric_series_plotter(a = input_box(label="\(a = \)",default=5), r = input_box(label="\( r =\)",default=1/3), N=input_box(label="\( N = \)",default=100)):
+    x(n) = a*r^(n-1) #defines the sequence terms
+    html('The geometric series $\sum_{n=1}^\infty x_n$ is $\sum_{n=1}^\infty '+latex(x(n))+'$.') #displays x(n)
+
+    if a==0:
+        html('<p>This series is trivially convergent to $0$.</p>');
+    elif abs(r)<1:
+        html('<p>This series is convergent with sum $'+latex(a/(1-r))+'$.</p>')
+    else:
+        html('<p>This series is divergent. </p>')
+
+
+    X=[a] #initialize the list X of partial sums
+
+    for i in range(2,N):
+        X.append(X[i-2]+x(i)); #this loop extends X
+
+    P=list_plot(X) #defines the plot P
+
+    if abs(r)<1: #if the geometric series converges then add a line showing the position of the limit
+        P=P+line([(0,a/(1-r)),(N,a/(1-r))], color='red',linestyle='--')
+
+    show(P) #displays the plot
+</script></div>
+
+</div><div class="section slide level2" id="series-your-work-on-this-topic">
+<h1 id="series-your-work-on-this-topic">Series \\ Your work on this topic</h1>
+<ul>
+<li>Read through the notes - Chapter 2 up to theorem 2.4 (Geometric Series Test)</li>
+<li>Prepare the tutorial exercises - Questions 1,2,3,4,6 from Exercises 2.1 (if not already done so)</li>
+<li>Study Chapter 43 on Infinite Series in <a href="http://capitadiscovery.co.uk/mmu/items/1954431">Schaum's Outline of Calculus</a> by Ayres &amp; Mendelson</li>
+</ul>
+<p>And after doing lots of mathematics, watch Leonard Bernstein explain the harmonic series in the musical context.</p>
+<iframe width="640" height="480" src="http://www.youtube.com/embed/8n3qMB6AD_0" frameborder="0" allowfullscreen></iframe>
+
+<iframe width="640" height="480" src="http://www.youtube.com/embed/iDTj6tBnHlA" frameborder="0" allowfullscreen></iframe>
+
+<p>And then enjoy Bernstein conducting Carreras, singing <em>Maria</em> from Sondheim &amp; Bernstein's <em>West Side Story</em>.</p>
+<iframe width="640" height="480" src="http://www.youtube.com/embed/3ZPA8fwp7PE" frameborder="0" allowfullscreen></iframe>
+
+
+<!--- 
+ <div class="compute"><script type="text/x-sage"><div class="compute"><script type="text/x-sage">
+@interact
+def tline(ep=slider(0.0001,4,0.1,0)):
+          p=plot(sin(x), (x, 0, 2*pi));
+          a=pi/2;
+          u=a+ep;
+          slope=(sin(u)-sin(a))/(u-a);
+          q=plot(slope*(x-pi/2)+sin(pi/2), (x,0,2*pi), color='red');
+          (p+q).show();
+</script></div> </script></div> 
+ --->
+</div>
+</body>
+</html>
