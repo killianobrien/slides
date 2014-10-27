@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Killian O'Brien" />
+  <title>6G5Z3001_1415 \\ Mathematical Methods</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+    href="http://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" />
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+   href="mycss.css" />
+  <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+  <script src="https://sagecell.sagemath.org/static/jquery.min.js"></script>
+      <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+      <script>$(function () {
+      // Make the div with id 'mycell' a Sage cell
+      sagecell.makeSagecell({inputLocation:  '#mycell',
+                             template:       sagecell.templates.minimal,
+                             evalButtonText: 'Activate'});
+      // Make *any* div with class 'compute' a Sage cell
+      sagecell.makeSagecell({inputLocation: 'div.compute',
+                             evalButtonText: 'Evaluate'});
+      });
+      </script>
+  	<link rel="stylesheet" type="text/css" href="https://sagecell.sagemath.org/static/sagecell_embed.css">
+  <script src="http://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js"
+    charset="utf-8" type="text/javascript"></script>
+</head>
+<body>
+<div class="slide titlepage">
+  <h1 class="title">6G5Z3001_1415 \\ Mathematical Methods</h1>
+  <p class="author">
+Killian O'Brien
+  </p>
+  <p class="date">Oct 2014</p>
+</div>
+<div class="slide section level2">
+
+<p><span class="math">\(\newcommand{\pderiv}[2]{\frac{\partial #1}{\partial #2}} \newcommand{\ppderiv}[2]{\frac{\partial^2 #1}{\partial #2}}\)</span></p>
+</div>
+<div id="multi-variable-calculus" class="titleslide slide section level1"><h1>Multi-variable calculus</h1></div><div id="multi-variable-calculus-taylors-theorem-sec.-1.9" class="slide section level2">
+<h1>Multi-variable calculus \\ Taylor's theorem (sec. 1.9)</h1>
+<p>Recall that Taylor's theorem for functions of a single variable allowed one to approximate the value of a function at arguments close to a base point <span class="math">\(a\)</span> by a polynomial ... where the coefficients of the polynomial were the derivatives of the function evaluated at the base point.</p>
+<p><span class="math">\[
+\begin{align*}
+f(a + h) &amp;= f(a) + f&#39;(a) h + \frac{1}{2} f&#39;&#39;(a) h^2 + \dots \\
+&amp;= \sum_{n=0}^\infty  \frac{1}{n!} f^{(n)}(a) h^n .
+\end{align*}
+\]</span></p>
+<p>It is also possible to approximate function values in the multi-variable cases as well.</p>
+<h3 id="two-variable-taylor-series">Two-variable Taylor series</h3>
+<p>In the following we shall use <span class="math">\((a,b)\)</span> as the base point for the expansion and <span class="math">\(h\)</span> and <span class="math">\(k\)</span> for the changes in the variables, i.e. <span class="math">\[ 
+h = \Delta x , \text{ and } k = \Delta y .
+\]</span> We shall write <span class="math">\(D\)</span> for the differential operator, <span class="math">\[ 
+D = h \pderiv{}{x} + k \pderiv{}{y}.
+\]</span> As <span class="math">\(D\)</span> is an <em>operator</em>, an (integer) power of <span class="math">\(D\)</span> denotes the composition of the appropriate number of instances of <span class="math">\(D\)</span>. So, for instance, <span class="math">\[ 
+Df = h \pderiv{f}{x} + k \pderiv{f}{y},
+\]</span> and <span class="math">\[
+\begin{align}
+D^2 f &amp;= D(D(f)) \\
+&amp;=\left ( h \pderiv{}{x} + k \pderiv{}{y} \right ) Df, \\
+&amp;= \left ( h \pderiv{}{x} + k \pderiv{}{y} \right ) \left ( h \pderiv{f}{x} + k \pderiv{f}{y} \right ), \\
+&amp;= h^2 \ppderiv{f}{x^2} + k^2 \ppderiv{f}{y^2} + 2 hk \ppderiv{f}{x \partial y} .
+\end{align}
+\]</span> The statement of Taylor's theorem is then very similar to the 1-variable case.</p>
+<h3 id="theorem-1.3-taylors-theorem">Theorem 1.3 (Taylor's theorem)</h3>
+<p>In any region about the point <span class="math">\((a,b)\)</span> where <span class="math">\(f\)</span> and all its derivatives are continuous, <span class="math">\[
+\begin{align} 
+f(a+ h,b+k)&amp;= \sum_{n=0}^\infty \frac{1}{n!} D^n f(a,b) , \\
+&amp;=f(a,b) + Df(a,b) + \frac{1}{2!} D^2 f (a,b) + \frac{1}{3!} D^3 f (a,b) + \dots .
+\end{align}
+\]</span></p>
+<p>Taking finite partial sums of the infinite Taylor series, so called <em>Taylor polynomials</em> will provide approximations to the value of the function. The more terms included in the partial sum and the smaller the changes <span class="math">\(h\)</span> and <span class="math">\(k\)</span>, the better will be the approximation.</p>
+<h3 id="example-1.11">Example 1.11</h3>
+<p>Find the Taylor expansion of order 2 of the function<br /><span class="math">\[
+f(x,y) = \sin(x + 3y) + \cos(3x + y) 
+\]</span> about the point <span class="math">\(\left ( \frac{\pi}{2} , 0 \right )\)</span>.</p>
+</div><div id="multi-variable-calculus-extreme-values-of-functions-of-two-variables-sec.-1.10" class="slide section level2">
+<h1>Multi-variable calculus \\ Extreme values of functions of two variables (sec. 1.10)</h1>
+<p>First, an example which we can understand from a single-variable perspective.</p>
+<h3 id="example-1.12">Example 1.12</h3>
+<p>The surface generated by the function <span class="math">\[ z = f(x,y) = \left ( x^2 + y^2 \right )^2 - 8 \left ( x^2 + y^2 \right ) + 20 ,
+\]</span> can be obtained by rotating the generated by the function <span class="math">\[
+z=f(x) = x^4 -8x^2 + 20
+\]</span> about the <span class="math">\(z\)</span>-axis.</p>
+<p>Using the fact that <span class="math">\(f&#39;(x) = 4x(x^2-4)\)</span> we know that <span class="math">\(f\)</span> has a local maximum at <span class="math">\(x=0\)</span> and a local minimum at <span class="math">\(x=\pm 2\)</span>. Hence the surface generated by <span class="math">\(x=f(x,y)\)</span> will have a local maximum at the origin <span class="math">\(x=y=0\)</span> and local minima at all points on the circle given by <span class="math">\(x^2+y^2=4\)</span>.</p>
+<div class="figure">
+<img src="Example1.12.png" alt="Fig. Plot of f centred on origin" /><p class="caption">Fig. Plot of <span class="math">\(f\)</span> centred on origin</p>
+</div>
+<pre><code>ezsurf(&#39; (x^2 + y^2)^2 - 8*( x^2 + y^2) + 20&#39;,[-3,3,-3,3])</code></pre>
+<p>... However not all two-variable functions have such a structure and so we need to know in general how to identify stationary points of such functions and determine their nature.</p>
+<h3 id="definition-1.8-stationary-point">Definition 1.8 (Stationary point)</h3>
+<p>Suppose that <span class="math">\(z=f(x,y)\)</span> is a function of two-variables whose first and second order partial derivatives exist. A  of <span class="math">\(f\)</span> is a point <span class="math">\((x_0,y_0)\)</span> where the first order partial derivatives vanish, i.e. <span class="math">\[
+f_x (x_0,y_0) = f_y (x_0,y_0) = 0.
+\]</span> Stationary points are also referred to as <em>critical points</em>.</p>
+<p>In order to determine the nature of the stationary point we need to examine the values of the second-order partial derivatives at the point <span class="math">\((x_0,y_0)\)</span>.</p>
+<h3 id="definition-1.9-hessian-matrixdeterminant">Definition 1.9 (Hessian matrix/determinant)</h3>
+<p>Suppose that <span class="math">\(z=f(x,y)\)</span> is a function of two-variables. The <em>Hessian</em> matrix of <span class="math">\(f\)</span> is the matrix, <span class="math">\(\mathcal{H}(f)\)</span> of second-order partial derivatives, <span class="math">\[
+\mathcal{H}(f) = \left ( 
+\begin{array}{cc}
+f_{xx}&amp; f_{xy} \\
+f_{yx} &amp; f_{yy}
+\end{array}
+\right ) .
+\]</span></p>
+<h3 id="classification-method">Classification method</h3>
+<p>To classify a stationary point <span class="math">\((x_0, y_0)\)</span> we evaluate the determinant of the Hessian matrix at the point to get <span class="math">\[
+D = D(x_0,y_0) = \left | \mathcal{H}(f) \right |_{(x_0,y_0)}.
+\]</span> The point is then classified as follows,</p>
+<ul>
+<li><p>if <span class="math">\(D &gt; 0\)</span> and <span class="math">\(f_{xx}(x_0, y_0) &gt; 0\)</span> then <span class="math">\((x_0,y_0)\)</span> is a local minimum,</p></li>
+<li><p>if <span class="math">\(D &gt; 0\)</span> and <span class="math">\(f_{xx}(x_0, y_0) &lt; 0\)</span> then <span class="math">\((x_0,y_0)\)</span> is a local maximum,</p></li>
+<li><p>if <span class="math">\(D &lt; 0\)</span> then <span class="math">\((x_0,y_0)\)</span> is a saddle point.</p></li>
+</ul>
+<h3 id="example-1.13">Example 1.13</h3>
+<p>Consider the function <span class="math">\[
+z = f(x,y) = x^3 + 3 x y^2 - 15 x - 12 y.
+\]</span> Find the stationary points of this function.</p>
+</div><div id="example-1.13-using-the-computer" class="slide section level2">
+<h1>Example 1.13 \\ Using the computer</h1>
+<div class="compute">
+<script type="text/x-sage">
+var('x,y');
+f(x,y)=x^3 + 3*x*y^2 - 15*x - 12*y
+
+html('$f$ is ')
+show(f)
+
+html('The equations to solve for the stationary points are')
+show((diff(f,x)(x,y)==0,diff(f,y)(x,y)==0))
+
+sol=solve((diff(f,x)(x,y)==0,diff(f,y)(x,y)==0),(x,y),solution_dict=True)
+html('Here is the solution')
+show(sol)
+
+html('The Hessian determinant $D$ is given by ')
+D=diff(f,x,x)*diff(f,y,y) - diff(f,x,y)^2
+
+show(D)
+</script>
+</div>
+<p>The nature of the stationary points can be appreciated from the plots</p>
+<div class="figure">
+<img src="Example1.13wide.png" alt="Fig. Plot of f centred on origin" /><p class="caption">Fig. Plot of <span class="math">\(f\)</span> centred on origin</p>
+</div>
+<div class="figure">
+<img src="Example1.13saddle.png" alt="Fig. Plot of f centred on (1,2)" /><p class="caption">Fig. Plot of <span class="math">\(f\)</span> centred on <span class="math">\((1,2)\)</span></p>
+</div>
+<p>Obtain plots like these using Matlab <code>ezsurf</code> command e.g.</p>
+<pre><code>ezsurf(&#39;x^3 + 3*x*y^2 -15*x - 12*y&#39;,[-3,3,-3,3])</code></pre>
+</div><div id="multi-variable-calculus-further-example-of-taylor-series-and-stationary-points" class="slide section level2">
+<h1>Multi-variable calculus \\ Further example of Taylor series and stationary points</h1>
+<h3 id="problem">Problem</h3>
+<p>Use the two-variable Taylor series of <span class="math">\(\sin{(xy)}\)</span> to prove that the surface defined by <span class="math">\(z=\sin{(xy)}\)</span> has maxima at every point on the surface lying over the curve represented by <span class="math">\(y=\frac{\pi}{2x}\)</span> in the <span class="math">\((x,y)\)</span>-plane.</p>
+<h3 id="solution">Solution</h3>
+<p>Evaluating the Hessian determinant <span class="math">\(D\)</span> does not help in this case as it evaluates to <span class="math">\(0\)</span> at every point along the given curve. This is because the stationary points here are not isolated.</p>
+<p>We will obtain the Taylor series expansion of <span class="math">\(z\left (x,y\right )=\sin\left (xy\right )\)</span> around the point <span class="math">\(\left (a, \frac{\pi}{2a}\right )\)</span> including terms up to order 2. As the quantity <span class="math">\(a\)</span> varies this point traces out one of the `ridge' curves in the <span class="math">\(xy\)</span>-plane. The series is given by <span class="math">\[
+z\left (a + h, \frac{\pi}{2a} + k\right ) = z\left (a, \frac{\pi}{2a}\right ) + \left (Dz\right )\left (a, \frac{\pi}{2a}\right ) + \frac{1}{2}  \left (D^2z\right )\left (a, \frac{\pi}{2a}\right ) + \dots \label{E:taylor}
+\]</span> where <span class="math">\(D\)</span> and <span class="math">\(D^2\)</span> are the differential operators <span class="math">\[
+D= h \frac{\partial}{\partial x} + k \frac{\partial}{\partial y}, \quad D^2 = h ^2 \frac{\partial^2}{\partial x^2} + k^2 \frac{\partial^2}{\partial y^2} + 2hk \frac{\partial^2}{\partial x \partial y}.
+\]</span> The various partial derivatives of <span class="math">\(z\)</span> needed for this have all been obtained in part (b) above. Evaluating these at the point <span class="math">\(\left (a, \frac{\pi}{2a}\right )\)</span> we get <span class="math">\[
+\begin{align}
+ \left (Dz\right )\left (a, \frac{\pi}{2a}\right ) &amp;=0 , \\
+ \left (D^2z\right )\left (a, \frac{\pi}{2a}\right ) &amp;= \frac{- \pi^2}{4a^2} h^2 - a^2 k^2 - \pi hk  = -\left ( \frac{\pi}{2a} h + ak \right )^2.
+\end{align}
+\]</span> Returning to the Taylor series we get <span class="math">\[
+z\left (a + h, \frac{\pi}{2a} + k\right ) = 1 - \frac{1}{2}  \left ( \frac{\pi}{2a} h + ak  \right )^2 + \dots . 
+\]</span> Now we are concerned with the behaviour of the function close to the base point of the expansion, i.e. the small variations <span class="math">\(h\)</span> and <span class="math">\(k\)</span> are just that, small. For small <span class="math">\(h\)</span>, <span class="math">\(k\)</span> (with absolute value very much less than 1) the behaviour of the Taylor series expansion, and in particular whether it is greater than or less than 1 will only depend on the value of the expansion taken up to the second order terms in <span class="math">\(h\)</span> and <span class="math">\(k\)</span> which we have above. This is because the higher order terms in <span class="math">\(h^3\)</span> etc will have absolute value very much less than <span class="math">\(h^2\)</span> etc. But from series approximation above the value of this expansion is 1 minus a square, so it is always less than or equal to 1 for any (small enough) changes <span class="math">\(h\)</span> and <span class="math">\(k\)</span>.</p>
+<p>This allows us to conclude that the point <span class="math">\(\left (a, \frac{\pi}{2a}\right )\)</span> is a local maximum of the surface. The surface is shown below, can you pick out the curve given by <span class="math">\(\left (a, \frac{\pi}{2a}\right )\)</span>, where <span class="math">\(a \in \mathbb{R}\)</span>, <span class="math">\(a \neq 0\)</span>.</p>
+<p><img src="surface.png" width="80%"></p>
+<p><!--- 
+ <div class="compute"><script type="text/x-sage"><div class="compute"><script type="text/x-sage">
+@interact
+def tline(ep=slider(0.0001,4,0.1,0)):
+          p=plot(sin(x), (x, 0, 2*pi));
+          a=pi/2;
+          u=a+ep;
+          slope=(sin(u)-sin(a))/(u-a);
+          q=plot(slope*(x-pi/2)+sin(pi/2), (x,0,2*pi), color='red');
+          (p+q).show();
+</script></div> </script></div> 
+
+
+[`cloud.sagemath.com`](https://cloud.sagemath.com).
+ ---></p>
+</div>
+</body>
+</html>

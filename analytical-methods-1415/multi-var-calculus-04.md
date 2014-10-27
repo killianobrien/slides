@@ -1,6 +1,6 @@
-% 6G5Z3001_1314 \\\\ Mathematical Methods
+% 6G5Z3001_1415 \\\\ Mathematical Methods
 % Killian O'Brien
-% Oct 2013
+% Oct 2014
 $\newcommand{\pderiv}[2]{\frac{\partial #1}{\partial #2}}
 \newcommand{\ppderiv}[2]{\frac{\partial^2 #1}{\partial #2}}$
 
@@ -195,7 +195,7 @@ z\left (a + h, \frac{\pi}{2a} + k\right ) = 1 - \frac{1}{2}  \left ( \frac{\pi}{
 $$
 Now we are concerned with the behaviour of the function close to the base point of the expansion, i.e. the small variations $h$ and $k$ are just that, small. For small $h$, $k$ (with absolute value very much less than 1) the behaviour of the Taylor series expansion, and in particular whether it is greater than or less than 1 will only depend on the value of the expansion taken up to the second order terms in $h$ and $k$ which we have above. This is because the higher order terms in $h^3$ etc will have absolute value very much less than $h^2$ etc. But from series approximation above the value of this expansion is 1 minus a square, so it is always less than or equal to 1 for any (small enough) changes $h$ and $k$.
 
-This allows us to conclude that the point $\left (a, \frac{\pi}{2a}\right )$ is a local minimum of the surface (surface shown below)
+This allows us to conclude that the point $\left (a, \frac{\pi}{2a}\right )$ is a local maximum of the surface. The surface is shown below, can you pick out the curve given by  $\left (a, \frac{\pi}{2a}\right )$, where $a \in \mathbb{R}$, $a \neq 0$.
 
 <img src="surface.png" width="80%"> 
 
