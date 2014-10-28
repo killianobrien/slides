@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="Content-Style-Type" content="text/css" />
   <meta name="generator" content="pandoc" />
   <meta name="author" content="Killian O'Brien" />
   <title>6G4Z3001_1314 \\ Mathematics Fundamentals</title>
+  <style type="text/css">code{white-space: pre;}</style>
   <link rel="stylesheet" type="text/css" media="screen, projection, print"
     href="http://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" />
   <link rel="stylesheet" type="text/css" media="screen, projection, print"
    href="mycss.css" />
-  <script src="https://d3eoax9i5htok0.cloudfront.net/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+  <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
   <script src="https://sagecell.sagemath.org/static/jquery.min.js"></script>
       <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
       <script>$(function () {
@@ -26,7 +27,7 @@
       });
       </script>
   	<link rel="stylesheet" type="text/css" href="https://sagecell.sagemath.org/static/sagecell_embed.css">
-  <script src="http://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js.gz"
+  <script src="http://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js"
     charset="utf-8" type="text/javascript"></script>
 </head>
 <body>
@@ -35,49 +36,131 @@
   <p class="author">
 Killian O'Brien
   </p>
-  <p class="date">Oct 2013</p>
+  <p class="date">Oct 2014</p>
 </div>
-<div class="section titleslide slide level1" id="series-02"><h1 id="series-02">Series 02</h1></div><div class="section slide level2" id="series-convergence">
-<h1 id="series-convergence">Series \\ Convergence</h1>
+<div id="series-01" class="titleslide slide section level1"><h1>Series 01</h1></div><div id="series-introduction" class="slide section level2">
+<h1>Series \\ Introduction</h1>
+<p>Work through chapter 2 in the notes up to Example 2.3 on the harmonic series.</p>
+</div><div id="series-stacking-blocks" class="slide section level2">
+<h1>Series \\ Stacking blocks</h1>
+<div class="figure">
+<img src="my_stack.jpg" alt="Fig. Block stacking" /><p class="caption">Fig. Block stacking</p>
+</div>
+<p>Let <span class="math">\(h_n\)</span> denote the overhang of this optimal simple stack of <span class="math">\(n\)</span> blocks, each of width <span class="math">\(w\)</span>. The overhang <span class="math">\(h_n\)</span> is measured from the rightmost edge of the top block back to the rightmost edge of the bottom block.</p>
+<div class="figure">
+<img src="stack.png" alt="Fig. An optimal simple stack of blocks" /><p class="caption">Fig. An optimal simple stack of blocks</p>
+</div>
+<p>To create the stack of <span class="math">\(n\)</span> blocks we place the optimal stack of <span class="math">\(n-1\)</span> blocks on top of the bottom block. The best way of doing this is to position the centre of gravity of the stack of <span class="math">\(n-1\)</span> blocks directly over the edge of the bottom block.</p>
+<p>So we see that <span class="math">\[
+\begin{align*}
+h_n &amp;= \text{ overhang obtained from optimal stack of $n$ blocks} \\
+&amp;= \text{ centre of gravity of the upper $n-1$ blocks}
+\end{align*}
+\]</span></p>
+<p>Using this we can develop a recurrence relation for the value of <span class="math">\(h_n\)</span></p>
+<p><span class="math">\[
+\begin{align*}
+h_1 &amp; = 0 , \\
+h_n &amp;= h_{n-1} + \frac{1}{n-1} \frac{w}{2}
+\end{align*}
+\]</span></p>
+<p>The right hand side of the recurrence relation can be understood as a weighted averaging of the positions of the centres of gravity of the blocks in the stack.</p>
+<p>Applying this recurrence relation to develop the sequence <span class="math">\(\left \{ h_n \right \}\)</span> will show the presence of the harmonic series more clearly.</p>
+<p><span class="math">\[
+\begin{align*}
+h_1 &amp; = 0 , \\
+h_2 &amp;= \frac{w}{2}, \\
+h_3 &amp;= \frac{w}{2} + \frac{1}{2} \frac{w}{2} = \frac{w}{2} \left ( 1 + \frac{1}{2} \right ) , \\
+h_4 &amp;= \frac{w}{2} \left ( 1 + \frac{1}{2} \right ) + \frac{1}{3} \frac{w}{2} = \frac{w}{2} \left ( 1 + \frac{1}{2} + \frac{1}{3} \right ) \\
+&amp;\vdots \\
+h_n &amp;= \frac{w}{2} \left (  1 + \frac{1}{2} + \frac{1}{3} + \dots + \frac{1}{n-1} \right )
+\end{align*}
+\]</span></p>
+</div><div id="series-stacking-blocks-1" class="slide section level2">
+<h1>Series \\ Stacking blocks</h1>
+<h3 id="obtaining-a-value-for-h_n">Obtaining a value for <span class="math">\(h_n\)</span></h3>
+<p><span class="math">\[h_n = \frac{w}{2} \left (  1 + \frac{1}{2} + \frac{1}{3} + \dots + \frac{1}{n-1} \right )\]</span></p>
+<div class="figure">
+<img src="integralunfilled.png" alt="Fig. An integral approximating the harmonic series" /><p class="caption">Fig. An integral approximating the harmonic series</p>
+</div>
+<p><span class="math">\[h_n \approx \frac{w}{2} \int_1^n \, \frac{1}{x} \, dx \]</span></p>
+<div class="figure">
+<img src="integralfilled.png" alt="Fig. An integral approximating the harmonic series" /><p class="caption">Fig. An integral approximating the harmonic series</p>
+</div>
+<p><span class="math">\[h_n = \frac{w}{2} \left ( \int_1^n \, \frac{1}{x} \, dx + \gamma_n \right ),\]</span> where <span class="math">\[\gamma_n = \text{ area of shaded regions }\]</span></p>
+<div class="figure">
+<img src="integralfilledslid.png" alt="Fig. An integral approximating the harmonic series" /><p class="caption">Fig. An integral approximating the harmonic series</p>
+</div>
+<p><span class="math">\[ \lim_{n \to \infty} \gamma_n = \gamma \approx 0.6\]</span></p>
+<p><span class="math">\(\gamma\)</span> is the Euler–Mascheroni constant.</p>
+<p>So for large <span class="math">\(n\)</span> a very good approximation is <span class="math">\[
+\begin{align*}
+h_n &amp;\approx \frac{w}{2} \left ( \int_1^n \, \frac{1}{x} \, dx + 0.6 \right ), \\
+&amp;= \frac{w}{2} \Big ( \log(n)+ 0.6 \Big ).
+\end{align*}
+\]</span></p>
+</div><div id="series-stacking-blocks-2" class="slide section level2">
+<h1>Series \\ Stacking blocks</h1>
+<h3 id="an-actual-stack-of-jenga-blocks">An actual stack of Jenga blocks</h3>
+<p><span class="math">\[h_n \approx \frac{w}{2} \Big ( \log(n)+ 0.6 \Big )\]</span></p>
+<h4 id="how-tall-is-a-simple-optimal-stack-with-a-3-metre-overhang">How tall is a simple optimal stack with a <span class="math">\(3\)</span> metre overhang?</h4>
+<p>The Jenga block is <span class="math">\(7.5\)</span>cm wide and <span class="math">\(1.5\)</span>cm tall.</p>
+<p><span class="math">\[3 = \frac{0.075}{2} \Big ( \log(n) + 0.6 \Big )\]</span></p>
+<p>Solve this to find number, <span class="math">\(n\)</span>, of blocks required.</p>
+<p><span class="math">\[
+\begin{align*}
+n &amp;= e^{\left ( \frac{3}{0.0375} - 0.6 \right )} \\
+&amp;\approx 3.0 \times 10^{34}, \text{ a LOT of bricks}
+\end{align*}
+\]</span></p>
+<p>Such a stack would be <span class="math">\(3.0 \times 10^{34} \times 0.015 \approx 4.6 \times 10^{32}\)</span> metres tall.</p>
+<h3 id="now-thats-tall">Now that's tall!</h3>
+<p><span class="math">\(4.6 \times 10^{32}\)</span> metres is approximately <span class="math">\(520 \, 000\)</span> times the diameter of the observable universe.</p>
+<h3 id="further-reading">Further reading</h3>
+<p>Read more about better overhangs that can be achieved with more complicated stacking strategies in the article</p>
+<p><em>Overhang</em>, by Mike Paterson and Uri Zwick, The American Mathematical Monthly , Vol. 116, No. 1 (Jan., 2009), pp. 19-44. Available from <a href="http://www.jstor.org/stable/27642662">JSTOR</a></p>
+</div><div id="series-convergence" class="slide section level2">
+<h1>Series \\ Convergence</h1>
 <p>Recall from previous lecture ...</p>
 <h3 id="definition-2.3-convergence-for-series">Definition 2.3 (Convergence for series)</h3>
-<p>The series \(\sum_{n=1}^\infty x_n\) <em>converges</em> to the limit (or sum) \(L\) if the sequence of its partial sums, \(\{ S_k \}_{k=1}^\infty\), is a convergent sequence and \[ \lim_{k \to \infty} S_k = L . \] If this is the case then we can simply write \[ \sum_{n=1}^\infty x_n = L .\]</p>
+<p>The series <span class="math">\(\sum_{n=1}^\infty x_n\)</span> <em>converges</em> to the limit (or sum) <span class="math">\(L\)</span> if the sequence of its partial sums, <span class="math">\(\{ S_k \}_{k=1}^\infty\)</span>, is a convergent sequence and <span class="math">\[ \lim_{k \to \infty} S_k = L . \]</span> If this is the case then we can simply write <span class="math">\[ \sum_{n=1}^\infty x_n = L .\]</span></p>
 <p>A series is <em>divergent</em> if the sequence of its partial sums is a divergent sequence.</p>
 <p>Interesting examples were:</p>
 <ul>
-<li><p>The sum of powers of \(\frac{1}{2}\), \[
+<li><p>The sum of powers of <span class="math">\(\frac{1}{2}\)</span>, <span class="math">\[
 \sum_{n=1}^\infty \left ( \frac{1}{2} \right )^n = \frac{1}{2} + \frac{1}{4} + \frac{1}{8} + \frac{1}{16} + \dots ,
-\] which is convergent, with sum 1.</p></li>
-<li><p>The harmonic series \[
+\]</span> which is convergent, with sum 1.</p></li>
+<li><p>The harmonic series <span class="math">\[
 \sum_{n=1}^\infty \frac{1}{n} = 1 + \frac{1}{2} + \frac{1}{3} + \frac{1}{4} + \dots ,
-\] which is divergent, as it increases without upper bound.</p></li>
+\]</span> which is divergent, as it increases without upper bound.</p></li>
 </ul>
 <p>We aim now to describe various results that can detect convergence/divergence for certain series.</p>
-</div><div class="section slide level2" id="series-linear-combinations">
-<h1 id="series-linear-combinations">Series \\ Linear combinations</h1>
+</div><div id="series-linear-combinations" class="slide section level2">
+<h1>Series \\ Linear combinations</h1>
 <p>Thge following theorem provides a similar result to the linearity case of the algebra of limits theorem for sequences from Chapter 1.</p>
 <h3 id="theorem-2.2-linear-combinations-of-convergent-series">Theorem 2.2 (Linear combinations of convergent series)</h3>
-<p>Suppose that we have two convergent series \(\sum_{m=1}^\infty a_m\) and \(\sum_{m=1}^\infty b_m\) such that \[ \sum_{m=1}^\infty a_m = A , \text{ and } \sum_{m=1}^\infty b_m = B .\] Then for any pair \(\alpha, \beta \in \mathbb{R}\) we have a new series \[ \sum_{m=1}^\infty \left ( \alpha a_m + \beta b_m \right ) ,\] which is convergent and satisfies \[ \sum_{m=1}^\infty \left ( \alpha a_m + \beta b_m \right ) = \alpha A + \beta B.\]</p>
+<p>Suppose that we have two convergent series <span class="math">\(\sum_{m=1}^\infty  a_m\)</span> and <span class="math">\(\sum_{m=1}^\infty b_m\)</span> such that <span class="math">\[ \sum_{m=1}^\infty a_m = A , \text{ and } \sum_{m=1}^\infty b_m = B .\]</span> Then for any pair <span class="math">\(\alpha, \beta \in \mathbb{R}\)</span> we have a new series <span class="math">\[ \sum_{m=1}^\infty \left ( \alpha a_m + \beta b_m \right ) ,\]</span> which is convergent and satisfies <span class="math">\[ \sum_{m=1}^\infty \left ( \alpha a_m + \beta b_m \right ) = \alpha A + \beta B.\]</span></p>
 <p><em>Proof</em>. See visualizer.</p>
-</div><div class="section slide level2" id="series-convergence-tests-sec.-2.3">
-<h1 id="series-convergence-tests-sec.-2.3">Series \\ Convergence tests (sec. 2.3)</h1>
+</div><div id="series-convergence-tests-sec.-2.3" class="slide section level2">
+<h1>Series \\ Convergence tests (sec. 2.3)</h1>
 <h3 id="theorem-2.3-general-term-test">Theorem 2.3 (General term test)</h3>
 <p>If a sequence has a non-zero limit (or no limit at all) then the associated series will diverge.</p>
 <p>Equivalently, by forming the contra-positive we can quote this test as:</p>
 <p>If a series converges then the associated sequence of terms converges to zero.</p>
 <p>Symbolically these two statements are</p>
 <ol style="list-style-type: decimal">
-<li><p>\[\lim_{m \to \infty} a_m  \neq 0 \, \Rightarrow \, \sum_{m=1}^\infty a_m \text{ diverges,}\]</p></li>
-<li><p>\[ \sum_{m=1}^\infty a_m \text{ converges} \, \Rightarrow \, \lim_{m \to \infty} a_m = 0.\]</p></li>
+<li><p><span class="math">\[\lim_{m \to \infty} a_m  \neq 0 \, \Rightarrow \, \sum_{m=1}^\infty a_m \text{ diverges,}\]</span></p></li>
+<li><p><span class="math">\[ \sum_{m=1}^\infty a_m \text{ converges} \, \Rightarrow \, \lim_{m \to \infty} a_m = 0.\]</span></p></li>
 </ol>
-<p>\(Proof\). See visualizer.</p>
-</div><div class="section slide level2" id="series-convergence-tests-sec.-2.3-1">
-<h1 id="series-convergence-tests-sec.-2.3-1">Series \\ Convergence tests (sec. 2.3)</h1>
+<p><span class="math">\(Proof\)</span>. See visualizer.</p>
+</div><div id="series-convergence-tests-sec.-2.3-1" class="slide section level2">
+<h1>Series \\ Convergence tests (sec. 2.3)</h1>
 <h3 id="theorem-2.4-geometric-series-test">Theorem 2.4 (Geometric series test)</h3>
-<p>The geometric series \(\sum_{n=1}^\infty a r^{n-1}\) converges trivially if \(a=0\). If \(a \neq 0\) then it converges if and only if \(|r| &lt; 1\), in which case \[ \sum_{n=1}^\infty a r^{n-1} = \frac{a}{1-r} .\]</p>
+<p>The geometric series <span class="math">\(\sum_{n=1}^\infty a r^{n-1}\)</span> converges trivially if <span class="math">\(a=0\)</span>. If <span class="math">\(a \neq 0\)</span> then it converges if and only if <span class="math">\(|r| &lt; 1\)</span>, in which case <span class="math">\[ \sum_{n=1}^\infty a r^{n-1} = \frac{a}{1-r} .\]</span></p>
 <p><em>Proof</em>. See visualizer.</p>
 <p>Use the following <a href="http://www.sagemath.org">Sage</a> cell to experiment with some geometric series.</p>
-<div class="compute"><script type="text/x-sage">
+<div class="compute">
+<script type="text/x-sage">
 n=var('n') #defines n to be a symbolic variable
 html('<h2>Geometric Series plotter</h2>')
 html('<p>Enter the parameters $a$ and $r$ for the series $\sum_{n=1}^\infty ar^{n-1}$ and the number $N$ of partial sums to plot.</p>')
@@ -105,25 +188,23 @@ def geometric_series_plotter(a = input_box(label="\(a = \)",default=5), r = inpu
         P=P+line([(0,a/(1-r)),(N,a/(1-r))], color='red',linestyle='--')
 
     show(P) #displays the plot
-</script></div>
-
-</div><div class="section slide level2" id="series-your-work-on-this-topic">
-<h1 id="series-your-work-on-this-topic">Series \\ Your work on this topic</h1>
+</script>
+</div>
+</div><div id="series-your-work-on-this-topic" class="slide section level2">
+<h1>Series \\ Your work on this topic</h1>
 <ul>
 <li>Read through the notes - Chapter 2 up to theorem 2.4 (Geometric Series Test)</li>
 <li>Prepare the tutorial exercises - Questions 1,2,3,4,6 from Exercises 2.1 (if not already done so)</li>
 <li>Study Chapter 43 on Infinite Series in <a href="http://capitadiscovery.co.uk/mmu/items/1954431">Schaum's Outline of Calculus</a> by Ayres &amp; Mendelson</li>
 </ul>
-<p>And after doing lots of mathematics, watch Leonard Bernstein explain the harmonic series in the musical context.</p>
+<p>For a musical perspective on the harmonic series, watch Leonard Bernstein at the piano explaining harmonics.</p>
 <iframe width="640" height="480" src="http://www.youtube.com/embed/8n3qMB6AD_0" frameborder="0" allowfullscreen></iframe>
 
 <iframe width="640" height="480" src="http://www.youtube.com/embed/iDTj6tBnHlA" frameborder="0" allowfullscreen></iframe>
 
-<p>And then enjoy Bernstein conducting Carreras, singing <em>Maria</em> from Sondheim &amp; Bernstein's <em>West Side Story</em>.</p>
-<iframe width="640" height="480" src="http://www.youtube.com/embed/3ZPA8fwp7PE" frameborder="0" allowfullscreen></iframe>
 
 
-<!--- 
+<p><!--- 
  <div class="compute"><script type="text/x-sage"><div class="compute"><script type="text/x-sage">
 @interact
 def tline(ep=slider(0.0001,4,0.1,0)):
@@ -133,8 +214,7 @@ def tline(ep=slider(0.0001,4,0.1,0)):
           slope=(sin(u)-sin(a))/(u-a);
           q=plot(slope*(x-pi/2)+sin(pi/2), (x,0,2*pi), color='red');
           (p+q).show();
-</script></div> </script></div> 
- --->
+</script></div> </script></div>  ---></p>
 </div>
 </body>
 </html>
