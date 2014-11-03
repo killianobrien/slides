@@ -1,12 +1,10 @@
-% 6G5Z3001_1314 \\\\ Mathematical Methods
+% 6G5Z3001_1415 \\\\ Mathematical Methods
 % Killian O'Brien
-% Nov 2013
+% Nov 2014
 $\newcommand{\pderiv}[2]{\frac{\partial #1}{\partial #2}}
 \newcommand{\ppderiv}[2]{\frac{\partial^2 #1}{\partial #2}}$
 
 ## Stationary point problems
-
-1. Problem from end of last weeks [lecture slides](http://killianobrien.github.io/analytical-methods/multi-var-calculus-04.html) .
 
 1. Consider the function, $f$, of two variables, defined by 
 $$ f(x,y)=\left ( x^2 - 9 \right ) \sin (y).$$
