@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Killian O'Brien" />
+  <title>6G5Z3001_1415 \\ Mathematical Methods</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+    href="http://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" />
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+   href="mycss.css" />
+  <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+  <script src="https://sagecell.sagemath.org/static/jquery.min.js"></script>
+      <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+      <script>$(function () {
+      // Make the div with id 'mycell' a Sage cell
+      sagecell.makeSagecell({inputLocation:  '#mycell',
+                             template:       sagecell.templates.minimal,
+                             evalButtonText: 'Activate'});
+      // Make *any* div with class 'compute' a Sage cell
+      sagecell.makeSagecell({inputLocation: 'div.compute',
+                             evalButtonText: 'Evaluate'});
+      });
+      </script>
+  	<link rel="stylesheet" type="text/css" href="https://sagecell.sagemath.org/static/sagecell_embed.css">
+  <script src="http://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js"
+    charset="utf-8" type="text/javascript"></script>
+</head>
+<body>
+<div class="slide titlepage">
+  <h1 class="title">6G5Z3001_1415 \\ Mathematical Methods</h1>
+  <p class="author">
+Killian O'Brien
+  </p>
+  <p class="date">Nov 2014</p>
+</div>
+<div class="slide section level2">
+
+<p><span class="math">\(\newcommand{\pderiv}[2]{\frac{\partial #1}{\partial #2}} \newcommand{\ppderiv}[2]{\frac{\partial^2 #1}{\partial #2}}\)</span></p>
+</div>
+<div id="multi-variable-calculus" class="titleslide slide section level1"><h1>Multi-variable calculus</h1></div><div id="multi-variable-calculus-line-integrals-sec.-1.11" class="slide section level2">
+<h1>Multi-variable calculus \\ Line integrals (sec. 1.11)</h1>
+<p>An expression of the form, <span class="math">\[
+L = P(x,y) \, dx + Q(x,y) \, dy ,
+\]</span> is called a <em>linear differential form</em> in the variables <span class="math">\(x\)</span> and <span class="math">\(y\)</span>. Recall that for functions of a single variable we met integrals of the form <span class="math">\[
+I = \int_a^b \, f(x) \, dx ,
+\]</span> which involved integrating the function <span class="math">\(f\)</span> over the interval from <span class="math">\(x=a\)</span> to <span class="math">\(x=b\)</span>.</p>
+<p>Similar integrals occur in the calculus of two-variable functions. These integrals take place over a line, or curve, <span class="math">\(C\)</span> in the <span class="math">\(xy\)</span>-plane. Their integrands are linear differential forms and they take the form <span class="math">\[
+I = \int\limits_C \, P(x,y) \, dx + Q(x,y) \, dy .
+\]</span> One way of evaluating such integrals is to use a specification of the curve <span class="math">\(C\)</span> to reduce <span class="math">\(I\)</span> to an integral of a one-variable function, as the following example illustrates.</p>
+<h3 id="example-1.14">Example 1.14</h3>
+<p>We will integrate the form <span class="math">\[
+L = 10 x^2 y \, dx + (3x+2y)\, dy ,
+\]</span> along the curve <span class="math">\[
+C: \quad y=x^2 ,
+\]</span> from the point <span class="math">\((0,0)\)</span> to the point <span class="math">\((1,1)\)</span>.</p>
+</div><div id="multi-variable-calculus-line-integrals-sec.-1.11-1" class="slide section level2">
+<h1>Multi-variable calculus \\ Line integrals (sec. 1.11)</h1>
+<h3 id="theorem-1.4-properties-of-line-integrals">Theorem 1.4 (Properties of line integrals)</h3>
+<p>These properties are all generalizations of equivalent properties that hold for definite integrals of functions of a single variable.</p>
+<ul>
+<li><p>Line integrals are linear, and in particular <span class="math">\[
+\int\limits_{C} \, P(x,y) \, dx + Q(x,y) \, dy = \int\limits_{C} \, P(x,y) \, dx + \int\limits_{C} Q(x,y) \, dy .
+\]</span></p></li>
+<li><p>If <span class="math">\(C\)</span> is a curve and <span class="math">\(C&#39;\)</span> is the same curve, but running in the  direction, then for any linear differential form <span class="math">\(L\)</span>, <span class="math">\[
+\int\limits_{C} \, L = - \int\limits_{C&#39;} \, L .
+\]</span></p></li>
+<li><p>If a path is split into components then the integral over the path is the sum of the integrals over the components. For example if <span class="math">\(AB\)</span> denotes a curve from a point <span class="math">\(A\)</span> to a point <span class="math">\(B\)</span>, <span class="math">\(BC\)</span> denotes a curve from <span class="math">\(B\)</span> to <span class="math">\(C\)</span> and <span class="math">\(AC\)</span> denotes the union of the two curves, then for any linear differential form <span class="math">\(L\)</span> <span class="math">\[
+\int\limits_{AC} \, L = \int\limits_{AB} \, L + \int\limits_{BC} \, L .
+\]</span></p></li>
+</ul>
+<h3 id="example-1.15">Example 1.15</h3>
+<p>Integrate the linear differential form <span class="math">\[
+L = 10 x^2 y \, dx + (3x + 2y) \, dy
+\]</span> from the point <span class="math">\(A=(0,0)\)</span> to the point <span class="math">\(B=(1,1)\)</span> along the path made up of the two straight line segments <span class="math">\(AD\)</span> and <span class="math">\(DB\)</span>, where <span class="math">\(D\)</span> is the intermediate point <span class="math">\(D=(1,0)\)</span>.</p>
+</div><div id="multi-variable-calculus-line-integrals-along-parametrised-paths-sec.-1.12" class="slide section level2">
+<h1>Multi-variable calculus \\ Line integrals along parametrised paths (sec. 1.12)</h1>
+<p>When the path of integration is <em>parametrised</em>, i.e. the <span class="math">\(x\)</span> and <span class="math">\(y\)</span> coordinates are given as functions of an independent variable <span class="math">\(t\)</span>, then a line integral over such a path can often be evaluated by converting everything to the independent variable <span class="math">\(t\)</span> to obtain a standard single-variable integral.</p>
+<h3 id="example-1.16">Example 1.16</h3>
+<p>Evaluate the line integral <span class="math">\[
+I= \int\limits_{C} \, x^2 \, dy - yx \, dx,
+\]</span> where <span class="math">\(C\)</span> is the semi-circular path, of radius <span class="math">\(1\)</span> and traversed clockwise, from the point <span class="math">\((-1,0)\)</span> to <span class="math">\((1,0)\)</span>.</p>
+<p><!--- 
+ <div class="compute"><script type="text/x-sage"><div class="compute"><script type="text/x-sage">
+@interact
+def tline(ep=slider(0.0001,4,0.1,0)):
+          p=plot(sin(x), (x, 0, 2*pi));
+          a=pi/2;
+          u=a+ep;
+          slope=(sin(u)-sin(a))/(u-a);
+          q=plot(slope*(x-pi/2)+sin(pi/2), (x,0,2*pi), color='red');
+          (p+q).show();
+</script></div> </script></div> 
+
+
+[`cloud.sagemath.com`](https://cloud.sagemath.com).
+ ---></p>
+</div>
+</body>
+</html>
