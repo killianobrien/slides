@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+    href="http://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" />
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+   href="./mycss.css" />
+  <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+  <script src="https://sagecell.sagemath.org/static/jquery.min.js"></script>
+      <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+      <script>$(function () {
+      // Make the div with id 'mycell' a Sage cell
+      sagecell.makeSagecell({inputLocation:  '#mycell',
+                             template:       sagecell.templates.minimal,
+                             evalButtonText: 'Activate'});
+      // Make *any* div with class 'compute' a Sage cell
+      sagecell.makeSagecell({inputLocation: 'div.compute',
+                             evalButtonText: 'Evaluate'});
+      });
+      </script>
+  	<link rel="stylesheet" type="text/css" href="https://sagecell.sagemath.org/static/sagecell_embed.css">
+  <script src="http://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js"
+    charset="utf-8" type="text/javascript"></script>
+</head>
+<body>
+<div id="number-theory-and-cryptography-6g5z3006" class="titleslide slide section level1"><h1>Number Theory and Cryptography (6G5Z3006)</h1></div><div id="syllabus-topics" class="slide section level2">
+<h1>Syllabus topics</h1>
+<p><strong>Number Theory:</strong> We study the integers and examine in detail the concepts of</p>
+<ul>
+<li>divisibility</li>
+<li>prime numbers</li>
+<li>congruences and modular arithmetic</li>
+<li>solutions of polynomial congruences</li>
+<li>quadratic residues and quadratic reciprocity</li>
+</ul>
+<p><strong>Cryptography:</strong> We start with the study of basic encryption techniques such as</p>
+<ul>
+<li>substitution ciphers</li>
+<li>Hill ciphers</li>
+<li>affine ciphers</li>
+<li>stream ciphers</li>
+</ul>
+<p>Then in the second term looks at more modern developments in public key encryption such as the</p>
+<ul>
+<li>RSA algorithm</li>
+<li>El-Gamal encryption</li>
+<li>Diffie-Helman key exchange</li>
+<li>primality testing.</li>
+</ul>
+</div><div id="teaching-team-teaching-pattern-assessment" class="slide section level2">
+<h1>Teaching team, teaching pattern &amp; assessment</h1>
+<ul>
+<li><p>3 hours lecture + 1 hour tutorial per week.</p></li>
+<li><p>This year the number theory is taught by Dr Killian O'Brien and the two cryptography terms are taught by Dr Andrew Wiseman and Dr Jon Borresen respectively.</p></li>
+<li><p>The tutorials concentrate on the two parts of the unit in alternate weeks and are taken by the relevant lecturer.</p></li>
+<li><p>Assessment is by Coursework Report (30%) and Summer Exam (70%).</p></li>
+<li><p>Both NT &amp; C contribute 50% to all teaching and assessment.</p></li>
+</ul>
+</div><div id="nature-of-the-unit" class="slide section level2">
+<h1>Nature of the unit</h1>
+<ul>
+<li><p>A nice combination of proof oriented theoretical work and practical calculation based methods.</p></li>
+<li><p>Definately suited to students who like problem solving and the unit will develop your skills in this area.</p></li>
+<li><p>Matlab is used to take the pain out of the lengthy calculations in the cryptography half. Its use is necessary for the coursework but plenty of support and sample code is provided.</p></li>
+<li><p>I am also increasingly making use of Sagemath (<a href="http://www.sagemath.org">www.sagemath.org</a>, <a href="https://cloud.sagemath.org">cloud.sagemath.org</a>, <a href="https://sagecell.sagemath.org">sagecell.sagemath.org</a>) to help investigate number theory and use it to demonstrate some aspects of number theory.</p></li>
+</ul>
+</div><div id="some-highlights-from-the-unit" class="slide section level2">
+<h1><em>Some highlights from the unit</em></h1>
+<p>In the unit we prove a lot of interesting results in Number Theory ....</p>
+<ul>
+<li><p>There are an infinite amount of primes <span class="math">\(2, 3, 5, 7, 11, \dots \)</span> (see at least three proofs of this)</p></li>
+<li><p>The prime harmonic series diverges, i.e. <span class="math">\[ \sum_{p} \frac{1}{p} = \infty \]</span></p></li>
+</ul>
+<div class="compute"><script type="text/x-sage">
+sum=0;
+
+for p in primes(1,10^2):
+    sum += 1/p;
+    
+print n(sum)
+</script></div>
+
+
+<ul>
+<li><p>We describe some famous unsolved conjectures in number theory, such as the twin prime conjecture: <em>There are an infinite number of pairs of integers <span class="math">\(n,n+2\)</span>, both of which are prime.</em></p></li>
+<li><p>As a counterpoint to this we will prove(tutorial exercise) that there exist arbitrarily large gaps between the primes.</p></li>
+<li><p>...</p></li>
+</ul>
+<p>And in Cryptography we meet ...</p>
+<ul>
+<li>Public Key Cryptography: This enables parties to communicate securely in public without ever having shared secrets beforehand. Relies on the properties of number theoretic functions.</li>
+</ul>
+</div><div id="and-some-interesting-functions-you-will-meet-..." class="slide section level2">
+<h1>... and some interesting functions you will meet ...</h1>
+<ul>
+<li>Can you explain the accumulation lines in the plots of the following functions?</li>
+</ul>
+<p>The divisor sum function <span class="math">\[d(n) = \sum_{d \, \text{divides }n} d\]</span></p>
+<div class="compute"><script type="text/x-sage">
+list_plot([sum(divisors(k)) for k in range(1,10^4)], size =1)
+</script></div>
+
+<p>(If you cannot see the Sagemath code cell above then click <a href="https://sagecell.sagemath.org/?z=eJzLySwuiS_IyS_RiC4uzdVIySzLLM4vKtbI1tRUSMsvUshWyMxTKErMS0_VMNQxNIgz0YzVUSjOrEpVsDXUBACllBQF&amp;lang=sage">here</a> for a link to the cell showing a plot of the divisor sum function. You may need to use a modern browser such as Chrome or Mozilla Firefox.)</p>
+<p>Euler's totient function <span class="math">\[\phi(n) = \text{number of $m$ such that $1 \leq m \leq n$ and $n,m$ are coprime} = |\mathbb{Z_n^\times}| .\]</span></p>
+<div class="compute"><script type="text/x-sage">
+list_plot([euler_phi(k) for k in range(1,10^4)], size =1)
+</script></div>
+<p>(If you cannot see the Sagemath code cell above then click <a href="https://sagecell.sagemath.org/?z=eJzLySwuiS_IyS_RiE4tzUktii_IyNTI1lRIyy9SyFbIzFMoSsxLT9Uw1DE0iDPRjNVRKM6sSlWwNdQEAE_nEqk=&amp;lang=sage">here</a> for a link to the cell showing a plot of Euler's totient function. You may need to use a modern browser such as Chrome or Mozilla Firefox.)</p>
+</div><div id="up-to-the-minute-relevance-to-world-politics-justice-human-rights-..." class="slide section level2">
+<h1>Up to the minute relevance to world politics, justice &amp; human rights ...</h1>
+<ul>
+<li><img src="http://www.newyorker.com/wp-content/uploads/2013/08/snowden-passport-580.jpeg" title="Travel the world!" alt="Edward Snowden" /></li>
+<li><a href="http://www.theguardian.com/us-news/the-nsa-files">Guardian</a>, <a href="https://www.aclu.org/nsa-documents-search">ACLU</a>, <a href="http://en.wikipedia.org/wiki/Global_surveillance_disclosures_(2013%E2%80%93present)">Wikipedia</a></li>
+</ul>
+</div>
+</body>
+</html>
