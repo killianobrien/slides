@@ -1,5 +1,16 @@
 # Group Theory (6G6Z3012)
 
+## What is a group
+
+A set $G$ with a binary operation $\star$ satisfying
+
+* $G$ is a closed system under $\star$,
+* $\star$ is associative on $G$,
+* $G$ contains an identity element for $\star$,
+* $G$ contains inverse elements for $\star$ .
+
+Groups arise in many different contexts in mathematics.
+
 ## Syllabus topics
 
 ### Introduction to group theory: 
