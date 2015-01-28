@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+    href="http://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" />
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+   href=".\mycss.css" />
+  <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+  <script src="https://sagecell.sagemath.org/static/jquery.min.js"></script>
+      <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+      <script>$(function () {
+      // Make the div with id 'mycell' a Sage cell
+      sagecell.makeSagecell({inputLocation:  '#mycell',
+                             template:       sagecell.templates.minimal,
+                             evalButtonText: 'Activate'});
+      // Make *any* div with class 'compute' a Sage cell
+      sagecell.makeSagecell({inputLocation: 'div.compute',
+                             evalButtonText: 'Evaluate'});
+      });
+      </script>
+  	<link rel="stylesheet" type="text/css" href="https://sagecell.sagemath.org/static/sagecell_embed.css">
+  <script src="http://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js"
+    charset="utf-8" type="text/javascript"></script>
+</head>
+<body>
+<div id="group-theory-6g6z3012" class="titleslide slide section level1"><h1>Group Theory (6G6Z3012)</h1></div><div id="syllabus-topics" class="slide section level2">
+<h1>Syllabus topics</h1>
+<h3 id="introduction-to-group-theory">Introduction to group theory:</h3>
+<p>Binary operations on sets and definition of a group with examples. Cayley tables.</p>
+<h3 id="examples-of-groups">Examples of groups:</h3>
+<p>Symmetry groups of two and three-dimensional objects, the dihedral groups <span class="math">\(D_n\)</span>, rotational symmetry groups of three-dimensional polyhedra. Permutation groups, the Symmetric groups <span class="math">\(S_n\)</span> and the Alternating groups <span class="math">\(A_n\)</span>. Number based groups under arithmetic operations, the cyclic groups <span class="math">\(\mathbb{Z}_n\)</span>. Groups of matrices.</p>
+</div><div id="rotational-symmtry-groups-of-2d-3d-solids-4d-5d-..." class="slide section level2">
+<h1>Rotational symmtry groups of 2D &amp; 3D solids (4D, 5D, ... ?)</h1>
+<h3 id="visualising-the-elements-of-gammat">Visualising the elements of <span class="math">\(\Gamma^+(T)\)</span></h3>
+<div class="figure">
+<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Tetrahedral_group_2.svg/753px-Tetrahedral_group_2.svg.png" alt="Symmetries of a tetrahedron" /><p class="caption">Symmetries of a tetrahedron</p>
+</div>
+</div><div id="the-symmetric-group-s_4-on-four-objects" class="slide section level2">
+<h1>The Symmetric group, <span class="math">\(S_4\)</span>, on four objects</h1>
+<div class="figure">
+<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Symmetric_group_4%3B_Cayley_graph_4,9.svg/2000px-Symmetric_group_4%3B_Cayley_graph_4,9.svg.png" alt="Cayley graph of S_4" /><p class="caption">Cayley graph of S_4</p>
+</div>
+</div><div id="syllabus-topics-1" class="slide section level2">
+<h1>Syllabus topics</h1>
+<h3 id="initial-group-theory">Initial group theory:</h3>
+<p>Various concept definitions and examples, including: elements, orders, Abelian groups, subgroups, generators and cyclic/non-cyclic. The natural mappings between groups, homomorphisms and isomorphisms. Examples of isomorphic pairs and non-isomorphic pairs. Cayley's theorem: Every group isomorphic to a group of permutations.</p>
+<h3 id="classification-problems">Classification problems:</h3>
+<p>What are the grand enterprises of group theory? What classification problems can be posed?</p>
+<h3 id="lagranges-theorem">Lagrange's theorem:</h3>
+<p>Restricting the possibilities for subgroup orders. Equivalence relations, equivalence classes, cosets. Normal groups and quotient groups.</p>
+</div><div id="lagranges-theorem-1" class="slide section level2">
+<h1>Lagrange's theorem</h1>
+<div class="figure">
+<img src="http://link.springer.com/static-content/lookinside/30/chp%253A10.1007%252F978-1-4757-4034-9_11/000.png" alt="MAArmstrong" /><p class="caption">MAArmstrong</p>
+</div>
+</div><div id="syllabus-topics-2" class="slide section level2">
+<h1>Syllabus topics</h1>
+<h3 id="group-presentations">Group presentations:</h3>
+<p>How to systematically describe groups in a computable way. Group presentations, generators and relations, presentation matrices. The isomorphism decision problem based on matrices.</p>
+<h3 id="the-classification-of-finitely-presented-abelian-groups">The classification of finitely presented Abelian groups:</h3>
+<p>A matrix reduction algorithm to decide the isomorphism problem amongst finitely presented Abelian groups. The canonical form of finitely presented Abelian group as a direct sum of cyclic groups.</p>
+<h3 id="classification-of-groups-of-low-order">Classification of groups of low order:</h3>
+<p>What about non-Abelian groups? Why we can't solve using matrix reduction? Investigation of groups of low order and enumeration and classification of all groups up to some suitable order.</p>
+<h3 id="sylows-theorems">Sylow's theorems:</h3>
+<p>Discussion of the converse to Lagrange's theorem. Group actions, orbits, stabilizers. Self-action by conjugation. Sylow's theorems.</p>
+</div><div id="wider-interst-material-applications" class="slide section level2">
+<h1>Wider interst material / applications</h1>
+<p>The unit could contain interesting general material on the following topics/applications.</p>
+<h3 id="the-classification-of-finite-simple-groups">The classification of finite simple groups</h3>
+<p>The grand project. Status of the proof. Some history and biographical details of the completion of the project. The families in the classification. The sporadic groups. The Monster group and Monstrous Moonshine.</p>
+<h4 id="the-monster-group">The Monster group</h4>
+<p>A group, <span class="math">\(M\)</span>, with approx. <span class="math">\(8 \times 10^{53}\)</span> elements, that is <em>simple</em>, i.e. it has no <em>normal</em> subgroups.</p>
+<p><span class="math">\(M\)</span> is (isomorphic to) a group of rotations of 196883-dimensional space.</p>
+<p><span class="math">\(M\)</span> is (isomorphic to) a group of matrices generated by two particular binary <span class="math">\(196882 \times 196882\)</span> matrices.</p>
+<h3 id="algorithmic-problems">Algorithmic problems</h3>
+<p>The word problem. Computability. Alan Turing.</p>
+<div class="figure">
+<img src="http://upload.wikimedia.org/wikipedia/en/c/c8/Alan_Turing_photo.jpg" alt="Alan Turing" /><p class="caption">Alan Turing</p>
+</div>
+<h3 id="combinatorial-enumeration-and-geometric-classification-problems">Combinatorial enumeration and geometric classification problems</h3>
+<p>Counting number of distinguishable colourings of geometric objects. Classifying the symmetry types of two-dimensional wallpaper patterns. Classifying two and three-dimensional crystal structures (lattices).</p>
+<h3 id="galois-theory">Galois theory</h3>
+<div class="figure">
+<img src="http://www-history.mcs.st-and.ac.uk/BigPictures/Galois.jpeg" alt="Galois" /><p class="caption">Galois</p>
+</div>
+<p>Life of Galois (1811 - 1832). Galois theory. Formulas for roots of polynomials. Construction problems with ruler and compass.</p>
+</div><div id="teaching-team-teaching-pattern-assessment" class="slide section level2">
+<h1>Teaching team, teaching pattern &amp; assessment</h1>
+<ul>
+<li><p>Unit designed by Killian O'Brien &amp; Seamus O'Shea</p></li>
+<li><p>Taught by Killian , ...</p></li>
+<li><p>2 hours lecture + 1 hour tutorial (or sometimes computer lab) per week.</p></li>
+<li><p>Assessment is by Coursework Report (40%) and Summer Exam (60%).</p></li>
+</ul>
+</div><div id="nature-of-the-unit" class="slide section level2">
+<h1>Nature of the unit</h1>
+<ul>
+<li><p>A thorough introduction to a substantial area of puremathematics that has strong connections to areas of geometry, combinatorics, graph theory, ... .</p></li>
+<li><p>Definately suited to students who like problem solving and the unit will develop your skills in this area.</p></li>
+<li><p>We will use the Sage mathematics system to aid our investigations. You will also get an introduction to the Python programming language. (<a href="http://www.sagemath.org">www.sagemath.org</a>, <a href="https://cloud.sagemath.org">cloud.sagemath.org</a>, <a href="https://sagecell.sagemath.org">sagecell.sagemath.org</a>)</p></li>
+</ul>
+<div class="compute">
+<script type="text/x-sage">
+G=DihedralGroup(12)
+# G is the group of rotational and 
+# reflectional symmetries of the 
+# regular 12-sided polygon
+
+for H in G.subgroups():
+    print H.order()
+</script>
+</div>
+</div>
+</body>
+</html>
