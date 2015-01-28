@@ -1,6 +1,6 @@
 # Group Theory (6G6Z3012)
 
-## What is a group
+## What is a group?
 
 A set $G$ with a binary operation $\star$ satisfying
 
