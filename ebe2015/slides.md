@@ -1,3 +1,6 @@
+
+
+
 # Lecture capture with Google Hangouts
 ## and how I learned to love the sound of my own voice
 
@@ -112,7 +115,7 @@ I did emphasize experimental / proof of concept nature of the enterprise to guar
 - A distraction from better things?
 	- watching videos is a poor substitute for reading and doing mathematics, i.e. directly engaging the mind with these abstract concepts.
 
-### What do you think?
+## What do you think?
 
 - any questions
 - your own reflections and experience
