@@ -1,5 +1,7 @@
-# Killian O'Brien
+# Lecture capture with Google Hangouts
+## and how I learned to love the sound of my own voice
 
-### Basic information 
+# Example recording
+## Talking through some notes
 
-Born in 1975. 
+<iframe height=450px  frameborder="0" allowfullscreen src="http://www.youtube.com/embed/qvdYGdOL52A?start=2595"></iframe>
