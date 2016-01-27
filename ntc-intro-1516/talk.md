@@ -1,6 +1,6 @@
 % 6G5Z3006 Number Theory and Cryptography
 % Options talk by Dr Killian O'Brien
-% MMU, January 2016
+% MMU, January 2016, these slides at [tinyurl.com/ntc1617](http://tinyurl.com/ntc1617)
 
 # The unit
 

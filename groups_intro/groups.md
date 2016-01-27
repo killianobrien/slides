@@ -1,6 +1,6 @@
 % 6G6Z3012 Group Theory
 % Options talk by Dr Killian O'Brien
-% MMU, January 2016
+% MMU, January 2016, these slides at [tinyurl.com/groups1617](http://tinyurl.com/groups1617)
 
 # The unit
 
