@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Options talk by Dr Killian O'Brien">
+  <title>6G5Z3006 Number Theory and Cryptography</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="reveal.js/css/reveal.css">
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="reveal.js/css/theme/kob.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="reveal.js/lib/js/html5shiv.js"></script>
+  <![endif]-->
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+  <h1 class="title">6G5Z3006 Number Theory and Cryptography</h1>
+  <h2 class="author">Options talk by Dr Killian O'Brien</h2>
+  <h3 class="date">MMU, January 2016</h3>
+</section>
+
+<section id="the-unit" class="slide level1">
+<h1>The unit</h1>
+<ul>
+<li>Number Theory (Dr Killian O'Brien)</li>
+<li>Cryptography (Dr Jon Borresen)</li>
+<li>3 hours lecture + 1 hour tutorial per week</li>
+<li>Coursework problems (30%), Examination (70%)</li>
+<li>Popular unit (49 students in 14/15) with good ISS results</li>
+</ul>
+</section>
+<section id="in-a-nutshell" class="slide level1">
+<h1>In a nutshell</h1>
+<h2 id="number-theory">Number Theory</h2>
+<ul>
+<li>The study of the integers <span class="math display">\[\mathbb{Z} = \{ \dots -3, -2, -1, 0, 1, 2, 3, \dots \}\]</span></li>
+<li>Of fundamental importance are the primes <span class="math display">\[2, 3, 5, 7, \dots \]</span></li>
+<li>Nice mixture of proof oriented theoretical work and algorithmic methods</li>
+</ul>
+<h2 id="cryptography">Cryptography</h2>
+<ul>
+<li>The science/art of transforming <em>text</em> so that it can only be <em>read</em> by selected recipients.</li>
+<li>Often in connection to military/industrial/political/... secrets.</li>
+<li>Universally and intensively used in modern computer network communications.</li>
+</ul>
+<h2 id="software">Software</h2>
+<ul>
+<li>Interesting use of mathematical software for various aspects of the unit
+<ul>
+<li>Matlab</li>
+<li><a href="https://cloud.sagemath.com">SageMath</a></li>
+</ul></li>
+</ul>
+</section>
+<section id="a-quick-tour-of-some-highlights-from-the-unit" class="slide level1">
+<h1>A quick tour of some highlights from the unit</h1>
+</section>
+<section id="integers-in-the-news" class="slide level1">
+<h1>Integers in the news</h1>
+<p>What's so special about ... ?</p>
+<ul>
+<li class="fragment"><span class="math inline">\(74,207,281\)</span></li>
+<li class="fragment"><span class="math inline">\(2^{74,207,281} - 1\)</span></li>
+</ul>
+<div class="fragment">
+<p>The <span class="math inline">\(49\)</span>th known Mersenne prime found by the <a href="http://www.mersenne.org/">GIMPS</a> project.</p>
+</div>
+</section>
+<section id="open-conjecture-or-tutorial-problem" class="slide level1">
+<h1>Open conjecture or tutorial problem?</h1>
+<ul>
+<li class="fragment">There are infinitely many prime numbers.</li>
+<li class="fragment"><span class="math inline">\(2^n - 1\)</span> can only be prime when <span class="math inline">\(n\)</span> is prime.</li>
+<li class="fragment">There are infinitely many <span class="math inline">\(2^n -1\)</span> which are prime.</li>
+</ul>
+<div class="fragment">
+The following SageMath code finds the first few Mersenne primes. See the <a href="https://sagecell.sagemath.org/?z=eJxLyy9SKFDIzFMoKMrMTY0vSsxLT9Uw1DE0iDPStOLlUgCCzDSFzOJ4sLyGUVyBgq6CIUwKBIASeSUaBZroImClhpoAPPsZcA==&amp;lang=sage">results</a>
+<pre><code data-trim data-noescape>
+for p in prime_range(1,10^2):
+    if is_prime(2^p - 1):
+        print(p)
+        print(2^p -1)
+</code></pre>
+</div>
+</section>
+<section class="slide level1">
+
+<section data-background="primepi.png" style="color:white;">
+.
+</section>
+</section>
+<section id="open-conjecture-or-tutorial-problem-1" class="slide level1">
+<h1>Open conjecture or tutorial problem?</h1>
+<ul>
+<li>There are infinitely many primes <span class="math inline">\(p\)</span> for which <span class="math inline">\(p+2\)</span> is also prime, i.e. <em>narrow</em> steps on the <span class="math inline">\(\pi\)</span> staircase.</li>
+<li>For any integer <span class="math inline">\(n \geq 1\)</span> there are infinitely many gaps of at least length <span class="math inline">\(n\)</span> between consecutive primes, i.e. <em>wide</em> steps on the <span class="math inline">\(\pi\)</span> staircase.</li>
+</ul>
+</section>
+<section id="classical-vs.-modern-cryptography" class="slide level1">
+<h1>Classical vs. modern cryptography</h1>
+<h3 id="classical">Classical</h3>
+<ul>
+<li>Topics include mono- and poly-alphabetic substitution ciphers.</li>
+<li>Classical cryptography required prearranged secrets between sender and recipient.</li>
+<li>Can be broken with the aid of frequency analysis and these vulnerabilities.</li>
+</ul>
+<h3 id="modern">Modern</h3>
+<ul>
+<li>Crypto systems based on number theoretic concepts.</li>
+<li>Prearranged secrets no longer required, so called <em>Public Key Cryptography</em>.</li>
+<li>Enables secure mass communication between anyone across public non-secure networks.</li>
+</ul>
+</section>
+<section id="who-is-this" class="slide level1">
+<h1>Who is this?</h1>
+<section data-background="snowden-id.jpg" style="color:white;">
+</section>
+</section>
+<section id="who-was-that" class="slide level1">
+<h1>Who was that?</h1>
+<ul>
+<li>Edward Snowden, former worker for the CIA and NSA.</li>
+<li>In 2013, he fled the USA, briefly staying in Hong Kong before securing temporary asylum in Russia.</li>
+<li>Has passed many thousands of classified files from the NSA, GCHQ and other intelligence agencies to journalists.</li>
+<li>These revelations concern global surveillance programs carried out by these agencies on the public.</li>
+</ul>
+</section>
+<section class="slide level1">
+
+<h1 style="color:red;">
+CitizenFour movie
+</h1>
+<section class="slide level1" data-autoplay data-background-iframe="https://www.youtube.com/embed/GiU2zinfotI?rel=0&amp;controls=0&amp;showinfo=0">
+<h3 style="color:white;">
+How did Snowden make secure contact with journalists he had never met?
+</h3>
+<center>
+<table width="100%">
+<tr>
+<td align="center" valign="bottom">
+<img height="200" src=https://pbs.twimg.com/profile_images/648888480974508032/66_cUYfj_400x400.jpg>
+</td>
+<td align="center" valign="bottom">
+<img height="300" src=https://c1.staticflickr.com/3/2813/13879794094_5e2ce50086_b.jpg>
+</td>
+<td align="center" valign="bottom">
+<img height="200" src=https://upload.wikimedia.org/wikipedia/commons/4/45/Laura_Poitras_2014.jpg>
+</td>
+<td align="center" valign="bottom">
+<img height="200" src=http://www.thenation.com/wp-content/uploads/2015/04/Glenn_Greenwald_ap_fb.jpg>
+</td>
+</tr>
+</table>
+</center>
+</section>
+</section>
+    </div>
+  </div>
+
+  <script src="reveal.js/lib/js/head.min.js"></script>
+  <script src="reveal.js/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+          { src: 'reveal.js/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>
