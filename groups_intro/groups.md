@@ -1,134 +1,173 @@
-# Group Theory (6G6Z3012)
+% 6G6Z3012 Group Theory
+% Options talk by Dr Killian O'Brien
+% MMU, January 2016
 
-## What is a group?
+# The unit
+
+
+* Taught by Dr Killian O'Brien + ...
+* 2 hours lecture + 1 hour tutorial per week
+* Coursework problems (40%), Examination (60%)
+* New unit: introduced in response to student requests for more pure mathematics content
+
+
+# Nature of the unit
+
+* A thorough introduction to a substantial area of pure mathematics that has strong connections to areas of geometry, combinatorics, graph theory, ... .
+* Definately suited to students who like problem solving and the unit will develop your skills in this area.
+* We will use the Sage mathematics system to aid our investigations. You will also get an introduction to the Python programming language.  ([www.sagemath.org](http://www.sagemath.org), [cloud.sagemath.org](https://cloud.sagemath.org), [sagecell.sagemath.org](https://sagecell.sagemath.org))
+
+# What you will get from the unit
+
+* An appreciation for the many aspects of group theory and its connections to other areas of mathematics.
+* Development of your problem solving and abstract thinking skills.
+* Exposure to SageMath mathematical software, aimed at pure mathematics teaching and research.
+* SageMath uses the Python programming language which is widely used in many areas of computing.
+
+# What is a group?
+
+A set of mathematical objects with a mathematically meaningful operation applied amongst them, as long as it is *well behaved*, it will be a group. It's a very broad concept and present in many areas of mathematics.
+
+## More formally
 
 A set $G$ with a binary operation $\star$ satisfying
 
-* $G$ is a closed system under $\star$,
-* $\star$ is associative on $G$,
-* $G$ contains an identity element for $\star$,
-* $G$ contains inverse elements for $\star$ .
+* $G$ is a closed system under $\star$, i.e. $x \star y \in G$.
+* $\star$ is associative on $G$, i.e. $x \star ( y \star z) = (x \star y) \star z$.
+* $G$ contains an identity element, $e$, for $\star$, i.e. $x \star e = e \star x = x$.
+* $G$ contains inverse elements for $\star$, i.e. $x \star x^{-1} = e$.
 
-Groups arise in many different contexts in mathematics.
+# Syllabus topics
 
-## Syllabus topics
+## Examples of groups:
 
-### Introduction to group theory: 
+* Symmetry groups of two and three-dimensional objects,
+* the dihedral groups $D_n$,
+* rotational symmetry groups of three-dimensional polyhedra.
+* Permutation groups, the Symmetric groups $S_n$ and the Alternating groups $A_n$.
+* Number based groups under arithmetic operations,
+* the cyclic groups $\mathbb{Z}_n$.
+* Groups of matrices.
+* ...
 
-Binary operations on sets and definition of a group with examples. Cayley tables.
+# Visualising the elements of $\Gamma^+(T)$
 
-### Examples of groups: 
+$\Gamma^+(T)$ is the set of rotational symmetries of the tetrahedron.
 
-Symmetry groups of two and three-dimensional objects, the dihedral groups $D_n$, rotational symmetry groups of three-dimensional polyhedra. Permutation groups, the Symmetric groups $S_n$ and the Alternating groups $A_n$. Number based groups under arithmetic operations, the cyclic groups $\mathbb{Z}_n$. Groups of matrices.
+<img height="400" src=./tetrahedrons.png>
 
-## Rotational symmtry groups of 2D & 3D solids (4D, 5D, ... ?)
+# The Symmetric group, $S_4$, on four objects
 
-### Visualising the elements of $\Gamma^+(T)$
+$S_4$ is the group of all rearrangments, or *permutations*, of four objects.
 
-![Symmetries of a tetrahedron](./tetrahedrons.png)
+<img height="400" src=./S4_Cayley.png>
 
-## The Symmetric group, $S_4$, on four objects
+# Syllabus topics
 
-![Cayley graph of S_4](./S4_Cayley.png)
-
-## Syllabus topics
-
-### Initial group theory: 
+## Initial group theory:
 
 Various concept definitions and examples, including: elements, orders, Abelian groups, subgroups, generators and cyclic/non-cyclic. The natural mappings between groups, homomorphisms and isomorphisms. Examples of isomorphic pairs and non-isomorphic pairs. Cayley's theorem: Every group isomorphic to a group of permutations.
 
-### Classification problems: 
+# Syllabus topics
+
+## Classification problems:
 
 What are the grand enterprises of group theory? What classification problems can be posed?
 
-### Lagrange's theorem: 
+## Lagrange's theorem:
 
 Restricting the possibilities for subgroup orders. Equivalence relations, equivalence classes, cosets. Normal groups and quotient groups.
 
-## Lagrange's theorem
+# Lagrange's theorem
 
-![MAArmstrong](./MAA.png)
+<img height="400" src=./MAA.png>
 
-## Syllabus topics
+A page from *Groups and Symmetry* by M. A. Armstrong.
 
-### Group presentations: 
+# Syllabus topics
 
-How to systematically describe groups in a computable way. Group presentations, generators and relations, presentation matrices. The isomorphism decision problem based on matrices. 
+## Group presentations:
 
-### The classification of finitely presented Abelian groups: 
+How to systematically describe groups in a computable way. Group presentations, generators and relations, presentation matrices. The isomorphism decision problem based on matrices.
 
-A matrix reduction algorithm to decide the isomorphism problem amongst finitely presented Abelian groups. The canonical form of finitely presented Abelian group as a direct sum of cyclic groups. 
+## The classification of finitely presented Abelian groups:
 
-### Classification of groups of low order: 
+A matrix reduction algorithm to decide the isomorphism problem amongst finitely presented Abelian groups. The canonical form of finitely presented Abelian group as a direct sum of cyclic groups.
+
+## Classification of groups of low order:
 
 What about non-Abelian groups? Why we can't solve using matrix reduction? Investigation of groups of low order and enumeration and classification of all groups up to some suitable order.
  
-### Sylow's theorems: 
+## Sylow's theorems:
 
-Discussion of the converse to Lagrange's theorem. Group actions, orbits, stabilizers. Self-action by conjugation. Sylow's theorems. 
+Discussion of the converse to Lagrange's theorem. Group actions, orbits, stabilizers. Self-action by conjugation. Sylow's theorems.
 
-## Wider interst material / applications
+# Wider interest material / applications
 
 The unit could contain interesting general material on the following topics/applications.
 
-### The classification of finite simple groups
+## The classification of finite simple groups
 
 The grand project. Status of the proof. Some history and biographical details of the completion of the project. The families in the classification. The sporadic groups. The Monster group and Monstrous Moonshine.
 
-#### The Monster group
+# Wider interest material / applications
 
-A group, $M$, with approx. $8 \times 10^{53}$ elements, that is *simple*, i.e. it has no *normal* subgroups.
+## The Monster group
 
-$M$ is (isomorphic to) a group of rotations of 196883-dimensional space. 
+* A group, $M$, with approx. $8 \times 10^{53}$ elements, that is *simple*, i.e. it has no *normal* subgroups.
+* $M$ is (isomorphic to) a group of rotations of 196883-dimensional space.
+* $M$ is (isomorphic to) a group of matrices generated by two particular binary $196882 \times 196882$ matrices.
 
-$M$ is (isomorphic to) a group of matrices generated by two particular binary $196882 \times 196882$ matrices.
+# Wider interst material / applications
 
-### Algorithmic problems
+## Algorithmic problems
 
 The word problem. Computability. Alan Turing.
 
-![Alan Turing](turing.jpg)
+<img height="400" src=./turing.jpg>
 
-### Combinatorial enumeration and geometric classification problems
+# Wider interst material / applications
 
-Counting number of distinguishable colourings of geometric objects. Classifying the symmetry types of two-dimensional wallpaper patterns. Classifying two and three-dimensional crystal structures (lattices). 
+## Combinatorial enumeration and geometric classification problems
 
-### Galois theory
+Counting number of distinguishable colourings of geometric objects. Classifying the symmetry types of two-dimensional wallpaper patterns. Classifying two and three-dimensional crystal structures (lattices).
 
-![Galois](./Galois.jpeg)
+# The are exactly 17 different types of wallpaper, up to symmetry.
 
-Life of Galois (1811 - 1832). Galois theory. Formulas for roots of polynomials. Construction problems with ruler and compass.
+<img height="400" src=./wallpapers.png>
 
+# Wider interst material / applications
 
-## Teaching team, teaching pattern & assessment
+## Galois theory
 
-* Unit designed by Killian O'Brien & Seamus O'Shea
+<img height="200" src=./Galois.jpeg>
 
-* Taught by Killian , ...
-
-* 2 hours lecture + 1 hour tutorial (or sometimes computer lab) per week.
-
-* Assessment is by Coursework Report (40%) and Summer Exam (60%).
-
-## Nature of the unit
-
-* A thorough introduction to a substantial area of pure mathematics that has strong connections to areas of geometry, combinatorics, graph theory, ... .
-
-* Definately suited to students who like problem solving and the unit will develop your skills in this area.
-
-* We will use the Sage mathematics system to aid our investigations. You will also get an introduction to the Python programming language.  ([www.sagemath.org](http://www.sagemath.org), [cloud.sagemath.org](https://cloud.sagemath.org), [sagecell.sagemath.org](https://sagecell.sagemath.org))
+* Life of Galois (1811 - 1832).
+* Galois theory.
+* Formulas for roots of polynomials.
+* Construction problems with ruler and compass.
 
 
+# SageMath
 
-<div class="compute"><script type="text/x-sage">
+<pre><code data-trim data-noescape>
 G=DihedralGroup(12)
-# G is the group of rotational and 
-# reflectional symmetries of the 
+# G is the group of rotational and
+# reflectional symmetries of the
 # regular 12-sided polygon
 
-for H in G.subgroups():
-    print H.order()
-</script></div>
+HH = G.subgroups()
+# HH is the set of all subgroups of G
+
+# The following for loop prints the
+# Cayley graph of each subgroup of G
+for H in HH:
+    show(H.cayley_graph())
+</code></pre>
+
+The above code displays the *Cayley Graph* of every subgroup of $D_{12}$. See the [results](https://sagecell.sagemath.org/?z=eJw9j0GKwzAMRfeB3EHQTbqYQrssdNUB5wDdF02ixAbVMrZDye1HSjPjlfm897_tbt_B05iRXZYldefLsW0O4CAUqJ5gthRkgiwVa5CIDBhHYzJNTMOelfX1opoDFYPV_BDzwpjhfPkqYaQRkvA6S2ybtul7uIE7leVnmyjdtqvpPlyoWhOydv8xFjiTD_BQZBJmeYc46y0DiyRIOcT6KTDqjivTqp_A5E0mHPx_3d5mrq5G3b62DegpXt5dfxo2-bnJ3VGf9wsk8l-j&lang=sage) from SageMath.
+
+
 
 
 
